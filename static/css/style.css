@@ -97,7 +97,7 @@ body {
 
 }
 
-#zyyo-loading {
+#marisa-loading {
     background: radial-gradient(white, #d8eaff);
     background-size: 100%;
     background-position: center;
@@ -117,7 +117,7 @@ body {
 
 
 
-#zyyo-loading-center {
+#marisa-loading-center {
     height: 150px;
     width: 150px;
     position: relative;
@@ -146,7 +146,7 @@ body {
 
 
 
-.zyyo-filter {
+.marisa-filter {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -157,7 +157,7 @@ body {
    
 }
 
-.zyyo-main {
+.marisa-main {
     width: 100%;
     margin: 0 auto;
     transition: transform 0.5s ease;
@@ -168,7 +168,7 @@ body {
 }
 
 
-.zyyo-left {
+.marisa-left {
     overflow-y: scroll;
     width: 230px;
     height: 100vh;
@@ -182,7 +182,7 @@ body {
 }
 
 
-.zyyo-left::-webkit-scrollbar {
+.marisa-left::-webkit-scrollbar {
     display: none;
 }
 
@@ -294,7 +294,7 @@ body {
 
 
 
-.zyyo-right {
+.marisa-right {
     width: calc(100% - 230px);
     display: flex;
     padding: 20px;
@@ -406,6 +406,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap; /* 新增：防止文字换行 */
     flex-shrink: 0;
 }
 .iconItem i,.iconItem svg{
@@ -432,8 +433,12 @@ body {
 }
 
 .iconTip {
-    white-space: nowrap;
     display: none;
+    opacity: 0;
+    margin-left: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.3s;
+    white-space: nowrap;
 }
 
 
@@ -441,15 +446,24 @@ body {
 
 
 .iconItem:hover {
-    width: 95px;
+    width: auto;         /* 自动宽度 */
+    min-width: 60px;    /* 最小扩展宽度 */
+    max-width: 200px;   /* 防止过度扩展 */
+    padding: 0 12px;    /* 添加呼吸空间 */
     transform: translateY(-2px);
     background: var(--item_hover_color);
 }
 
 
 .iconItem:hover .iconTip {
-    display: block;
+    display: inline-block;
+    opacity: 1;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-5px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 
 .switch:hover {
     width: 55px;
@@ -637,7 +651,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .zyyo-left {
+    .marisa-left {
         display: none;
     }
 
@@ -670,7 +684,7 @@ footer {
 
 
 
-    .zyyo-right {
+    .marisa-right {
         width: 100%;
     }
 

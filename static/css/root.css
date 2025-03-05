@@ -125,7 +125,7 @@ html {
     --main_bg_color: url(../img/background.PNG);
     --main_text_color: #eeeeee;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
-    --purple_text_color: #747bff;
+    --purple_text_color: #fff666;
     --text_bg_color: #00000040;
     --item_bg_color: #00000038;
     --item_hover_color: #33333338;
@@ -134,7 +134,7 @@ html {
     --footer_text_color: #ffffff;
     --left_tag_item: rgb(27 42 57 / 20%);
     --card_filter: 0px;
-    --back_filter: 9px;
+    --back_filter: 3px;
     --back_filter_color: #00000030;
     --fill:#ffffff;
 }
