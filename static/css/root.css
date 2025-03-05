@@ -25,10 +25,7 @@
 
 一个有数字另一个建议为0
 
-
 内置4套白天主题修改办法
-
-
 
 每套主题的结构都为html{
     
@@ -37,18 +34,11 @@
 只有最下面的会生效,也就是将你要设置的主题剪切到最下面
 */
 
-
-
-
-
-
-
-
 /*非常吃性能,低配手机会卡顿*/
 /*卡片模糊背景＋黑色透明卡片+白色svg**/
 html {
     --name: 主题1;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/background.PNG);
     --main_text_color: #eeeeee;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -69,7 +59,7 @@ html {
 
     /*图片模糊背景＋白色透明卡片+黑色svg*/
     --name: 主题2;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/background.PNG);
     --main_text_color: #000000;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -132,7 +122,7 @@ html {
 html {
     /*图片模糊背景＋黑色透明卡片+白色svg**/
     --name: 主题5;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/background.PNG);
     --main_text_color: #eeeeee;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -144,7 +134,7 @@ html {
     --footer_text_color: #ffffff;
     --left_tag_item: rgb(27 42 57 / 20%);
     --card_filter: 0px;
-    --back_filter: 19px;
+    --back_filter: 9px;
     --back_filter_color: #00000030;
     --fill:#ffffff;
 }
