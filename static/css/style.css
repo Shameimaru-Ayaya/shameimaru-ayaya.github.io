@@ -91,7 +91,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: local;
     transition: color 0.1s ease;
     color: var(--main_text_color);
 
