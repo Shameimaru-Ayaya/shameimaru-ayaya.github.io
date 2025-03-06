@@ -141,6 +141,12 @@ html {
 
 /* 移动端背景设置 */
 @media (max-width: 800px) {
+    body {
+        background: var(--main_bg_color) center/cover fixed !important;
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
     html {
       --main_bg_color: url(../img/mobile-bg.jpg); /* 移动端背景图 */
       --back_filter: 1.5px; /* 移动端模糊强度 */
@@ -148,8 +154,10 @@ html {
     
     /* 覆盖PC端模糊设置 */
     .marisa-filter {
-      backdrop-filter: blur(var(--back_filter));
-      -webkit-backdrop-filter: blur(var(--back_filter));
+        background: var(--back_filter_color);
+        backdrop-filter: blur(var(--back_filter)) !important;
+        position: fixed !important;
+        height: 100vh !important;
     }
   }
   
