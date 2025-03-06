@@ -80,30 +80,27 @@ html[data-theme="Dark"] {
 
 
 
-
+/* 清除 body 上的背景，保持纯内容层 */
 body {
     height: 100%;
     min-height: 100vh;
     width: 100%;
     position: relative;
-    font-family: "b",  "a", sans-serif;
+    font-family: "b", "a", sans-serif;
     transition: color 0.1s ease;
     color: var(--main_text_color);
-
+    background: none; /* 移除 background 属性 */
 }
 
-/* 通过伪元素创建固定背景层 */
-body::before {
+/* 固定背景层，改用 html::before 伪元素 */
+html::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--main_bg_color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: var(--main_bg_color) center/cover no-repeat;
     z-index: -1;
 }
 
