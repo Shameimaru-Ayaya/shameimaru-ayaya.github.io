@@ -143,8 +143,8 @@ html {
 @media (max-width: 800px) {
     body {
         background: var(--main_bg_color) center/cover fixed !important;
-        background-attachment: fixed !important;
-        background-size: cover !important;
+        background-attachment: scroll !important;
+        background-size: contain !important;
         background-repeat: no-repeat !important;
     }
     html {
