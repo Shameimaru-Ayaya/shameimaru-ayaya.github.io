@@ -87,14 +87,24 @@ body {
     width: 100%;
     position: relative;
     font-family: "b",  "a", sans-serif;
+    transition: color 0.1s ease;
+    color: var(--main_text_color);
+
+}
+
+/* 通过伪元素创建固定背景层 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: var(--main_bg_color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    transition: color 0.1s ease;
-    color: var(--main_text_color);
-
+    z-index: -1;
 }
 
 #marisa-loading {
