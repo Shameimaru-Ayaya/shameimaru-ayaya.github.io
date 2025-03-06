@@ -134,7 +134,7 @@ html {
     --footer_text_color: #ffffff;
     --left_tag_item: rgb(27 42 57 / 20%);
     --card_filter: 0px;
-    --back_filter: 1.5px;
+    --back_filter: 1px;
     --back_filter_color: #00000030;
     --fill:#ffffff;
 }
@@ -143,7 +143,7 @@ html {
 @media (max-width: 800px) {
     html {
       --main_bg_color: url(../img/mobile-bg.jpg); /* 移动端背景图 */
-      --back_filter: 1.5px; /* 移动端模糊强度 */
+      --back_filter: 1px; /* 移动端模糊强度 */
     }
     
     /* 调整模糊层 */
@@ -157,6 +157,12 @@ html {
 /* 保持 PC 端设置 */
 @media (min-width: 801px) {
     html {
-      --back_filter: 1.5px; /* PC 端模糊 */
+      --back_filter: 1px; /* PC 端模糊 */
+    }
+    /* 调整模糊层 */
+    .marisa-filter {
+        background: var(--back_filter_color);
+        backdrop-filter: blur(var(--back_filter)) !important;
+        height: 100vh;
     }
 }

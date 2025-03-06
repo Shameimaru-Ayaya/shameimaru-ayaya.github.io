@@ -56,30 +56,6 @@ a:focus {
     background-color: var(--main_bg_color, linear-gradient(50deg, #a2d0ff, #ffffff));
 }
 
-
-
-html[data-theme="Dark"] {
-    
-    --main_text_color: #fff;
-    --gradient:linear-gradient(120deg, rgb(133, 62, 255), #f76cc6 30%, rgb(255, 255, 255) 60%);
-    --purple_text_color: #747bff;
-    --text_bg_color: rgb(26, 4, 48);
-    --item_bg_color: rgb(19, 20, 24);
-    --item_hover_color: rgb(19, 23, 27);
-    --item_left_title_color: rgb(255, 255, 255);
-    --item_left_text_color: rgb(142, 142, 142);
-    --footer_text_color: #646464;
-    --left_tag_item: linear-gradient(50deg, #1f2327, #000000);
-    --card_filter: 0px;
-    --back_filter: 0px;
-    --back_filter_color: #000000;
-    --fill:#ffffff;
-}
-
-
-
-
-
 /* 清除 body 上的背景，保持纯内容层 */
 body {
     height: 100%;
@@ -122,7 +98,22 @@ html::before {
     align-items: center;
 }
 
-
+html[data-theme="Dark"] {    
+    --main_text_color: #fff;
+    --gradient:linear-gradient(120deg, rgb(133, 62, 255), #f76cc6 30%, rgb(255, 255, 255) 60%);
+    --purple_text_color: #747bff;
+    --text_bg_color: rgb(26, 4, 48);
+    --item_bg_color: rgb(19, 20, 24);
+    --item_hover_color: rgb(19, 23, 27);
+    --item_left_title_color: rgb(255, 255, 255);
+    --item_left_text_color: rgb(142, 142, 142);
+    --footer_text_color: #646464;
+    --left_tag_item: linear-gradient(50deg, #1f2327, #000000);
+    --card_filter: 0px;
+    --back_filter: 0px;
+    --back_filter_color: #000000;
+    --fill:#ffffff;
+}
 
 #marisa-loading-center {
     height: 150px;
@@ -150,9 +141,6 @@ html::before {
     }
 }
 
-
-
-
 /* 模糊层：调整背景颜色和层级 */
 .marisa-filter {
     position: fixed;
@@ -175,7 +163,6 @@ html::before {
     display: flex;
     flex-direction: row;
 }
-
 
 .marisa-left {
     overflow-y: scroll;
@@ -622,6 +609,29 @@ html::before {
 
 .skill #skillWap {
     display: none;
+}
+
+.skill-section {
+    margin-bottom: 1.5em;
+}
+  
+.skill-section h4 {
+    color: #6a1b9a;
+    margin-bottom: 0.8em;
+}
+  
+.skill-list {
+    margin-left: 1.5em;
+}
+  
+ .skill-list ul {
+    margin-left: 1em;
+    list-style-type: circle;
+}
+  
+.skill-list li {
+    margin: 0.4em 0;
+    line-height: 1.5;
 }
 
 footer {
