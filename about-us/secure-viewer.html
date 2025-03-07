@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件查看器</title>
+    <!-- 设置严格的 CSP -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; 
+                   connect-src 'self'; style-src 'self' 'unsafe-inline'">
+    
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #content {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            min-height: 200px;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文件查看器</h1>
+        <div id="content">加载中...</div>
+    </div>
+
+    <!-- 引入混淆后的解密逻辑 -->
+    <script src="decrypt-logic.min.js"></script>
+    <script>
+    (function() {
+        // 检查访问来源
+        function validateAccess() {
+            const referer = document.referrer;
+            // 只允许从about-us页面访问，禁止直接访问
+            return referer && referer.includes('your-username.github.io/about-us');
+        }
+
+        function displayContent(decrypted) {
+            if (!decrypted) {
+                document.getElementById('content').innerHTML = '<div class="error">无法访问此内容</div>';
+                return;
+            }
+
+            const decoder = new TextDecoder();
+            const content = decoder.decode(decrypted);
+            
+            if (content.startsWith('%PDF-')) {
+                const blob = new Blob([decrypted], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+                document.getElementById('content').innerHTML = `
+                    <embed src="${url}" width="100%" height="600px" type="application/pdf">
+                `;
+            } else {
+                document.getElementById('content').textContent = content;
+            }
+        }
+
+        // 主函数
+        async function init() {
+            if (!validateAccess()) {
+                document.getElementById('content').innerHTML = 
+                    '<div class="error">无权访问此内容</div>';
+                return;
+            }
+
+            try {
+                const timestamp = Math.floor(Date.now() / 1000).toString();
+                const fileId = 'YOUR_FILE_ID'; // 从URL或配置获取
+                
+                const decrypted = await window._dc(fileId, timestamp);
+                if (!decrypted) {
+                    throw new Error('解密失败');
+                }
+
+                // 显示内容
+                displayContent(decrypted);
+            } catch (error) {
+                console.error('加载失败:', error);
+                document.getElementById('content').innerHTML = 
+                    '<div class="error">加载失败</div>';
+            }
+        }
+
+        // 禁用右键和快捷键
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+            }
+        });
+
+        // 开始执行
+        init();
+    })();
+    </script>
+</body>
+</html> 

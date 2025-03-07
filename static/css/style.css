@@ -909,3 +909,160 @@ footer {
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
     right: 50%;
 }
+
+/* About Us 页面样式 */
+.left-div.left-des {
+  /* 容器基础样式 */
+  color: var(--main_text_color);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* 打印按钮样式 */
+.left-div.left-des .print-button {
+  background: var(--item_bg_color);
+  color: var(--main_text_color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* 页眉样式 */
+.left-div.left-des .header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--main_text_color);
+  padding-bottom: 1rem;
+}
+
+.left-div.left-des .header h1 {
+  font-size: 2em;
+  margin-bottom: 0.5rem;
+}
+
+/* 章节标题样式 */
+.left-div.left-des .section-title {
+  color: var(--main_text_color);
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--main_text_color);
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+}
+
+/* 经历条目样式 */
+.left-div.left-des .experience-item {
+  margin: 1.5rem 0;
+}
+
+.left-div.left-des .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.left-div.left-des .experience-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--main_text_color);
+}
+
+.left-div.left-des .experience-subtitle {
+  color: var(--purple_text_color);
+  font-style: italic;
+}
+
+.left-div.left-des .experience-duration {
+  color: var(--purple_text_color);
+  white-space: nowrap;
+}
+
+/* 技能部分样式 */
+.left-div.left-des .technical-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.left-div.left-des .skill-category {
+  break-inside: avoid;
+}
+
+.left-div.left-des .skill-category h3 {
+  margin: 0.5rem 0;
+  color: var(--main_text_color);
+}
+
+/* 出版物列表样式 */
+.left-div.left-des .publication-list {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.left-div.left-des .publication-item {
+  margin: 0.8rem 0;
+  position: relative;
+}
+
+.left-div.left-des .publication-item::before {
+  content: "•";
+  color: var(--main_text_color);
+  position: absolute;
+  left: -1rem;
+}
+
+/* 链接样式 */
+.left-div.left-des a {
+  color: var(--purple_text_color);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* 列表样式 */
+.left-div.left-des ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.left-div.left-des ul ul {
+  list-style-type: circle;
+}
+
+/* 打印优化 */
+@media print {
+  .left-div.left-des {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .left-div.left-des .print-button {
+    display: none;
+  }
+  
+  .left-div.left-des a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .left-div.left-des .technical-skills {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-div.left-des .experience-header {
+    flex-direction: column;
+  }
+  
+  .left-div.left-des .experience-duration {
+    margin-top: 0.5rem;
+  }
+}
