@@ -94,7 +94,14 @@ async function decryptFile() {
             // 是 PDF 文件
             const blob = new Blob([unpaddedData], { type: 'application/pdf' });
             const url = URL.createObjectURL(blob);
-            showContent(`<embed src="${url}" width="100%" height="600px" type="application/pdf">`);
+            showContent(`
+                <iframe 
+                    src="${url}" 
+                    width="100%" 
+                    height="600px" 
+                    style="border: none;">
+                </iframe>
+            `);
         } else {
             // 尝试作为文本显示
             const decoder = new TextDecoder();
