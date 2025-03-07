@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件查看器</title>
+    <!-- 修改 CSP 策略 -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; 
+                   connect-src 'self'; style-src 'self' 'unsafe-inline'">
+    
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #file-list {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-item:hover {
+            background-color: #f5f5f5;
+        }
+        #content {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            min-height: 200px;
+            display: none;
+        }
+        .password-form {
+            display: none;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            display: none;
+            text-align: center;
+            padding: 10px;
+        }
+        .close-btn {
+            float: right;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文件查看器</h1>
+        
+        <!-- 文件列表 -->
+        <div id="file-list">
+            <h2>加密文件</h2>
+            <div class="file-item" data-type="encrypted" data-path="../static/resources/encrypted_file_001.bin">
+                <span>加密文件1</span>
+                <button class="open-btn">查看</button>
+            </div>
+            <div class="file-item" data-type="encrypted" data-path="../static/resources/encrypted_file_002.bin">
+                <span>加密文件2</span>
+                <button class="open-btn">查看</button>
+            </div>
+            
+            <h2>图片文件</h2>
+            <div class="file-item" data-type="image" data-path="/static/img/image1.jpg">
+                <span>图片1</span>
+                <button class="open-btn">查看</button>
+            </div>
+            <div class="file-item" data-type="image" data-path="/static/img/image2.png">
+                <span>图片2</span>
+                <button class="open-btn">查看</button>
+            </div>
+        </div>
+
+        <!-- 密码输入框 -->
+        <div class="password-form" id="password-form">
+            <input type="password" id="password" placeholder="请输入密码">
+            <button id="decrypt-btn">确认</button>
+            <button id="cancel-btn">取消</button>
+        </div>
+
+        <!-- 错误提示 -->
+        <div class="error" id="error-message"></div>
+
+        <!-- 内容显示区域 -->
+        <div id="content">
+            <button class="close-btn" id="close-btn">关闭</button>
+            <div id="content-body"></div>
+        </div>
+    </div>
+
+    <!-- 引入外部脚本 -->
+    <script src="viewer.js"></script>
+</body>
+</html> 
