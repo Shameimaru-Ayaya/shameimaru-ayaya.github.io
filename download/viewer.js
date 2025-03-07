@@ -56,30 +56,55 @@ async function decryptFile() {
         const response = await fetch(currentFilePath);
         const encryptedData = await response.arrayBuffer();
         
-        // 准备密钥
+        // 准备密钥（与Python端使用相同的密钥生成方式）
         const encoder = new TextEncoder();
         const keyBytes = encoder.encode(password).slice(0, 32);
         const paddedKey = new Uint8Array(32);
         paddedKey.set(keyBytes);  // 自动补0到32字节
         
+        // 转换为base64url格式（与Fernet兼容）
+        const base64Key = btoa(String.fromCharCode.apply(null, paddedKey))
+            .replace(/\+/g, '-')
+            .replace(/\//g, '_')
+            .replace(/=+$/, '');
+        
+        // 解析Fernet令牌
+        const data = new Uint8Array(encryptedData);
+        
+        // 版本（1字节）
+        if (data[0] !== 128) {
+            throw new Error('无效的加密文件格式');
+        }
+        
+        // 时间戳（8字节）
+        // const timestamp = new DataView(data.buffer, 1, 8).getBigUint64(0);
+        
+        // IV（16字节）
+        const iv = data.slice(9, 25);
+        
+        // 密文
+        const ciphertext = data.slice(25, -32);
+        
+        // HMAC（32字节）
+        // const hmac = data.slice(-32);
+        
         // 导入密钥
         const key = await window.crypto.subtle.importKey(
-            "raw",
+            'raw',
             paddedKey,
-            { name: "AES-CBC", length: 256 },
+            { name: 'AES-CBC' },
             false,
-            ["decrypt"]
+            ['decrypt']
         );
         
-        // 解密数据
-        const iv = new Uint8Array(16); // 使用全零IV，与Python端保持一致
+        // 解密
         const decrypted = await window.crypto.subtle.decrypt(
             {
-                name: "AES-CBC",
+                name: 'AES-CBC',
                 iv: iv
             },
             key,
-            encryptedData
+            ciphertext
         );
 
         // 检测文件类型并显示
