@@ -104,9 +104,34 @@ async function decryptFile() {
             `);
         } else {
             // 尝试作为文本显示
-            const decoder = new TextDecoder();
-            const text = decoder.decode(unpaddedData);
-            showContent(`<pre>${text}</pre>`);
+            try {
+                const decoder = new TextDecoder('utf-8');
+                const text = decoder.decode(unpaddedData);
+                showContent(`
+                    <div style="padding: 20px; background: white; border: 1px solid #ddd;">
+                        <pre style="white-space: pre-wrap; word-wrap: break-word;">${text}</pre>
+                    </div>
+                `);
+            } catch (e) {
+                // 如果解码失败，提供下载选项
+                const blob = new Blob([unpaddedData]);
+                const url = URL.createObjectURL(blob);
+                showContent(`
+                    <div style="text-align: center; padding: 20px;">
+                        <p>无法直接显示此文件类型</p>
+                        <a href="${url}" download="decrypted_file" 
+                           class="download-btn" 
+                           style="display: inline-block; 
+                                  padding: 10px 20px; 
+                                  background: #4CAF50; 
+                                  color: white; 
+                                  text-decoration: none; 
+                                  border-radius: 4px;">
+                            下载文件
+                        </a>
+                    </div>
+                `);
+            }
         }
 
         // 隐藏密码输入框
@@ -125,8 +150,15 @@ function showContent(html) {
 }
 
 function closeContent() {
+    const content = document.getElementById('content-body');
+    // 找到所有的 blob URL 并释放
+    const blobUrls = content.querySelectorAll('iframe[src^="blob:"], a[href^="blob:"]');
+    blobUrls.forEach(element => {
+        URL.revokeObjectURL(element.src || element.href);
+    });
+    
     document.getElementById('content').style.display = 'none';
-    document.getElementById('content-body').innerHTML = '';
+    content.innerHTML = '';
 }
 
 function cancelDecrypt() {
