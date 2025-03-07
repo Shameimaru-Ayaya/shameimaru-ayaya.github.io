@@ -1,32 +1,35 @@
-from cryptography.fernet import Fernet
-import base64
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
 import os
 
-def generate_key(password):
-    """从密码生成Fernet密钥"""
-    # 确保密钥长度为32字节
-    password_bytes = password.encode('utf-8')
-    key = password_bytes[:32].ljust(32, b'\0')
-    # 转换为Fernet可用的base64格式
-    return base64.urlsafe_b64encode(key)
-
 def encrypt_file(input_path, output_path, password):
-    # 生成密钥
-    key = generate_key(password)
-    f = Fernet(key)
+    """使用简单的AES-CBC加密文件"""
+    # 准备32字节的密钥
+    key = password.encode('utf-8')[:32].ljust(32, b'\0')
+    # 生成16字节的IV
+    iv = b'\0' * 16  # 使用固定的全零IV以简化实现
     
-    # 读取并加密文件
-    with open(input_path, 'rb') as file:
-        file_data = file.read()
+    # 创建加密器
+    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    encryptor = cipher.encryptor()
     
-    encrypted_data = f.encrypt(file_data)
+    # 读取文件
+    with open(input_path, 'rb') as f:
+        data = f.read()
+    
+    # 添加PKCS7填充
+    padding_length = 16 - (len(data) % 16)
+    data += bytes([padding_length] * padding_length)
+    
+    # 加密数据
+    encrypted_data = encryptor.update(data) + encryptor.finalize()
     
     # 确保输出目录存在
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     # 保存加密文件
-    with open(output_path, 'wb') as file:
-        file.write(encrypted_data)
+    with open(output_path, 'wb') as f:
+        f.write(encrypted_data)
 
 if __name__ == "__main__":
     # 使用固定密钥
