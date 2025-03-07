@@ -27,7 +27,7 @@ def decrypt_file(input_path, output_path, password):
         file.write(decrypted_data)
 
 if __name__ == "__main__":
-    PASSWORD = "あなた、ご自分の事ばかりですのね"
+    PASSWORD = "password"
     
     if len(sys.argv) != 3:
         print("使用方法: python decrypt_tool.py <加密文件路径> <输出文件路径>")
