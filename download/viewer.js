@@ -68,7 +68,7 @@ async function decryptFile() {
         // 导入密钥
         const key = await window.crypto.subtle.importKey(
             'raw',
-            paddedKey,
+            paddedKey.buffer,
             { name: 'AES-CBC', length: 256 },
             false,
             ['decrypt']
