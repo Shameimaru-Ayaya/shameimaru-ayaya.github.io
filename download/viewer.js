@@ -56,99 +56,53 @@ async function decryptFile() {
         const response = await fetch(currentFilePath);
         const encryptedData = await response.arrayBuffer();
         
-        // 使用 Fernet 加密方案
+        // 准备密钥
         const encoder = new TextEncoder();
         const keyBytes = encoder.encode(password).slice(0, 32);
         const paddedKey = new Uint8Array(32);
         paddedKey.set(keyBytes);  // 自动补0到32字节
         
-        // 转换为 base64url 格式的密钥
-        const key = btoa(String.fromCharCode.apply(null, paddedKey))
-            .replace(/\+/g, '-')
-            .replace(/\//g, '_')
-            .replace(/=+$/, '');
+        // 导入密钥
+        const key = await window.crypto.subtle.importKey(
+            "raw",
+            paddedKey,
+            { name: "AES-CBC", length: 256 },
+            false,
+            ["decrypt"]
+        );
         
         // 解密数据
-        try {
-            const decrypted = await fernetDecrypt(new Uint8Array(encryptedData), key);
-            
-            // 检测文件类型并显示
-            if (decrypted.slice(0, 4).every((b, i) => b === [0x25, 0x50, 0x44, 0x46][i])) {
-                // 是 PDF 文件
-                const blob = new Blob([decrypted], { type: 'application/pdf' });
-                const url = URL.createObjectURL(blob);
-                showContent(`<embed src="${url}" width="100%" height="600px" type="application/pdf">`);
-            } else {
-                // 尝试作为文本显示
-                const decoder = new TextDecoder();
-                const text = decoder.decode(decrypted);
-                showContent(`<pre>${text}</pre>`);
-            }
+        const iv = new Uint8Array(16); // 使用全零IV，与Python端保持一致
+        const decrypted = await window.crypto.subtle.decrypt(
+            {
+                name: "AES-CBC",
+                iv: iv
+            },
+            key,
+            encryptedData
+        );
 
-            // 隐藏密码输入框
-            document.getElementById('password-form').style.display = 'none';
-            document.getElementById('error-message').style.display = 'none';
-        } catch (e) {
-            throw new Error('解密失败，请检查密码是否正确');
+        // 检测文件类型并显示
+        const decryptedArray = new Uint8Array(decrypted);
+        if (decryptedArray.slice(0, 4).every((b, i) => b === [0x25, 0x50, 0x44, 0x46][i])) {
+            // 是 PDF 文件
+            const blob = new Blob([decrypted], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            showContent(`<embed src="${url}" width="100%" height="600px" type="application/pdf">`);
+        } else {
+            // 尝试作为文本显示
+            const decoder = new TextDecoder();
+            const text = decoder.decode(decrypted);
+            showContent(`<pre>${text}</pre>`);
         }
+
+        // 隐藏密码输入框
+        document.getElementById('password-form').style.display = 'none';
+        document.getElementById('error-message').style.display = 'none';
     } catch (error) {
         console.error('解密失败:', error);
-        showError(error.message || '解密失败');
+        showError('密码错误或文件损坏');
     }
-}
-
-// Fernet 解密实现
-async function fernetDecrypt(data, key) {
-    // 版本检查（1字节）
-    if (data[0] !== 128) {
-        throw new Error('Invalid Fernet token');
-    }
-    
-    // 时间戳（8字节）
-    // const timestamp = new DataView(data.buffer, 1, 8).getBigUint64(0);
-    
-    // IV（16字节）
-    const iv = data.slice(9, 25);
-    
-    // 密文
-    const ciphertext = data.slice(25, -32);
-    
-    // HMAC（32字节）
-    // const hmac = data.slice(-32);
-    
-    // 导入密钥
-    const cryptoKey = await window.crypto.subtle.importKey(
-        'raw',
-        base64urlToUint8Array(key),
-        { name: 'AES-CBC' },
-        false,
-        ['decrypt']
-    );
-    
-    // 解密
-    const decrypted = await window.crypto.subtle.decrypt(
-        {
-            name: 'AES-CBC',
-            iv: iv
-        },
-        cryptoKey,
-        ciphertext
-    );
-    
-    return new Uint8Array(decrypted);
-}
-
-// Base64URL 解码
-function base64urlToUint8Array(base64url) {
-    const base64 = base64url.replace(/-/g, '+').replace(/_/g, '/');
-    const padding = '='.repeat((4 - base64.length % 4) % 4);
-    const base64WithPadding = base64 + padding;
-    const binary = atob(base64WithPadding);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-        bytes[i] = binary.charCodeAt(i);
-    }
-    return bytes;
 }
 
 function showContent(html) {
