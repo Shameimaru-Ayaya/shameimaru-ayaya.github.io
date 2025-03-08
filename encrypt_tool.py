@@ -80,7 +80,7 @@ def encrypt_file(input_path, output_path, password):
 
 if __name__ == "__main__":
     # 使用固定密钥
-    PASSWORD = "password"
+    PASSWORD = "あなた、ご自分の事ばかりですのね"
     
     # 创建一个测试文本文件
     test_content = "测试"
