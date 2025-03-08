@@ -22,9 +22,21 @@ def encrypt_file(input_path, output_path, password):
     # 读取文件内容
     with open(input_path, 'rb') as f:
         file_data = f.read()
+    if input_path.endswith('.txt'):
+        # 确保文本内容被正确处理为二进制
+        file_data = file_data.decode('utf-8').encode('utf-8')
+    
+    # 在构建数据包之前添加调试信息
+    print(f"[调试] 文件名长度: {len(filename_bytes)} 字节")
+    print(f"[调试] 文件名: {original_filename}")
+    print(f"[调试] 文件内容长度: {len(file_data)} 字节")
     
     # 构建完整数据包：文件名长度 + 文件名 + 文件内容
     full_data = filename_len + filename_bytes + file_data
+    
+    print(f"[调试] 完整数据包长度: {len(full_data)} 字节")
+    print(f"[调试] 文件名长度字节: {filename_len.hex()}")
+    print(f"[调试] 数据包前32字节: {full_data[:32].hex()}")
     
     # 使用PKCS7填充（确保16字节对齐）
     padder = padding.PKCS7(128).padder()
@@ -71,7 +83,7 @@ if __name__ == "__main__":
     PASSWORD = "password"
     
     # 创建一个测试文本文件
-    test_content = "这是一个测试文件。如果你能看到这段文字，说明解密成功了！"
+    test_content = "测试"
     with open("test.txt", "w", encoding='utf-8') as f:
         f.write(test_content)
     

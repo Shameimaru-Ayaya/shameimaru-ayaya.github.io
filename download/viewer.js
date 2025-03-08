@@ -106,23 +106,35 @@ async function decryptFile() {
 
         // 先处理整个数据块的PKCS7填充
         const paddingLength = decryptedArray[decryptedArray.length - 1];
+         // 验证填充有效性
+         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
+            throw new Error("无效填充");
+        }
         decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
 
+        // 解析文件名长度前添加调试信息
+        console.log("[调试] 解密后数据总长度:", decryptedArray.length);
+        console.log("[调试] 前32字节:", Array.from(decryptedArray.slice(0, 32)).map(b => b.toString(16).padStart(2, '0')).join(''));
+        
         // 解析文件名长度（前2字节）
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
-
-        // 验证文件名长度有效性（新增完整校验）
-        if (
-            filenameLen < 0 || 
-            filenameLen > (decryptedArray.length - 2) || 
-            filenameLen > 65535  // 最大支持65535字节文件名
-        ) {
-            throw new Error("文件名长度无效");
+        console.log("[调试] 解析的文件名长度:", filenameLen);
+        
+        // 提取文件名时添加更多验证
+        if (filenameLen <= 0) {
+            throw new Error(`无效的文件名长度: ${filenameLen}`);
         }
-
-        // 提取文件名（UTF-8解码）
+        
+        // 提取并验证文件名
         const filenameBytes = decryptedArray.slice(2, 2 + filenameLen);
-        const originalFileName = new TextDecoder().decode(filenameBytes);
+        console.log("[调试] 文件名字节:", Array.from(filenameBytes).map(b => b.toString(16).padStart(2, '0')).join(''));
+        
+        try {
+            const originalFileName = new TextDecoder().decode(filenameBytes);
+            console.log("[调试] 解析的文件名:", originalFileName);
+        } catch (e) {
+            throw new Error(`文件名解码失败: ${e.message}`);
+        }
         
         // 提取文件内容（剩余部分）
         const fileData = decryptedArray.slice(2 + filenameLen);
@@ -145,9 +157,8 @@ async function decryptFile() {
         document.getElementById('password-form').style.display = 'none';
         document.getElementById('error-message').style.display = 'none';
     } catch (error) {
-        console.error('解密失败:', error);
-        showError(error.message.includes("填充") ? "文件格式错误" : "密码错误或文件损坏");
-        showError(error.message.includes("哈希") ? `文件被篡改: ${error.message}` : error.message);
+        console.error('[详细错误]', error);
+        showError(`解密错误: ${error.message}`);
     }
 }
 
