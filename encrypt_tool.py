@@ -1,6 +1,7 @@
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.backends import default_backend
+from hashlib import sha256
 import os
 
 def encrypt_file(input_path, output_path, password):
@@ -49,6 +50,21 @@ def encrypt_file(input_path, output_path, password):
     print(f"[调试] 填充字节: {padded_data[-16:]}")
     print(f"[调试] 填充前最后16字节: {full_data[-16:].hex()}")
     print(f"[调试] 填充后最后16字节: {padded_data[-16:].hex()}")
+
+    # ===== 新增：计算加密后文件哈希 =====
+    encrypted_hash = sha256(encrypted_data).hexdigest()
+    
+    # 存储哈希值到独立文件
+    hash_dir = os.path.join(os.path.dirname(output_path), "hash")
+    os.makedirs(hash_dir, exist_ok=True)
+    hash_filename = os.path.basename(output_path) + ".hash"
+    hash_path = os.path.join(hash_dir, hash_filename)
+    
+    with open(hash_path, 'w') as f:
+        f.write(f"SHA256|{encrypted_hash}")
+
+    # 调试输出
+    print(f"[哈希] 加密文件哈希: {encrypted_hash}")
 
 if __name__ == "__main__":
     # 使用固定密钥

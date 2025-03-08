@@ -1,0 +1,2 @@
+# .gitattributes
+static/resources/*.bin binary

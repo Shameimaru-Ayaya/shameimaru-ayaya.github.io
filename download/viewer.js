@@ -46,16 +46,34 @@ function openFile(fileItem) {
 
 async function decryptFile() {
     try {
+        // 获取加密文件
+        const response = await fetch(currentFilePath);
+        const encryptedData = await response.arrayBuffer();
+
+        // ===== 新增：哈希验证阶段 =====
+        // 获取存储的哈希值
+        const hashPath = currentFilePath.replace('/resources/', '/resources/hash/') + '.hash';
+        const hashResponse = await fetch(hashPath);
+        if (!hashResponse.ok) throw new Error("哈希文件缺失");
+        
+        const storedHash = await hashResponse.text();
+        const [algo, expectedHash] = storedHash.split('|');
+        
+        // 计算实际哈希
+        const hashBuffer = await crypto.subtle.digest('SHA-256', encryptedData);
+        const actualHash = Array.from(new Uint8Array(hashBuffer))
+            .map(b => b.toString(16).padStart(2, '0')).join('');
+
+        if (actualHash !== expectedHash.toLowerCase()) {
+            throw new Error(`文件校验失败\n存储哈希: ${expectedHash}\n实际哈希: ${actualHash}`);
+        }
+
         const password = document.getElementById('password').value;
         if (!password) {
             showError('请输入密码');
             return;
         }
 
-        // 获取加密文件
-        const response = await fetch(currentFilePath);
-        const encryptedData = await response.arrayBuffer();
-        
         // 准备32字节密钥
         const encoder = new TextEncoder();
         const keyBytes = encoder.encode(password).slice(0, 32);
@@ -134,6 +152,7 @@ async function decryptFile() {
     } catch (error) {
         console.error('解密失败:', error);
         showError(error.message.includes("填充") ? "文件格式错误" : "密码错误或文件损坏");
+        showError(error.message.includes("哈希") ? `文件被篡改: ${error.message}` : error.message);
     }
 }
 
