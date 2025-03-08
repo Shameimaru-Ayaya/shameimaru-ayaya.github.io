@@ -56,14 +56,6 @@ async function decryptFile() {
         const response = await fetch(currentFilePath);
         const encryptedData = await response.arrayBuffer();
         
-        // 首先提取文件扩展名（前16字节）
-        const extBytes = new Uint8Array(encryptedData.slice(0, 16));
-        const decoder = new TextDecoder();
-        const ext = decoder.decode(extBytes).trim().replace(/\0/g, '');
-        
-        // 获取实际的加密数据
-        const actualEncryptedData = encryptedData.slice(16);
-        
         // 准备32字节密钥
         const encoder = new TextEncoder();
         const keyBytes = encoder.encode(password).slice(0, 32);
@@ -89,29 +81,34 @@ async function decryptFile() {
                 iv: iv
             },
             key,
-            actualEncryptedData
+            encryptedData
         );
 
-        // 移除PKCS7填充
+        // 解析解密后的数据
         const decryptedArray = new Uint8Array(decrypted);
-        const paddingLength = decryptedArray[decryptedArray.length - 1];
-        const unpaddedData = decryptedArray.slice(0, -paddingLength);
+        
+        // 读取文件名长度（前2字节）
+        const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
+        
+        // 提取文件名
+        const filenameBytes = decryptedArray.slice(2, 2 + filenameLen);
+        const originalFileName = new TextDecoder().decode(filenameBytes);
+        
+        // 提取文件内容
+        const contentData = decryptedArray.slice(2 + filenameLen);
+        
+        // 移除PKCS7填充
+        const paddingLength = contentData[contentData.length - 1];
+        const unpaddedData = contentData.slice(0, -paddingLength);
         
         // 创建blob并设置正确的文件名
         const blob = new Blob([unpaddedData]);
         const url = URL.createObjectURL(blob);
         
-        // 从文件路径中提取基本文件名
-        const baseName = currentFilePath.split('/').pop().replace('.bin', '');
-        
-        // 确保扩展名是有效的（以点开头）
-        const fileExt = ext.startsWith('.') ? ext : `.${ext}`;
-        const fileName = baseName + fileExt;
-        
         showContent(`
             <div style="text-align: center; padding: 20px;">
                 <p>文件已解密</p>
-                <a href="${url}" download="${fileName}" 
+                <a href="${url}" download="${originalFileName}" 
                    class="download-btn" 
                    style="display: inline-block; 
                           padding: 10px 20px; 
@@ -119,7 +116,7 @@ async function decryptFile() {
                           color: white; 
                           text-decoration: none; 
                           border-radius: 4px;">
-                    下载文件
+                    下载文件 (${originalFileName})
                 </a>
             </div>
         `);
