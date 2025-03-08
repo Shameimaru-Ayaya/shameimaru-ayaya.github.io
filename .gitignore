@@ -1,0 +1,7 @@
+download/download.html
+about-us/about-us.html
+encrypt-tool.py
+
+.DS_Store
+Thumbs.db
+.vscode/

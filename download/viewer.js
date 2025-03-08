@@ -46,9 +46,39 @@ function openFile(fileItem) {
 
 async function decryptFile() {
     try {
+        // 网站特定的盐值（需要与Python端保持一致）
+        const SITE_SALT = new TextEncoder().encode("Yk9x#mP2$L8n&vR4@jW7");
+        
+        // 获取用户输入的密码
+        const password = document.getElementById('password').value;
+        if (!password) {
+            showError('请输入密码');
+            return;
+        }
+
+        // 组合密码和网站盐值
+        const passwordBytes = new TextEncoder().encode(password);
+        const combined = new Uint8Array([...passwordBytes, ...SITE_SALT]);
+        
+        // 使用SHA-256生成最终密钥
+        const keyMaterial = await crypto.subtle.digest('SHA-256', combined);
+        const key = await window.crypto.subtle.importKey(
+            'raw',
+            keyMaterial.slice(0, 32), // 取前32字节作为AES密钥
+            { name: 'AES-CBC', length: 256 },
+            false,
+            ['decrypt']
+        );
+
         // 获取加密文件
         const response = await fetch(currentFilePath);
         const encryptedData = await response.arrayBuffer();
+
+        // 获取IV（公钥）
+        const ivPath = currentFilePath.replace('/resources/', '/resources/keys/') + '.iv';
+        const ivResponse = await fetch(ivPath);
+        if (!ivResponse.ok) throw new Error("IV文件缺失");
+        const iv = new Uint8Array(await ivResponse.arrayBuffer());
 
         // ===== 新增：哈希验证阶段 =====
         // 获取存储的哈希值
@@ -68,31 +98,7 @@ async function decryptFile() {
             throw new Error(`文件校验失败\n存储哈希: ${expectedHash}\n实际哈希: ${actualHash}`);
         }
 
-        const password = document.getElementById('password').value;
-        if (!password) {
-            showError('请输入密码');
-            return;
-        }
-
-        // 准备32字节密钥
-        const encoder = new TextEncoder();
-        const keyBytes = encoder.encode(password).slice(0, 32);
-        const paddedKey = new Uint8Array(32);
-        paddedKey.set(keyBytes);  // 自动补0到32字节
-        
-        // 准备16字节IV（全零）
-        const iv = new Uint8Array(16);
-        
-        // 导入密钥
-        const key = await window.crypto.subtle.importKey(
-            'raw',
-            paddedKey.buffer,
-            { name: 'AES-CBC', length: 256 },
-            false,
-            ['decrypt']
-        );
-        
-        // 解密
+        // 使用获取的IV进行解密
         const decrypted = await window.crypto.subtle.decrypt(
             {
                 name: 'AES-CBC',
