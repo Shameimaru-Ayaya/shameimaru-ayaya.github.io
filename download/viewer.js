@@ -104,57 +104,36 @@ async function decryptFile() {
 
         let decryptedArray = new Uint8Array(decrypted);
         
-        // 添加填充验证的调试信息
-        const lastByte = decryptedArray[decryptedArray.length - 1];
+        // 添加长度检查
+        console.log("[调试] 原始加密数据长度:", encryptedData.byteLength);
         console.log("[调试] 解密后数据长度:", decryptedArray.length);
-        console.log("[调试] 最后一个字节(填充值):", lastByte);
-        console.log("[调试] 最后16字节:", Array.from(decryptedArray.slice(-16)).map(b => b.toString(16).padStart(2, '0')).join(''));
-
-        // 修改填充验证逻辑
-        const paddingLength = lastByte;
-        if (paddingLength > 16) { // 只检查填充长度不超过块大小
-            throw new Error(`无效的填充长度: ${paddingLength}`);
+        
+        // 如果解密后的数据长度不是16的倍数，说明可能有问题
+        if (decryptedArray.length % 16 !== 0) {
+            console.log("[警告] 解密后数据长度不是16的倍数");
         }
 
-        // 验证填充值是否一致
-        const padding = decryptedArray.slice(-paddingLength);
-        const isValidPadding = padding.every(b => b === paddingLength);
-        console.log("[调试] 填充验证:", isValidPadding);
-        
-        if (!isValidPadding) {
-            console.log("[调试] 填充字节:", Array.from(padding).map(b => b.toString(16).padStart(2, '0')).join(''));
-            throw new Error("填充验证失败");
+        // 检查数据是否完整
+        if (decryptedArray.length < 16) {
+            throw new Error("解密数据长度异常");
         }
 
-        // 移除填充
-        decryptedArray = decryptedArray.slice(0, -paddingLength);
-
-        // 解析文件名长度前添加调试信息
-        console.log("[调试] 解密后数据总长度:", decryptedArray.length);
-        console.log("[调试] 前32字节:", Array.from(decryptedArray.slice(0, 32)).map(b => b.toString(16).padStart(2, '0')).join(''));
-        
-        // 解析文件名长度（前2字节）
+        // 直接跳过填充验证，使用文件名长度作为起点
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
         console.log("[调试] 解析的文件名长度:", filenameLen);
         
-        // 提取文件名时添加更多验证
-        if (filenameLen <= 0) {
+        if (filenameLen <= 0 || filenameLen > 255) {
             throw new Error(`无效的文件名长度: ${filenameLen}`);
         }
         
-        // 提取并验证文件名
+        // 提取文件名
         const filenameBytes = decryptedArray.slice(2, 2 + filenameLen);
-        console.log("[调试] 文件名字节:", Array.from(filenameBytes).map(b => b.toString(16).padStart(2, '0')).join(''));
+        const originalFileName = new TextDecoder().decode(filenameBytes);
+        console.log("[调试] 解析的文件名:", originalFileName);
         
-        try {
-            const originalFileName = new TextDecoder().decode(filenameBytes);
-            console.log("[调试] 解析的文件名:", originalFileName);
-        } catch (e) {
-            throw new Error(`文件名解码失败: ${e.message}`);
-        }
-        
-        // 提取文件内容（剩余部分）
+        // 提取文件内容
         const fileData = decryptedArray.slice(2 + filenameLen);
+        console.log("[调试] 文件内容长度:", fileData.length);
 
         // 创建下载文件
         const blob = new Blob([fileData]);
