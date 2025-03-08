@@ -84,8 +84,7 @@ async function decryptFile() {
             encryptedData
         );
 
-        // 解密后增强填充校验
-        const decryptedArray = new Uint8Array(decrypted);
+        let decryptedArray = new Uint8Array(decrypted);
 
         // 先处理整个数据块的PKCS7填充
         const paddingLength = decryptedArray[decryptedArray.length - 1];
