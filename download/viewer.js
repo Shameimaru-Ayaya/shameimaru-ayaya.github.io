@@ -85,24 +85,34 @@ async function decryptFile() {
         );
 
         // 解析解密后的数据
-        const decryptedArray = new Uint8Array(decrypted);
+        let decryptedArray = new Uint8Array(decrypted);
+        
+        // 先处理整个数据块的PKCS7填充
+        const paddingLength = decryptedArray[decryptedArray.length - 1];
+        decryptedArray = decryptedArray.slice(0, -paddingLength);
+        
+        // 验证最小数据长度
+        if (decryptedArray.length < 2) {
+            throw new Error("数据损坏");
+        }
         
         // 读取文件名长度（前2字节）
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
+        
+        // 验证文件名长度有效性
+        if (2 + filenameLen > decryptedArray.length) {
+            throw new Error("文件名长度超过数据范围");
+        }
         
         // 提取文件名
         const filenameBytes = decryptedArray.slice(2, 2 + filenameLen);
         const originalFileName = new TextDecoder().decode(filenameBytes);
         
-        // 提取文件内容
-        const contentData = decryptedArray.slice(2 + filenameLen);
-        
-        // 移除PKCS7填充
-        const paddingLength = contentData[contentData.length - 1];
-        const unpaddedData = contentData.slice(0, -paddingLength);
+        // 提取文件内容（剩余部分）
+        const fileData = decryptedArray.slice(2 + filenameLen);
         
         // 创建blob并设置正确的文件名
-        const blob = new Blob([unpaddedData]);
+        const blob = new Blob([fileData]);
         const url = URL.createObjectURL(blob);
         
         showContent(`
@@ -126,7 +136,7 @@ async function decryptFile() {
         document.getElementById('error-message').style.display = 'none';
     } catch (error) {
         console.error('解密失败:', error);
-        showError('密码错误或文件损坏');
+        showError(error.message || '密码错误或文件损坏');
     }
 }
 
