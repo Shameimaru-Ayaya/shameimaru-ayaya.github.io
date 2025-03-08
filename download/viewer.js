@@ -84,38 +84,37 @@ async function decryptFile() {
             encryptedData
         );
 
-        // 解析解密后的数据
         let decryptedArray = new Uint8Array(decrypted);
-        
-        // 验证并移除PKCS7填充
+
+        // 先处理整个数据块的PKCS7填充
         const paddingLength = decryptedArray[decryptedArray.length - 1];
-        // 验证填充有效性
-        if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
+         // 验证填充有效性
+         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
             throw new Error("无效填充");
         }
         decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
-        
-        // 验证最小数据长度
-        if (decryptedArray.length < 2) {
-            throw new Error("数据损坏");
-        }
-        
-        // 读取文件名长度（前2字节）
+
+        // 解析文件名长度（前2字节）
+        if (decryptedArray.length < 2) throw new Error("数据损坏");
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
-        
-        // 验证文件名长度有效性
-        if (filenameLen < 0 || filenameLen > decryptedArray.length - 2) {
+
+        // 验证文件名长度有效性（新增完整校验）
+        if (
+            filenameLen < 0 || 
+            filenameLen > (decryptedArray.length - 2) || 
+            filenameLen > 65535  // 最大支持65535字节文件名
+        ) {
             throw new Error("文件名长度无效");
         }
-        
-        // 提取文件名
+
+        // 提取文件名（UTF-8解码）
         const filenameBytes = decryptedArray.slice(2, 2 + filenameLen);
         const originalFileName = new TextDecoder().decode(filenameBytes);
         
         // 提取文件内容（剩余部分）
         const fileData = decryptedArray.slice(2 + filenameLen);
-        
-        // 创建blob并设置正确的文件名
+
+        // 创建下载文件
         const blob = new Blob([fileData]);
         const url = URL.createObjectURL(blob);
         
@@ -123,13 +122,7 @@ async function decryptFile() {
             <div style="text-align: center; padding: 20px;">
                 <p>文件已解密</p>
                 <a href="${url}" download="${originalFileName}" 
-                   class="download-btn" 
-                   style="display: inline-block; 
-                          padding: 10px 20px; 
-                          background: #4CAF50; 
-                          color: white; 
-                          text-decoration: none; 
-                          border-radius: 4px;">
+                   class="download-btn">
                     下载文件 (${originalFileName})
                 </a>
             </div>
@@ -140,7 +133,7 @@ async function decryptFile() {
         document.getElementById('error-message').style.display = 'none';
     } catch (error) {
         console.error('解密失败:', error);
-        showError(error.message || '密码错误或文件损坏');
+        showError(error.message.includes("填充") ? "文件格式错误" : "密码错误或文件损坏");
     }
 }
 

@@ -1,5 +1,4 @@
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.backends import default_backend
 import os
 
@@ -25,9 +24,10 @@ def encrypt_file(input_path, output_path, password):
     # 构建完整数据包：文件名长度 + 文件名 + 文件内容
     full_data = filename_len + filename_bytes + file_data
     
-    # 使用PKCS7填充（确保16字节对齐）
-    padder = padding.PKCS7(128).padder()
-    padded_data = padder.update(full_data) + padder.finalize()
+    # 添加PKCS7填充（手动实现）
+    block_size = 16
+    padding_length = block_size - (len(full_data) % block_size)
+    padded_data = full_data + bytes([padding_length] * padding_length)
     
     # 创建加密器
     cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
