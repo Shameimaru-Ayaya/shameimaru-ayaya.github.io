@@ -1,38 +1,37 @@
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
 import os
 
 def encrypt_file(input_path, output_path, password):
-    """使用简单的AES-CBC加密文件"""
-    # 准备32字节的密钥
+    """使用AES-CBC加密文件，并在加密数据中嵌入原始文件名"""
+    # 使用固定密钥
     key = password.encode('utf-8')[:32].ljust(32, b'\0')
-    # 生成16字节的IV
-    iv = b'\0' * 16  # 使用固定的全零IV以简化实现
+    iv = b'\0' * 16  # 使用固定的全零IV
     
-    # 创建加密器
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
-    encryptor = cipher.encryptor()
-    
-    # 获取原始文件名（含后缀）
+    # 获取原始文件名
     original_filename = os.path.basename(input_path)
     filename_bytes = original_filename.encode('utf-8')
     
-    # 用2个字节存储文件名长度（大端序）
+    # 用2个字节存储文件名长度
     filename_len = len(filename_bytes).to_bytes(2, 'big')
     
     # 读取文件内容
     with open(input_path, 'rb') as f:
         file_data = f.read()
     
-    # 构造完整数据包
+    # 构建完整数据包：文件名长度 + 文件名 + 文件内容
     full_data = filename_len + filename_bytes + file_data
     
-    # 添加PKCS7填充（整个数据包统一填充）
+    # 使用PKCS7填充（确保16字节对齐）
     padder = padding.PKCS7(128).padder()
     padded_data = padder.update(full_data) + padder.finalize()
     
-    # 加密并写入文件
+    # 创建加密器
+    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    encryptor = cipher.encryptor()
+    
+    # 加密数据
     encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
     
     # 确保输出目录存在
@@ -52,12 +51,9 @@ if __name__ == "__main__":
         f.write(test_content)
     
     # 加密测试文件
-    encrypt_file("test.txt", "./static/resources/test_encrypted.bin", PASSWORD)
+    encrypt_file("test.txt", "./static/resources/encrypted_001.bin", PASSWORD)
     print("测试文件加密完成")
     
-    # 加密其他文件
-    input_file = "../../pdf.pdf"  # 你要加密的文件
-    output_file = "./static/resources/encrypted_file_001.bin"  # 加密后的文件位置
-    
-    encrypt_file(input_file, output_file, PASSWORD)
-    print("文件加密完成")
+    # 加密PDF文件
+    encrypt_file("../../pdf.pdf", "./static/resources/encrypted_002.bin", PASSWORD)
+    print("PDF文件加密完成")
