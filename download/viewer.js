@@ -106,10 +106,6 @@ async function decryptFile() {
 
         // 先处理整个数据块的PKCS7填充
         const paddingLength = decryptedArray[decryptedArray.length - 1];
-         // 验证填充有效性
-         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
-            throw new Error("无效填充");
-        }
         decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
 
         // 解析文件名长度（前2字节）
