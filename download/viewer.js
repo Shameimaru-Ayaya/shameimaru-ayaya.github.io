@@ -84,13 +84,12 @@ async function decryptFile() {
             encryptedData
         );
 
-        const decryptedArray = new Uint8Array(decrypted);
+        let decryptedArray = new Uint8Array(decrypted);
 
         // 先处理整个数据块的PKCS7填充
         const paddingLength = decryptedArray[decryptedArray.length - 1];
          // 验证填充有效性
-         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength||
-            !validatePKCS7Padding(decryptedArray, paddingLength)) {
+         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
             throw new Error("无效填充");
         }
         decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
@@ -136,17 +135,6 @@ async function decryptFile() {
         console.error('解密失败:', error);
         showError(error.message.includes("填充") ? "文件格式错误" : "密码错误或文件损坏");
     }
-}
-
-// 新增填充验证函数
-function validatePKCS7Padding(dataArray, paddingLength) {
-    const paddingStart = dataArray.length - paddingLength;
-    for (let i = paddingStart; i < dataArray.length; i++) {
-        if (dataArray[i] !== paddingLength) {
-            return false;
-        }
-    }
-    return true;
 }
 
 function showContent(html) {

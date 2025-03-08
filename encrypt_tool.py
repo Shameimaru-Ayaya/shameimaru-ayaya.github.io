@@ -47,6 +47,8 @@ def encrypt_file(input_path, output_path, password):
     print(f"[调试] 原始数据长度: {len(full_data)}")
     print(f"[调试] 填充后长度: {len(padded_data)}")
     print(f"[调试] 填充字节: {padded_data[-16:]}")
+    print(f"[调试] 填充前最后16字节: {full_data[-16:].hex()}")
+    print(f"[调试] 填充后最后16字节: {padded_data[-16:].hex()}")
 
 if __name__ == "__main__":
     # 使用固定密钥
