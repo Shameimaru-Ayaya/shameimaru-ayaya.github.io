@@ -108,22 +108,23 @@ async function decryptFile() {
         console.log("[调试] 原始加密数据长度:", encryptedData.byteLength);
         console.log("[调试] 解密后数据长度:", decryptedArray.length);
         
-        // 如果解密后的数据长度不是16的倍数，说明可能有问题
-        if (decryptedArray.length % 16 !== 0) {
-            console.log("[警告] 解密后数据长度不是16的倍数");
-        }
-
         // 检查数据是否完整
-        if (decryptedArray.length < 16) {
+        if (decryptedArray.length < 3) { // 至少需要2字节的文件名长度字段和1字节的文件名
             throw new Error("解密数据长度异常");
         }
 
-        // 直接跳过填充验证，使用文件名长度作为起点
+        // 解析文件名长度
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
         console.log("[调试] 解析的文件名长度:", filenameLen);
         
+        // 验证文件名长度
         if (filenameLen <= 0 || filenameLen > 255) {
             throw new Error(`无效的文件名长度: ${filenameLen}`);
+        }
+        
+        // 验证总数据长度
+        if (decryptedArray.length < 2 + filenameLen) {
+            throw new Error("数据长度不足以包含完整文件名");
         }
         
         // 提取文件名
