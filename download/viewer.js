@@ -56,6 +56,14 @@ async function decryptFile() {
         const response = await fetch(currentFilePath);
         const encryptedData = await response.arrayBuffer();
         
+        // 首先提取文件扩展名（前16字节）
+        const extBytes = new Uint8Array(encryptedData.slice(0, 16));
+        const decoder = new TextDecoder();
+        const ext = decoder.decode(extBytes).trim().replace(/\0/g, '');
+        
+        // 获取实际的加密数据
+        const actualEncryptedData = encryptedData.slice(16);
+        
         // 准备32字节密钥
         const encoder = new TextEncoder();
         const keyBytes = encoder.encode(password).slice(0, 32);
@@ -81,7 +89,7 @@ async function decryptFile() {
                 iv: iv
             },
             key,
-            encryptedData
+            actualEncryptedData
         );
 
         // 移除PKCS7填充
@@ -89,12 +97,13 @@ async function decryptFile() {
         const paddingLength = decryptedArray[decryptedArray.length - 1];
         const unpaddedData = decryptedArray.slice(0, -paddingLength);
         
-        // 创建下载链接
+        // 创建blob并设置正确的文件名
         const blob = new Blob([unpaddedData]);
         const url = URL.createObjectURL(blob);
         
-        // 从文件路径中提取文件名
-        const fileName = currentFilePath.split('/').pop().replace('_encrypted.bin', '');
+        // 从文件路径中提取基本文件名，并添加原始扩展名
+        const baseName = currentFilePath.split('/').pop().replace('.bin', '');
+        const fileName = baseName + ext;
         
         showContent(`
             <div style="text-align: center; padding: 20px;">
