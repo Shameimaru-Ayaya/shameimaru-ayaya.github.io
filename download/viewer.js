@@ -101,9 +101,12 @@ async function decryptFile() {
         const blob = new Blob([unpaddedData]);
         const url = URL.createObjectURL(blob);
         
-        // 从文件路径中提取基本文件名，并添加原始扩展名
+        // 从文件路径中提取基本文件名
         const baseName = currentFilePath.split('/').pop().replace('.bin', '');
-        const fileName = baseName + ext;
+        
+        // 确保扩展名是有效的（以点开头）
+        const fileExt = ext.startsWith('.') ? ext : `.${ext}`;
+        const fileName = baseName + fileExt;
         
         showContent(`
             <div style="text-align: center; padding: 20px;">
