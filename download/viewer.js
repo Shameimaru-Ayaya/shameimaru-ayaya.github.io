@@ -103,14 +103,31 @@ async function decryptFile() {
         );
 
         let decryptedArray = new Uint8Array(decrypted);
+        
+        // 添加填充验证的调试信息
+        const lastByte = decryptedArray[decryptedArray.length - 1];
+        console.log("[调试] 解密后数据长度:", decryptedArray.length);
+        console.log("[调试] 最后一个字节(填充值):", lastByte);
+        console.log("[调试] 最后16字节:", Array.from(decryptedArray.slice(-16)).map(b => b.toString(16).padStart(2, '0')).join(''));
 
-        // 先处理整个数据块的PKCS7填充
-        const paddingLength = decryptedArray[decryptedArray.length - 1];
-         // 验证填充有效性
-         if (paddingLength < 1 || paddingLength > 16 || decryptedArray.length < paddingLength) {
-            throw new Error("无效填充");
+        // 修改填充验证逻辑
+        const paddingLength = lastByte;
+        if (paddingLength > 16) { // 只检查填充长度不超过块大小
+            throw new Error(`无效的填充长度: ${paddingLength}`);
         }
-        decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
+
+        // 验证填充值是否一致
+        const padding = decryptedArray.slice(-paddingLength);
+        const isValidPadding = padding.every(b => b === paddingLength);
+        console.log("[调试] 填充验证:", isValidPadding);
+        
+        if (!isValidPadding) {
+            console.log("[调试] 填充字节:", Array.from(padding).map(b => b.toString(16).padStart(2, '0')).join(''));
+            throw new Error("填充验证失败");
+        }
+
+        // 移除填充
+        decryptedArray = decryptedArray.slice(0, -paddingLength);
 
         // 解析文件名长度前添加调试信息
         console.log("[调试] 解密后数据总长度:", decryptedArray.length);
@@ -158,6 +175,7 @@ async function decryptFile() {
         document.getElementById('error-message').style.display = 'none';
     } catch (error) {
         console.error('[详细错误]', error);
+        console.error('[调试] 错误堆栈:', error.stack);
         showError(`解密错误: ${error.message}`);
     }
 }
