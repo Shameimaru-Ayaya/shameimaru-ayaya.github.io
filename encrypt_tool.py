@@ -12,6 +12,8 @@ def encrypt_file(input_path, output_path, password):
     # 获取原始文件名
     original_filename = os.path.basename(input_path)
     filename_bytes = original_filename.encode('utf-8')
+    if len(filename_bytes) > 65535:
+        raise ValueError("文件名过长（最大支持65535字节）")
     
     # 用2个字节存储文件名长度
     filename_len = len(filename_bytes).to_bytes(2, 'big')
@@ -40,6 +42,11 @@ def encrypt_file(input_path, output_path, password):
     # 保存加密文件
     with open(output_path, 'wb') as f:
         f.write(encrypted_data)
+
+    # 验证填充结果（调试用）
+    print(f"[调试] 原始数据长度: {len(full_data)}")
+    print(f"[调试] 填充后长度: {len(padded_data)}")
+    print(f"[调试] 填充字节: {padded_data[-16:]}")
 
 if __name__ == "__main__":
     # 使用固定密钥
