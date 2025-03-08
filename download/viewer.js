@@ -109,7 +109,6 @@ async function decryptFile() {
         decryptedArray = decryptedArray.slice(0, -paddingLength); // 移除填充后的完整数据
 
         // 解析文件名长度（前2字节）
-        if (decryptedArray.length < 2) throw new Error("数据损坏");
         const filenameLen = (decryptedArray[0] << 8) + decryptedArray[1];
 
         // 验证文件名长度有效性（新增完整校验）
