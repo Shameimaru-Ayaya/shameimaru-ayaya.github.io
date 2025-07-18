@@ -5,3 +5,5 @@ encrypt-tool.py
 .DS_Store
 Thumbs.db
 .vscode/
+.DS_Store
+static/.DS_Store
