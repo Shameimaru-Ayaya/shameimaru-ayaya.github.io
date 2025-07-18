@@ -27,6 +27,7 @@ staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/d
 ```bash
 staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/about-us/about-us.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents
 ```
+注：如未能如期输出文件，则可将`--share`这一项删掉试试
 
 ### 1.3 模板`my_template.html`
 根据生成的文件希望所在位置，而不是`my_template.html`所在的位置，合理调整背景图像的相对路径  
