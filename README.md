@@ -23,7 +23,8 @@ my_template.html：模版文件
 #### 1.2.1 使用例
 ```bash
 staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/download.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents --share https://shameimaru-ayaya.github.io/download/index.html
-
+```
+```bash
 staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/about-us/about-us.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents
 ```
 
