@@ -101,6 +101,44 @@
     fill: var(--main_text_color);
 }
 
+/* 移动端导航栏样式 */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* 显示汉堡菜单图标 */
+    }
+    
+    .navbar-links {
+        display: none; /* 默认隐藏链接 */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(19, 20, 24, 0.9);
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+    
+    .navbar-links.active {
+        display: flex; /* 点击后显示链接 */
+    }
+    
+    .navbar-link {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar-link::after {
+        display: none; /* 移除下划线动画效果 */
+    }
+    
+    .navbar-container {
+        position: relative;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
