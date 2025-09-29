@@ -266,6 +266,45 @@ Improvement：GitHub@KirisameMarisa-DAZE & deepseek
 							</div>
 						</a>
 					</div><!-- 图标容器结束 -->
+				</header><!-- 头部结束 -->
+				<content>
+					<div id="aplayer-local"></div>
+					<script>
+					const ap = new APlayer({
+						container: document.getElementById('aplayer-local'),
+						autoplay: true,
+						volume: 0.01,
+						loop: 'all',
+						preload: 'auto',
+						theme: '#2a2a2a',
+						mutex: true,
+						lrcType: 1,
+						audio: [{
+						name: '風神少女　 (Short Version)(风神少女 (Short Version))',
+						artist: '上海アリス幻樂団',
+						url: './static/bgm/fuujinshoujo/fuujinshoujo.flac',
+						cover: './static/bgm/fuujinshoujo/fuujinshoujo.jpg',
+						lrc: '[00:00.00]作曲 : ZUN\n[00:05.00]纯音乐，请欣赏'
+						}]
+					});
+					document.addEventListener('click', function handleFirstInteraction() {
+						if (ap.audio.paused) {
+						ap.audio.paused = false;
+						ap.play();
+						}
+						document.removeEventListener('click', handleFirstInteraction);
+					});
+				<!--	document.addEventListener('click', function() {-->
+				<!--		if (ap.audio.paused) {-->
+				<!--			ap.audio.play().catch(() => {});-->
+				<!--		}-->
+				<!--		});-->
+					</script>
+					<meting-js server="netease" type="song" id="510200" fixed="true" autoplay="false"></meting-js>
+					<div class="left-div left-des" style="width:100%; margin:0;">
+						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/base.svg" alt="" style="max-width: 500px; display: block; margin: -1 auto;">
+						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/steam.full.svg" alt="" style="max-width: 500px; display: block; margin: -1 auto;">
+						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/youtube.music.svg" alt="" style="max-width: 500px; display: block; margin: -1 auto;">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 210" style="width:90%;height:auto;display:block;margin:0 auto" class="">
 						<style>
 							.anilist {
@@ -330,45 +369,6 @@ Improvement：GitHub@KirisameMarisa-DAZE & deepseek
 							</div>
 						</foreignObject>
 					</svg>
-				</header><!-- 头部结束 -->
-				<content>
-					<div id="aplayer-local"></div>
-					<script>
-					const ap = new APlayer({
-						container: document.getElementById('aplayer-local'),
-						autoplay: true,
-						volume: 0.01,
-						loop: 'all',
-						preload: 'auto',
-						theme: '#2a2a2a',
-						mutex: true,
-						lrcType: 1,
-						audio: [{
-						name: '風神少女　 (Short Version)(风神少女 (Short Version))',
-						artist: '上海アリス幻樂団',
-						url: './static/bgm/fuujinshoujo/fuujinshoujo.flac',
-						cover: './static/bgm/fuujinshoujo/fuujinshoujo.jpg',
-						lrc: '[00:00.00]作曲 : ZUN\n[00:05.00]纯音乐，请欣赏'
-						}]
-					});
-					document.addEventListener('click', function handleFirstInteraction() {
-						if (ap.audio.paused) {
-						ap.audio.paused = false;
-						ap.play();
-						}
-						document.removeEventListener('click', handleFirstInteraction);
-					});
-				<!--	document.addEventListener('click', function() {-->
-				<!--		if (ap.audio.paused) {-->
-				<!--			ap.audio.play().catch(() => {});-->
-				<!--		}-->
-				<!--		});-->
-					</script>
-					<meting-js server="netease" type="song" id="510200" fixed="true" autoplay="false"></meting-js>
-					<div class="left-div left-des" style="width:100%; margin:0;">
-						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/base.svg" alt="">
-						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/steam.full.svg" alt="">
-						<img id="GitHub" width="100%" src="https://raw.githubusercontent.com/Shameimaru-Ayaya/Shameimaru-Ayaya/refs/heads/main/github-metrics/youtube.music.svg" alt="">
 					</div>
 					<div class="title">
 						<svg t="1705257823317" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7833" >
