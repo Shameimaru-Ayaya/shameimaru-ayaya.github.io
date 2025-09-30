@@ -270,35 +270,35 @@ Improvement：GitHub@KirisameMarisa-DAZE & deepseek
 				<content>
 					<div id="aplayer-local"></div>
 					<script>
-					const ap = new APlayer({
-						container: document.getElementById('aplayer-local'),
-						autoplay: true,
-						volume: 0.01,
-						loop: 'all',
-						preload: 'auto',
-						theme: '#2a2a2a',
-						mutex: true,
-						lrcType: 1,
-						audio: [{
-						name: '天狗舞踏会',
-						artist: '上海アリス幻樂団',
-						url: './static/bgm/天狗舞踏会/天狗舞踏会.mp3',
-						cover: './static/bgm/天狗舞踏会/天狗舞踏会.jpg',
-						lrc: '[00:00.00]作曲 : ZUN\n[00:05.00]纯音乐，请欣赏'
-						}]
-					});
-					document.addEventListener('click', function handleFirstInteraction() {
-						if (ap.audio.paused) {
-						ap.audio.paused = false;
-						ap.play();
-						}
-						document.removeEventListener('click', handleFirstInteraction);
-					});
+						const ap = new APlayer({
+							container: document.getElementById('aplayer-local'),
+							autoplay: true,
+							volume: 0.01,
+							loop: 'all',
+							preload: 'auto',
+							theme: '#2a2a2a',
+							mutex: true,
+							lrcType: 1,
+							audio: [{
+							name: '天狗舞踏会',
+							artist: '上海アリス幻樂団',
+							url: './static/bgm/天狗舞踏会/天狗舞踏会.mp3',
+							cover: './static/bgm/天狗舞踏会/天狗舞踏会.jpg',
+							lrc: '[00:00.00]作曲 : ZUN\n[00:05.00]纯音乐，请欣赏'
+							}]
+						});
+						document.addEventListener('click', function handleFirstInteraction() {
+							if (ap.audio.paused) {
+							ap.audio.paused = false;
+							ap.play();
+							}
+							document.removeEventListener('click', handleFirstInteraction);
+						});
 				<!--	document.addEventListener('click', function() {-->
 				<!--		if (ap.audio.paused) {-->
 				<!--			ap.audio.play().catch(() => {});-->
 				<!--		}-->
-				<!--		});-->
+				<!--	});-->
 					</script>
 					<meting-js server="netease" type="song" id="510200" fixed="true" autoplay="false"></meting-js>
 					<div class="left-div left-des" style="width:100%; margin:0;">
@@ -342,7 +342,7 @@ Improvement：GitHub@KirisameMarisa-DAZE & deepseek
 									background-color: #eee;
 
 									/* 新增：设置图片填充方式为裁剪 */
-		object-fit: cover; 
+									object-fit: cover; 
 								}
 							</style>
 							<foreignObject x="0" y="0" width="100%" height="100%">

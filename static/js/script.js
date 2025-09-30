@@ -58,8 +58,6 @@ tc_main[0].addEventListener('click', function (event) {
     event.stopPropagation();
 });
 
-
-
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -85,50 +83,22 @@ function getCookie(name) {
     return null;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
-
-
-
-
-
 
     var html = document.querySelector('html');
     var themeState = getCookie("themeState") || "Light";
-    var tanChiShe = document.getElementById("tanChiShe");
-
-
-
-
-
-
+    
     const basePath = window.location.pathname.includes('/about-us/') ? '../' : './';
 
     function changeTheme(theme) {
-        tanChiShe.src = basePath + "static/svg/snake-" + theme + ".svg";
+        var tanChiShe = document.getElementById("tanChiShe");
+        if (tanChiShe) {
+            tanChiShe.src = basePath + "static/svg/snake-" + theme + ".svg";
+        }
         html.dataset.theme = theme;
         setCookie("themeState", theme, 365);
         themeState = theme;
     }
-
-
-
-
-
-
 
     var Checkbox = document.getElementById('myonoffswitch')
     Checkbox.addEventListener('change', function () {
@@ -141,31 +111,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-
     if (themeState == "Dark") {
         Checkbox.checked = false;
     }
 
     changeTheme(themeState);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 
     var fpsElement = document.createElement('div');
     fpsElement.id = 'fps';
@@ -207,17 +157,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         step();
     })();
-    
-    
-    
+
     //pop('./static/img/tz.jpg')
-    
-    
-    
+
 });
-
-
-
 
 var pageLoading = document.querySelector("#marisa-loading");
 window.addEventListener('load', function() {
@@ -225,4 +168,3 @@ window.addEventListener('load', function() {
         pageLoading.style.opacity = '0';
     }, 100);
 });
-
