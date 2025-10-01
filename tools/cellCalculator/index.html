@@ -193,6 +193,16 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT
 	
 	<script src="../../static/js/script.js"> </script>
 	<script>
+		// 为导航栏切换按钮添加点击事件
+		document.addEventListener('DOMContentLoaded', function() {
+			var navbarToggle = document.querySelector('.navbar-toggle');
+			if (navbarToggle) {
+				navbarToggle.addEventListener('click', function() {
+					document.querySelector('.navbar-links').classList.toggle('active');
+				});
+			}
+		});
+		
 		function getVal(id, unitId){
 			let v = parseFloat(document.getElementById(id).value);
 			if(isNaN(v)) return NaN;
@@ -258,5 +268,6 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT
 			let addVol = tvol - (prev - used);
 			document.getElementById('out4').innerHTML = '目标体积:\n' + formatVal(tvol) + ' mL ('+formatVal(tvol*1000)+' uL)\n需要增加体积:\n' + formatVal(addVol) + ' mL ('+formatVal(addVol*1000)+' uL)';
 		}
+		
 	</script>
 </html>
