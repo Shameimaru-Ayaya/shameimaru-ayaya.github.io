@@ -1,0 +1,262 @@
+<!--
+Author：ZYYO (zyyo.net) 基于Github大佬xhofe的主页写的
+Improvement：GitHub@Shameimaru-Ayaya & ChatGPT
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>射命丸Tools - Concentration Calculator</title>
+		<link rel="icon" href="../../static/img/title.jpeg" type="image/jpeg">
+		<!-- SEO Meta -->
+		<meta name="description" content="Concentration Calculator - ShameimaruAya">
+		<meta name="keywords" content="ShameimaruAya,shameimaruaya,射命丸文,シャメイマルアヤ">
+		<!-- Open Graph -->
+		<meta property="og:title" content="射命丸文">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ja_JP">
+		<meta property="og:image" content="https://avatars.githubusercontent.com/u/97383295?s=400&u=8416298bf97a731c13897661c76b6a3674045440&v=4">
+		<meta property="og:image:alt" content="射命丸文">
+		<meta property="og:url" content="https://github.com/Shameimaru-Ayaya">
+		<meta property="og:description" content="「さあ、手加減してあげるから本気で掛かってきなさい！」">
+		<meta property="og:site_name" content="射命丸文">
+		<!-- Mobile Optimization -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="../../static/css/style.css">
+		<link rel="stylesheet" href="../../static/css/root.css">
+		<link rel="stylesheet" href="../../static/js/APlayer.min.js">
+		<link rel="stylesheet" href="../../static/css/APlayer.min.css">
+		<link rel="stylesheet" href="../../static/js/Meting.min.js">
+		<script src="../../static/js/APlayer.min.js"></script>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				background-color: #fff;
+				color: #000;
+			}
+			html {
+				--main_bg_color: #fff;
+				--back_filter: 0px;
+				--back_filter_color: #fff;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.section {
+				background: #fff;
+				border: 1px solid #ddd;
+				padding: 20px;
+				margin: 20px auto;
+				border-radius: 12px;
+				max-width: 600px;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+			}
+			.section h2 {
+				margin-top: 0;
+				color: #007acc;
+				font-size: 1.2em;
+			}
+			.form-row {
+				display: flex;
+				align-items: center;
+				margin-top: 12px;
+			}
+			.form-row label {
+				flex: 1;
+			}
+			.form-row input {
+				flex: 2;
+				padding: 6px;
+				font-size: 1em;
+				border: 1px solid #ccc;
+				border-radius: 6px;
+				margin-right: 8px;
+			}
+			.form-row select, .form-row span {
+				flex: 1;
+			}
+			button {
+				margin-top: 15px;
+				padding: 8px 16px;
+				background-color: #007acc;
+				color: #fff;
+				border: none;
+				border-radius: 6px;
+				cursor: pointer;
+				transition: background-color 0.2s;
+			}
+			button:hover {
+				background-color: #005fa3;
+			}
+			.output {
+				margin-top: 15px;
+				padding: 10px;
+				background-color: #f0f8ff;
+				border: 1px solid #cce;
+				border-radius: 6px;
+				font-weight: bold;
+				color: #222;
+				white-space: pre-line;
+			}
+			sup {
+				font-size: 0.8em;
+			}
+			.navbar-link {
+				color: white !important; /* 使用 !important 确保覆盖全局样式（可选） */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="marisa-loading">
+			<div id="marisa-loading-center"></div>
+		</div>
+		<div class="marisa-filter"></div>
+		<!-- 添加导航栏 -->
+		<div class="marisa-navbar">
+			<div class="navbar-container">
+				<div class="navbar-logo">
+					<img src="../../static/img/title.jpeg" alt="Logo">
+					<a href="https://Shameimaru-Ayaya.github.io/"><span>射命丸Tools</span></a>
+				</div>
+				<div class="navbar-links">
+					<a href="https://Shameimaru-Ayaya.github.io/" class="navbar-link">Home</a>
+					<a href="https://Shameimaru-Ayaya.github.io/about-us/" class="navbar-link">About us</a>
+					<a href="https://Shameimaru-Ayaya.github.io/contact-us" class="navbar-link">Contact us</a>
+					<a href="https://Shameimaru-Ayaya.github.io/download" class="navbar-link">Download</a>
+					<a href="https://Shameimaru-Ayaya.github.io/privacy-policy" class="navbar-link">Privacy Policy</a>
+					<a href="https://Shameimaru-Ayaya.github.io/terms-and-conditions" class="navbar-link">Terms and Conditions</a>
+				</div>
+				<div class="navbar-toggle">
+					<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+						<path d="M128 256h768v86H128v-86zm0 298v-84h768v84H128zm0 256v-86h768v86H128z"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<h1>浓度与体积计算器</h1>
+
+		<div class="section" id="sec1">
+			<h2>1. 平面浓度计算</h2>
+			<div class="form-row"><label>目标平面浓度：</label><input id="pConc" placeholder="如 1.5E6"><span>个/cm²</span></div>
+			<div class="form-row"><label>平面面积：</label><input id="pArea" placeholder="如 2.5"><select id="pAreaUnit"><option value="cm2">cm²</option><option value="mm2">mm²</option></select></div>
+			<div class="form-row"><label>目标加入体积：</label><input id="pVol" placeholder="如 1"><select id="pVolUnit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
+			<button onclick="calc1()">计算</button>
+			<div class="output" id="out1"></div>
+		</div>
+
+
+		<div class="section" id="sec2">
+			<h2>2. 目标体积计算</h2>
+			<div class="form-row"><label>当前数量：</label><input id="cNum" placeholder="如 2.0E6"><span>个</span></div>
+			<div class="form-row"><label>目标浓度：</label><input id="tConc2" placeholder="自动填充或手动输入"><span>个/mL</span></div>
+			<button onclick="calc2()">计算</button>
+			<div class="output" id="out2"></div>
+		</div>
+
+
+		<div class="section" id="sec3">
+			<h2>3. 稀释及配料计算</h2>
+			<div class="form-row"><label>当前浓度：</label><input id="cConc3" placeholder="如 1E6"><span>个/mL</span></div>
+			<div class="form-row"><label>当前体积：</label><input id="cVol3" placeholder="如 2"><select id="cVol3Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
+			<div class="form-row"><label>目标浓度：</label><input id="tConc3" placeholder="自动填充或手动输入"><span>个/mL</span></div>
+			<button onclick="calc3()">计算</button>
+			<div class="output" id="out3"></div>
+		</div>
+
+
+		<div class="section" id="sec4">
+		<h2>4. 补加体积计算</h2>
+			<div class="form-row"><label>当前浓度：</label><input id="cConc4" placeholder="自动填充或手动输入"><span>个/mL</span></div>
+			<div class="form-row"><label>之前体积：</label><input id="preVol4" placeholder="自动填充或手动输入"><select id="preVol4Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
+			<div class="form-row"><label>已用体积：</label><input id="usedVol4" placeholder="如 0.5"><select id="usedVol4Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
+			<div class="form-row"><label>目标浓度：</label><input id="tConc4" placeholder="如 5E5"><span>个/mL</span></div>
+			<button onclick="calc4()">计算</button>
+			<div class="output" id="out4"></div>
+		</div>
+
+		<br><br>
+
+		<footer>
+			Copyright © 2022-2026 <a href="https://github.com/Shameimaru-Ayaya">GitHub@Shameimaru-Ayaya.</a><br>
+			All rights reserved.
+		</footer>
+
+		<div class="tc"><!--弹窗-->
+			<div onclick="" class="tc-main">
+				<img class="tc-img" src="" alt="" srcset="">
+			</div>
+		</div>
+	</body>
+	
+	<script src="../../static/js/script.js"> </script>
+	<script>
+		function getVal(id, unitId){
+			let v = parseFloat(document.getElementById(id).value);
+			if(isNaN(v)) return NaN;
+			if(unitId){
+				let u = document.getElementById(unitId).value;
+				if(u==='mm2') v = v/100; // 转换为cm²
+				if(u==='uL') v = v/1000; // 转换为mL
+			}
+			return v;
+		}
+
+		function formatVal(v){
+			if(!isFinite(v)) return "NaN";
+			let abs = Math.abs(v);
+			if(abs === 0) return "0";
+			if(abs >= 1e-2 && abs < 1e2){
+				return v.toFixed(3).replace(/\.0+$/,'').replace(/(\.\d*?)0+$/,'$1');
+			}
+			let exp = v.toExponential(2).split("e");
+			let m = parseFloat(exp[0]);
+			let n = parseInt(exp[1]);
+			return m + '×10<sup>' + n + '</sup>';
+		}
+
+		function calc1(){
+			let conc = getVal('pConc');
+			let area = getVal('pArea','pAreaUnit');
+			let vol = getVal('pVol','pVolUnit');
+			let total = conc * area;
+			let tConc = total / vol;
+			document.getElementById('out1').innerHTML = '目标浓度:\n' + formatVal(tConc) + ' 个/mL';
+			document.getElementById('tConc2').value = tConc;
+			document.getElementById('tConc3').value = tConc;
+			document.getElementById('cConc4').value = tConc;
+		}
+
+		function calc2(){
+			let cnum = getVal('cNum');
+			let tconc = getVal('tConc2');
+			let vol = cnum / tconc;
+			document.getElementById('out2').innerHTML = '目标体积:\n' + formatVal(vol) + ' mL';
+		}
+
+		function calc3(){
+			let cconc = getVal('cConc3');
+			let cvol = getVal('cVol3','cVol3Unit');
+			let tconc = getVal('tConc3');
+			let totalNum = cconc * cvol;
+			let tvol = totalNum / tconc;
+			let L = tvol * 0.01;
+			let Y = tvol * (3e-6/0.01);
+			document.getElementById('out3').innerHTML = '目标总体积:\n' + formatVal(tvol) + ' mL\n配料L:\n' + formatVal(L) + ' mL ('+formatVal(L*1000)+' uL)\n配料Y:\n' + formatVal(Y) + ' mL ('+formatVal(Y*1000)+' uL)';
+			document.getElementById('preVol4').value = tvol;
+		}
+
+		function calc4(){
+			let cconc = getVal('cConc4');
+			let prev = getVal('preVol4','preVol4Unit');
+			let used = getVal('usedVol4','usedVol4Unit');
+			let tconc = getVal('tConc4');
+			let totalNum = cconc * (prev - used);
+			let tvol = totalNum / tconc;
+			let addVol = tvol - (prev - used);
+			document.getElementById('out4').innerHTML = '目标体积:\n' + formatVal(tvol) + ' mL ('+formatVal(tvol*1000)+' uL)\n需要增加体积:\n' + formatVal(addVol) + ' mL ('+formatVal(addVol*1000)+' uL)';
+		}
+	</script>
+</html>
