@@ -140,8 +140,8 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 		<h1>浓度与体积计算器</h1>
 
 		<div class="section" id="sec1">
-			<h2>1. 平面浓度计算</h2>
-			<div class="form-row"><label>目标平面浓度：</label><input id="pConc" placeholder="如 1.5E6"><span>个/cm²</span></div>
+			<h2>1. 面积密度→体积密度计算</h2>
+			<div class="form-row"><label>目标面积密度：</label><input id="pConc" placeholder="如 1.5E6"><span>个/cm²</span></div>
 			<div class="form-row"><label>平面面积：</label><input id="pArea" placeholder="如 2.5"><select id="pAreaUnit"><option value="cm2">cm²</option><option value="mm2">mm²</option></select></div>
 			<div class="form-row"><label>目标加入体积：</label><input id="pVol" placeholder="如 1"><select id="pVolUnit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
 			<button onclick="calc1()">计算</button>
@@ -150,8 +150,8 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 
 
 		<div class="section" id="sec2">
-			<h2>2. 目标体积计算</h2>
-			<div class="form-row"><label>当前数量：</label><input id="cNum" placeholder="如 2.0E6"><span>个</span></div>
+			<h2>2. 离心重悬建议体积计算</h2>
+			<div class="form-row"><label>管体标记细胞数：</label><input id="cNum" placeholder="如 2.0E6"><span>个</span></div>
 			<div class="form-row"><label>目标浓度：</label><input id="tConc2" placeholder="自动填充或手动输入"><span>个/mL</span></div>
 			<button onclick="calc2()">计算</button>
 			<div class="output" id="out2"></div>
@@ -159,7 +159,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 
 
 		<div class="section" id="sec3">
-			<h2>3. 稀释及配料计算</h2>
+			<h2>3. 稀释及辅料计算</h2>
 			<div class="form-row"><label>当前浓度：</label><input id="cConc3" placeholder="如 1E6"><span>个/mL</span></div>
 			<div class="form-row"><label>当前体积：</label><input id="cVol3" placeholder="如 2"><select id="cVol3Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
 			<div class="form-row"><label>目标浓度：</label><input id="tConc3" placeholder="自动填充或手动输入"><span>个/mL</span></div>
@@ -169,7 +169,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 
 
 		<div class="section" id="sec4">
-		<h2>4. 补加体积计算</h2>
+		<h2>4. 二次利用补加体积计算</h2>
 			<div class="form-row"><label>当前浓度：</label><input id="cConc4" placeholder="自动填充或手动输入"><span>个/mL</span></div>
 			<div class="form-row"><label>之前体积：</label><input id="preVol4" placeholder="自动填充或手动输入"><select id="preVol4Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
 			<div class="form-row"><label>已用体积：</label><input id="usedVol4" placeholder="如 0.5"><select id="usedVol4Unit"><option value="mL">mL</option><option value="uL">uL</option></select></div>
@@ -244,7 +244,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 			let cnum = getVal('cNum');
 			let tconc = getVal('tConc2');
 			let vol = cnum / tconc;
-			document.getElementById('out2').innerHTML = '目标体积:\n' + formatVal(vol) + ' mL';
+			document.getElementById('out2').innerHTML = '建议最大重悬体积:\n' + formatVal(vol) + ' mL';
 		}
 
 		function calc3(){
@@ -255,7 +255,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 			let tvol = totalNum / tconc;
 			let L = tvol * 0.01;
 			let Y = tvol * (3e-6/0.01);
-			document.getElementById('out3').innerHTML = '目标总体积:\n' + formatVal(tvol) + ' mL\n配料L:\n' + formatVal(L) + ' mL ('+formatVal(L*1000)+' uL)\n配料Y:\n' + formatVal(Y) + ' mL ('+formatVal(Y*1000)+' uL)';
+			document.getElementById('out3').innerHTML = '目标稀释体积:\n' + formatVal(tvol) + ' mL\nLaminin:\n' + formatVal(L) + ' mL ('+formatVal(L*1000)+' uL)\nY:\n' + formatVal(Y) + ' mL ('+formatVal(Y*1000)+' uL)';
 			document.getElementById('preVol4').value = tvol;
 		}
 
@@ -267,7 +267,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 			let totalNum = cconc * (prev - used);
 			let tvol = totalNum / tconc;
 			let addVol = tvol - (prev - used);
-			document.getElementById('out4').innerHTML = '目标体积:\n' + formatVal(tvol) + ' mL ('+formatVal(tvol*1000)+' uL)\n需要增加体积:\n' + formatVal(addVol) + ' mL ('+formatVal(addVol*1000)+' uL)';
+			document.getElementById('out4').innerHTML = '目标稀释体积:\n' + formatVal(tvol) + ' mL ('+formatVal(tvol*1000)+' uL)\n需要增加体积:\n' + formatVal(addVol) + ' mL ('+formatVal(addVol*1000)+' uL)';
 		}
 		
 	</script>
