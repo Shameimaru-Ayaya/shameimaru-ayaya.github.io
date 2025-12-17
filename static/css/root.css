@@ -120,23 +120,28 @@ html {
 }
 
 html {
-    /*图片模糊背景＋黑色透明卡片+白色svg**/
+    /*图片模糊背景＋黑色透明卡片+白色svg - 优化版 (Glassmorphism)*/
     --name: 主题5;
     --main_bg_color: url(../img/background.PNG);
-    --main_text_color: #eeeeee;
-    --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
-    --purple_text_color: #fff666;
-    --text_bg_color: #00000040;
-    --item_bg_color: #00000038;
-    --item_hover_color: #33333338;
+    --main_text_color: #f0f0f0;
+    --gradient: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b);
+    --purple_text_color: #aeb4ff;
+    --text_bg_color: rgba(0, 0, 0, 0.35);
+    --item_bg_color: rgba(22, 24, 28, 0.50);
+    --item_hover_color: rgba(36, 38, 42, 0.62);
+    --item_border_color: rgba(255, 255, 255, 0.1);
     --item_left_title_color: #ffffff;
-    --item_left_text_color: #ffffff;
-    --footer_text_color: #ffffff;
-    --left_tag_item: rgb(27 42 57 / 20%);
-    --card_filter: 0px;
-    --back_filter: 1px;
-    --back_filter_color: #00000030;
-    --fill:#ffffff;
+    --item_left_text_color: #cccccc;
+    --footer_text_color: #aaaaaa;
+    --left_tag_item: rgba(255, 255, 255, 0.1);
+    --card_filter: 20px;
+    --back_filter: 6px;
+    --back_filter_color: rgba(0, 0, 0, 0.20);
+    --fill: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --edge_padding: 1px;
+    --edge_gradient: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(185,215,255,0.35) 22%, rgba(255,255,255,0.04) 50%, rgba(185,215,255,0.35) 78%, rgba(255,255,255,0.75));
 }
 
 /* 移动端背景设置 */

@@ -317,3 +317,128 @@ document.addEventListener('visibilitychange', function () {
         }, 3000);
     }
 });
+
+function updateCopyrightYear() {
+    function applyYear(year) {
+        var footers = document.querySelectorAll('footer');
+        footers.forEach(function (footer) {
+            var html = footer.innerHTML;
+            var yearStr = String(year);
+            html = html.replace(/(Copyright[^\\d]*?\\s*\\d{4})-(\\d{4})/i, function (match, startPart, endYear) {
+                return startPart + '-' + yearStr;
+            });
+            footer.innerHTML = html;
+        });
+    }
+    fetch('https://worldtimeapi.org/api/ip').then(function (resp) {
+        return resp.json();
+    }).then(function (data) {
+        var dateStr = data && data.datetime;
+        var y = dateStr ? new Date(dateStr).getFullYear() : new Date().getFullYear();
+        applyYear(y);
+    }).catch(function () {
+        applyYear(new Date().getFullYear());
+    });
+}
+document.addEventListener('DOMContentLoaded', function () {
+    updateCopyrightYear();
+});
+
+function initTagPhysics() {
+    var containers = document.querySelectorAll('.left-tag');
+    containers.forEach(function (container) {
+        if (!container || container.dataset.physics === 'on') return;
+        container.dataset.physics = 'on';
+        var sidePad = 8;
+        var topPad = 0;
+        var bottomPad = 65;
+        var w = container.clientWidth - sidePad * 2;
+        var h = Math.max(container.clientHeight - topPad - bottomPad, 150);
+        container.style.height = (h + topPad + bottomPad) + 'px';
+        var nodes = Array.prototype.slice.call(container.querySelectorAll('.left-tag-item'));
+        var maxN = 24;
+        nodes = nodes.slice(0, maxN);
+        var items = nodes.map(function (node) {
+            var nw = (node.offsetWidth || 84);
+            var nh = (node.offsetHeight || 26);
+            var x = sidePad + Math.random() * (w - nw);
+            var y = topPad - Math.random() * 100 - nh;
+            var vx = (Math.random() - 0.5) * 60;
+            var vy = 0;
+            node.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+            return { node: node, x: x, y: y, w: nw, h: nh, vx: vx, vy: vy, m: nw * nh * 0.0002 };
+        });
+        var mouse = { x: 0, y: 0, inside: false };
+        container.addEventListener('mousemove', function (e) {
+            var r = container.getBoundingClientRect();
+            mouse.x = e.clientX - r.left;
+            mouse.y = e.clientY - r.top;
+            mouse.inside = true;
+        });
+        container.addEventListener('mouseleave', function () {
+            mouse.inside = false;
+        });
+        var g = 1100;
+        var last = performance.now();
+        function step(now) {
+            var dt = Math.min((now - last) / 1000, 0.033);
+            last = now;
+            items.forEach(function (it) {
+                it.vy += g * dt;
+                var centerX = sidePad + w / 2;
+                if (it.y > topPad + h * 0.25) {
+                    var kx = 220;
+                    var cx = (centerX - (it.x + it.w / 2));
+                    it.vx += cx * kx * dt * 0.001;
+                }
+                if (mouse.inside) {
+                    var dx = (it.x + it.w / 2) - mouse.x;
+                    var dy = (it.y + it.h / 2) - mouse.y;
+                    var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                    var rad = 80;
+                    if (dist < rad) {
+                        var push = (rad - dist) * 1600;
+                        it.vx += (dx / dist) * push * dt;
+                        it.vy += (dy / dist) * push * dt;
+                    }
+                }
+                it.x += it.vx * dt;
+                it.y += it.vy * dt;
+                if (it.x < sidePad) { it.x = sidePad; it.vx *= -0.35; }
+                if (it.x + it.w > w + sidePad) { it.x = w + sidePad - it.w; it.vx *= -0.35; }
+                if (it.y < topPad) {
+                    it.y = topPad;
+                    it.vy *= -0.35;
+                }
+                if (it.y + it.h > h + topPad) {
+                    it.y = h + topPad - it.h;
+                    it.vy *= -0.35;
+                    it.vx *= 0.88;
+                }
+                for (var j = 0; j < items.length; j++) {
+                    var other = items[j];
+                    if (other === it) continue;
+                    if (it.x < other.x + other.w && it.x + it.w > other.x && it.y < other.y + other.h && it.y + it.h > other.y) {
+                        var overlapX = (it.w + other.w) / 2 - Math.abs((it.x + it.w / 2) - (other.x + other.w / 2));
+                        var overlapY = (it.h + other.h) / 2 - Math.abs((it.y + it.h / 2) - (other.y + other.h / 2));
+                        if (overlapX > 0 && overlapY > 0) {
+                            if (overlapX < overlapY) {
+                                if (it.x < other.x) { it.x -= overlapX / 2; other.x += overlapX / 2; } else { it.x += overlapX / 2; other.x -= overlapX / 2; }
+                                var t = it.vx; it.vx = other.vx * 0.7; other.vx = t * 0.7;
+                            } else {
+                                if (it.y < other.y) { it.y -= overlapY / 2; other.y += overlapY / 2; } else { it.y += overlapY / 2; other.y -= overlapY / 2; }
+                                var tt = it.vy; it.vy = other.vy * 0.7; other.vy = tt * 0.7;
+                            }
+                        }
+                    }
+                }
+                it.node.style.transform = 'translate3d(' + it.x + 'px,' + it.y + 'px,0)';
+            });
+            requestAnimationFrame(step);
+        }
+        requestAnimationFrame(function (t) { last = t; step(t); });
+    });
+}
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(initTagPhysics, 300);
+});
