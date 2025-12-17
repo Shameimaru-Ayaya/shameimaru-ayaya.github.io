@@ -123,6 +123,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     changeTheme(themeState);
 
+    var loadingCenter = document.getElementById('marisa-loading-center');
+    if (loadingCenter && loadingCenter.childElementCount === 0) {
+        loadingCenter.innerHTML = ''
+            + '<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">'
+            + '  <path d="M 200 50 A 150 150 0 0 1 200 350 A 75 75 0 0 1 200 200 A 75 75 0 0 0 200 50 Z" fill="#E31E24"/>'
+            + '  <circle cx="200" cy="275" r="20" fill="#FFFFFF"/>'
+            + '</svg>'
+            + '<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">'
+            + '  <path d="M 200 50 A 75 75 0 0 1 200 200 A 75 75 0 0 0 200 350 A 150 150 0 0 1 200 50 Z" fill="#FFFFFF"/>'
+            + '  <circle cx="200" cy="125" r="20" fill="#E31E24"/>'
+            + '</svg>';
+    }
+
     var fpsElement = document.createElement('div');
     fpsElement.id = 'fps';
     fpsElement.style.zIndex = '10000';
@@ -168,23 +181,85 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-var pageLoading = document.querySelector("#marisa-loading");
+ var pageLoading = document.querySelector("#marisa-loading");
 var mainContent = document.querySelector(".marisa-main");
 var navbar = document.querySelector(".marisa-navbar");
-
-window.addEventListener('load', function() {
-    if (pageLoading) {
+ 
+if (pageLoading) {
+    var rippleIntervalId;
+    var presetRipples = document.querySelectorAll('#marisa-loading-wrapper .loading-ripple');
+    presetRipples.forEach(function (node) {
+        if (node && node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+    });
+    function spawnRipple() {
+        var wrapper = document.getElementById('marisa-loading-wrapper');
+        var center = document.getElementById('marisa-loading-center');
+        if (!wrapper) return;
+        var ripple = document.createElement('div');
+        ripple.className = 'loading-ripple';
+        ripple.style.animation = 'ripple-anim 3s linear forwards';
+        ripple.style.animationPlayState = 'running';
+        if (center) {
+            wrapper.insertBefore(ripple, center);
+        } else {
+            wrapper.appendChild(ripple);
+        }
         setTimeout(function () {
+            if (ripple && ripple.parentNode) {
+                ripple.parentNode.removeChild(ripple);
+            }
+        }, 3200);
+    }
+
+    setTimeout(function () {
+        spawnRipple();
+        rippleIntervalId = setInterval(spawnRipple, 1000);
+    }, 300);
+
+    var minLoadingPromise = new Promise(function(resolve) {
+        setTimeout(resolve, 3000);
+    });
+ 
+    var windowLoadPromise = new Promise(function(resolve) {
+        if (document.readyState === 'complete') {
+            resolve();
+        } else {
+            window.addEventListener('load', resolve);
+        }
+    });
+ 
+    Promise.all([minLoadingPromise, windowLoadPromise]).then(function() {
+        if (rippleIntervalId) {
+            clearInterval(rippleIntervalId);
+        }
+        pageLoading.classList.add('center-open');
+        var centerNode = document.getElementById('marisa-loading-center');
+        var svgs = centerNode ? centerNode.querySelectorAll('svg') : [];
+        function startFinish() {
             pageLoading.classList.add('loading-finish');
             if (mainContent) mainContent.style.opacity = '1';
             if (navbar) navbar.style.opacity = '1';
             setTimeout(function () {
                 pageLoading.style.display = 'none';
-            }, 1000);
-        }, 3000);
-    } else {
-        // If no loading screen, ensure content is visible immediately
-        if (mainContent) mainContent.style.opacity = '1';
-        if (navbar) navbar.style.opacity = '1';
-    }
-});
+            }, 1100);
+        }
+        if (svgs && svgs.length > 0) {
+            var remaining = svgs.length;
+            svgs.forEach(function (svg) {
+                svg.addEventListener('animationend', function () {
+                    remaining--;
+                    if (remaining === 0) {
+                        startFinish();
+                    }
+                }, { once: true });
+            });
+        } else {
+            startFinish();
+        }
+    });
+} else {
+    if (mainContent) mainContent.style.opacity = '1';
+    if (navbar) navbar.style.opacity = '1';
+}

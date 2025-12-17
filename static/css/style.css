@@ -217,10 +217,11 @@ html::before {
     pointer-events: none;
     opacity: 1;
     transition: opacity 1s ease;
+    will-change: opacity;
 }
 
 #marisa-loading.loading-finish {
-    opacity: 0;
+    animation: finish-fade 1.1s cubic-bezier(0.2, 0.75, 0.2, 1) forwards;
 }
 
 #marisa-loading-wrapper {
@@ -229,11 +230,15 @@ html::before {
     align-items: center;
     width: 100%;
     height: 100%;
-    transition: transform 1s ease-in;
+    transform-origin: center;
+    animation: intro-scale 0.3s ease-out;
+    transition: transform 1s ease-out;
+    contain: layout paint;
+    will-change: transform;
 }
 
 #marisa-loading.loading-finish #marisa-loading-wrapper {
-    transform: scale(20);
+    animation: finish-scale 1.1s cubic-bezier(0.2, 0.75, 0.2, 1) forwards;
 }
 
 html[data-theme="Dark"] {    
@@ -257,10 +262,35 @@ html[data-theme="Dark"] {
     width: 220px;
     height: 220px;
     position: relative;
-    background: url('../img/img-loading.png') center/contain no-repeat;
+    background: none;
     border-radius: 0;
-    animation: rotate-ccw 6s linear infinite;
+    animation: rotate-cw 6s linear infinite;
     z-index: 10;
+    will-change: transform;
+}
+
+#marisa-loading-center svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+}
+
+#marisa-loading.center-open #marisa-loading-center {
+    animation-play-state: paused;
+}
+
+#marisa-loading.center-open #marisa-loading-center svg:first-child {
+    animation: yin-left-open 0.8s cubic-bezier(0.15, 0.9, 0.2, 1) forwards;
+}
+
+#marisa-loading.center-open #marisa-loading-center svg:last-child {
+    animation: yin-right-open 0.8s cubic-bezier(0.15, 0.9, 0.2, 1) forwards;
 }
 
 .loading-ripple {
@@ -274,7 +304,12 @@ html[data-theme="Dark"] {
     border-radius: 50%;
     opacity: 0;
     animation: ripple-anim 3s linear infinite;
+    animation-play-state: paused;
     z-index: 1;
+}
+
+#marisa-loading.ripple-start .loading-ripple {
+    animation-play-state: running;
 }
 
 @keyframes ripple-anim {
@@ -292,6 +327,15 @@ html[data-theme="Dark"] {
     }
 }
 
+@keyframes intro-scale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @keyframes rotate-ccw {
     from {
         transform: rotate(360deg);
@@ -301,6 +345,65 @@ html[data-theme="Dark"] {
     }
 }
 
+@keyframes rotate-cw {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes finish-scale {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    35% {
+        transform: scale3d(1.15, 1.15, 1);
+    }
+    60% {
+        transform: scale3d(1.08, 1.08, 1);
+    }
+    100% {
+        transform: scale3d(20, 20, 1);
+    }
+}
+
+@keyframes finish-fade {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.95;
+    }
+    60% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes yin-left-open {
+    0% {
+        transform: translate3d(0, 0, 0) rotateZ(0deg) scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(120px, 0, 0) rotateZ(14deg) scale3d(1.15, 1.15, 1);
+        opacity: 0.85;
+    }
+}
+
+@keyframes yin-right-open {
+    0% {
+        transform: translate3d(0, 0, 0) rotateZ(0deg) scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(-120px, 0, 0) rotateZ(-14deg) scale3d(1.15, 1.15, 1);
+        opacity: 0.85;
+    }
+}
 @keyframes zoom {
     0% {
         transform: scale(0);
