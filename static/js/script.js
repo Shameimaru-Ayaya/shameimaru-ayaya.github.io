@@ -344,101 +344,218 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCopyrightYear();
 });
 
-function initTagPhysics() {
-    var containers = document.querySelectorAll('.left-tag');
-    containers.forEach(function (container) {
-        if (!container || container.dataset.physics === 'on') return;
-        container.dataset.physics = 'on';
-        var sidePad = 8;
-        var topPad = 0;
-        var bottomPad = 65;
-        var w = container.clientWidth - sidePad * 2;
-        var h = Math.max(container.clientHeight - topPad - bottomPad, 150);
-        container.style.height = (h + topPad + bottomPad) + 'px';
-        var nodes = Array.prototype.slice.call(container.querySelectorAll('.left-tag-item'));
-        var maxN = 24;
-        nodes = nodes.slice(0, maxN);
-        var items = nodes.map(function (node) {
-            var nw = (node.offsetWidth || 84);
-            var nh = (node.offsetHeight || 26);
-            var x = sidePad + Math.random() * (w - nw);
-            var y = topPad - Math.random() * 100 - nh;
-            var vx = (Math.random() - 0.5) * 60;
-            var vy = 0;
-            node.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
-            return { node: node, x: x, y: y, w: nw, h: nh, vx: vx, vy: vy, m: nw * nh * 0.0002 };
-        });
-        var mouse = { x: 0, y: 0, inside: false };
-        container.addEventListener('mousemove', function (e) {
-            var r = container.getBoundingClientRect();
-            mouse.x = e.clientX - r.left;
-            mouse.y = e.clientY - r.top;
-            mouse.inside = true;
-        });
-        container.addEventListener('mouseleave', function () {
-            mouse.inside = false;
-        });
-        var g = 1100;
-        var last = performance.now();
-        function step(now) {
-            var dt = Math.min((now - last) / 1000, 0.033);
-            last = now;
-            items.forEach(function (it) {
-                it.vy += g * dt;
-                var centerX = sidePad + w / 2;
-                if (it.y > topPad + h * 0.25) {
-                    var kx = 220;
-                    var cx = (centerX - (it.x + it.w / 2));
-                    it.vx += cx * kx * dt * 0.001;
-                }
-                if (mouse.inside) {
-                    var dx = (it.x + it.w / 2) - mouse.x;
-                    var dy = (it.y + it.h / 2) - mouse.y;
-                    var dist = Math.sqrt(dx * dx + dy * dy) || 1;
-                    var rad = 80;
-                    if (dist < rad) {
-                        var push = (rad - dist) * 1600;
-                        it.vx += (dx / dist) * push * dt;
-                        it.vy += (dy / dist) * push * dt;
+/* 标签云布局算法优化版 */
+function initWordCloud() {
+    const containers = document.querySelectorAll('.left-tag');
+    
+    containers.forEach(container => {
+        // 标记已初始化，防止重复，但允许Resize时强制刷新
+        if (container.dataset.cloud === 'on' && !window.isResizing) return;
+        container.dataset.cloud = 'on';
+
+        let items = Array.from(container.querySelectorAll('.left-tag-item'));
+        if (items.length === 0) return;
+
+        // --- 配置参数 ---
+        const config = {
+            maxFontSize: 32,
+            minFontSize: 12,
+            padding: 8,         // 增加间距
+            maxItems: 60,       // 限制数量优化性能
+            spiralStep: 5,      // 螺旋步长
+            angleStep: 0.2      // 角度步长 (更精细)
+        };
+
+        // --- 1. 预处理与测量 (减少回流) ---
+        
+        // 限制标签数量
+        if (items.length > config.maxItems) {
+            items.slice(config.maxItems).forEach(el => el.style.display = 'none');
+            items = items.slice(0, config.maxItems);
+        } else {
+            items.forEach(el => el.style.display = '');
+        }
+
+        // 批量设置样式并测量
+        const measuredItems = items.map((item, index) => {
+            // 样式计算
+            const ratio = index / items.length;
+            const fontSize = Math.max(config.minFontSize, config.maxFontSize - (config.maxFontSize - config.minFontSize) * ratio);
+            const opacity = Math.max(0.6, 1 - ratio * 0.4);
+            const fontWeight = index === 0 ? 900 : (index < 5 ? 700 : 400);
+
+            // 应用样式
+            item.style.fontSize = fontSize + 'px';
+            item.style.fontWeight = fontWeight;
+            item.style.opacity = opacity;
+            item.style.position = 'absolute';
+            item.style.transition = 'transform 0.3s ease, opacity 0.3s ease'; // 优化交互动画
+
+            // 交互事件 (鼠标靠近高亮)
+            item.onmouseenter = () => {
+                items.forEach(el => {
+                    if (el === item) {
+                        el.style.opacity = '1';
+                        el.style.zIndex = '100';
+                        el.style.transform = 'scale(1.2)';
+                    } else {
+                        el.style.opacity = '0.3';
                     }
+                });
+            };
+            item.onmouseleave = () => {
+                items.forEach((el, idx) => {
+                    const r = idx / items.length;
+                    el.style.opacity = Math.max(0.6, 1 - r * 0.4);
+                    el.style.zIndex = '';
+                    el.style.transform = '';
+                });
+            };
+
+            return {
+                element: item,
+                width: item.offsetWidth,
+                height: item.offsetHeight,
+                area: item.offsetWidth * item.offsetHeight
+            };
+        });
+
+        // 按面积大小排序，优先放置大标签
+        measuredItems.sort((a, b) => b.area - a.area);
+
+        // --- 2. 空间分区 (加速碰撞检测) ---
+        const gridSize = 60; // 网格大小
+        const grid = {}; 
+
+        function addToGrid(rect) {
+            const startX = Math.floor(rect.left / gridSize);
+            const endX = Math.floor(rect.right / gridSize);
+            const startY = Math.floor(rect.top / gridSize);
+            const endY = Math.floor(rect.bottom / gridSize);
+
+            for (let x = startX; x <= endX; x++) {
+                for (let y = startY; y <= endY; y++) {
+                    const key = `${x},${y}`;
+                    if (!grid[key]) grid[key] = [];
+                    grid[key].push(rect);
                 }
-                it.x += it.vx * dt;
-                it.y += it.vy * dt;
-                if (it.x < sidePad) { it.x = sidePad; it.vx *= -0.35; }
-                if (it.x + it.w > w + sidePad) { it.x = w + sidePad - it.w; it.vx *= -0.35; }
-                if (it.y < topPad) {
-                    it.y = topPad;
-                    it.vy *= -0.35;
-                }
-                if (it.y + it.h > h + topPad) {
-                    it.y = h + topPad - it.h;
-                    it.vy *= -0.35;
-                    it.vx *= 0.88;
-                }
-                for (var j = 0; j < items.length; j++) {
-                    var other = items[j];
-                    if (other === it) continue;
-                    if (it.x < other.x + other.w && it.x + it.w > other.x && it.y < other.y + other.h && it.y + it.h > other.y) {
-                        var overlapX = (it.w + other.w) / 2 - Math.abs((it.x + it.w / 2) - (other.x + other.w / 2));
-                        var overlapY = (it.h + other.h) / 2 - Math.abs((it.y + it.h / 2) - (other.y + other.h / 2));
-                        if (overlapX > 0 && overlapY > 0) {
-                            if (overlapX < overlapY) {
-                                if (it.x < other.x) { it.x -= overlapX / 2; other.x += overlapX / 2; } else { it.x += overlapX / 2; other.x -= overlapX / 2; }
-                                var t = it.vx; it.vx = other.vx * 0.7; other.vx = t * 0.7;
-                            } else {
-                                if (it.y < other.y) { it.y -= overlapY / 2; other.y += overlapY / 2; } else { it.y += overlapY / 2; other.y -= overlapY / 2; }
-                                var tt = it.vy; it.vy = other.vy * 0.7; other.vy = tt * 0.7;
+            }
+        }
+
+        function checkCollision(rect) {
+            const startX = Math.floor(rect.left / gridSize);
+            const endX = Math.floor(rect.right / gridSize);
+            const startY = Math.floor(rect.top / gridSize);
+            const endY = Math.floor(rect.bottom / gridSize);
+
+            for (let x = startX; x <= endX; x++) {
+                for (let y = startY; y <= endY; y++) {
+                    const key = `${x},${y}`;
+                    if (grid[key]) {
+                        for (const other of grid[key]) {
+                            // 严格碰撞检测 (包含padding)
+                            if (!(rect.right < other.left || 
+                                  rect.left > other.right || 
+                                  rect.bottom < other.top || 
+                                  rect.top > other.bottom)) {
+                                return true;
                             }
                         }
                     }
                 }
-                it.node.style.transform = 'translate3d(' + it.x + 'px,' + it.y + 'px,0)';
-            });
-            requestAnimationFrame(step);
+            }
+            return false;
         }
-        requestAnimationFrame(function (t) { last = t; step(t); });
+
+        // --- 3. 布局计算 ---
+        const containerWidth = container.offsetWidth;
+        // 初始中心点
+        const centerX = containerWidth / 2;
+        const centerY = 170; // 预设一个起始高度中心，随内容扩展
+
+        let minTop = centerY;
+        let maxBottom = centerY;
+
+        measuredItems.forEach(item => {
+            // 包含padding的尺寸
+            const w = item.width + config.padding;
+            const h = item.height + config.padding;
+            
+            let angle = 0;
+            let radius = 0;
+            let x = 0;
+            let y = 0;
+            let found = false;
+            // 限制尝试次数，防止死循环
+            let maxIter = 1000; 
+
+            while(maxIter-- > 0) {
+                // 螺旋公式
+                x = centerX + radius * Math.cos(angle) - w / 2;
+                y = centerY + radius * Math.sin(angle) - h / 2;
+
+                const rect = {
+                    left: x,
+                    top: y,
+                    right: x + w,
+                    bottom: y + h
+                };
+
+                // 边界检查 (增加垂直方向限制)
+                if (rect.left < 0 || rect.right > containerWidth || rect.top < 25 || rect.bottom > config.maxContainerHeight) {
+                    // 超出边界，继续寻找
+                } else {
+                    if (!checkCollision(rect)) {
+                        // 找到位置
+                        found = true;
+                        
+                        // 记录实际位置 (去掉padding偏移，居中放置)
+                        item.element.style.left = (x + config.padding / 2) + 'px';
+                        item.element.style.top = (y + config.padding / 2) + 'px';
+                        
+                        addToGrid(rect);
+                        
+                        // 更新整体边界
+                        if (rect.top < minTop) minTop = rect.top;
+                        if (rect.bottom > maxBottom) maxBottom = rect.bottom;
+                        break;
+                    }
+                }
+
+                // 步长递增
+                angle += config.angleStep;
+                radius += config.spiralStep * config.angleStep / (2 * Math.PI);
+            }
+
+            if (!found) {
+                // 降级处理：隐藏
+                item.element.style.opacity = '0';
+                item.element.style.pointerEvents = 'none';
+            }
+        });
+
+        // --- 4. 调整容器高度 ---
+        // 确保容器足够高以容纳所有内容
+        const finalHeight = Math.max(300, maxBottom + 50);
+        container.style.height = finalHeight + 'px';
     });
 }
+
 document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(initTagPhysics, 300);
+    // 延迟执行确保字体加载和样式应用
+    setTimeout(initWordCloud, 100);
 });
+
+// 窗口大小改变时重排
+let resizeTimer;
+window.addEventListener('resize', () => {
+    window.isResizing = true;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.querySelectorAll('.left-tag').forEach(c => c.dataset.cloud = ''); // 重置标记
+        initWordCloud();
+        window.isResizing = false;
+    }, 300);
+});
+
+

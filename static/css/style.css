@@ -457,7 +457,7 @@ html[data-theme="Dark"] {
     width: 100%;
     margin: 0 auto;
     transition: transform 0.5s ease, opacity 1s ease;
-    max-width: 1150px;
+    max-width: 1220px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -466,7 +466,7 @@ html[data-theme="Dark"] {
 
 .marisa-left {
     overflow-y: scroll;
-    width: 230px;
+    width: 300px;
     height: 100vh;
     display: flex;
     padding: 0 15px;
@@ -501,11 +501,16 @@ html[data-theme="Dark"] {
     border-radius: 16px;
     margin-top: 15px;
     padding: 20px 16px;
-    backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    background: var(--item_bg_color);
-    border: 1px solid var(--item_border_color);
-    box-shadow: var(--shadow-sm);
+    
+    /* Liquid Glass Styles */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
@@ -516,22 +521,20 @@ html[data-theme="Dark"] {
     margin: 0;
 }
 .left-div::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    border-radius:inherit;
-    padding: var(--edge_padding);
-    background: var(--edge_gradient);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: .9;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    pointer-events: none;
 }
 
 .left-div:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .left-des {
@@ -562,10 +565,10 @@ html[data-theme="Dark"] {
     padding-bottom: 12px;
 }
 .left-tag {
-    display: block;
-    padding: 48px 8px 12px;
-    min-height: 280px;
     position: relative;
+    width: 100%;
+    min-height: 300px;
+    padding: 56px 0 24px;
     overflow: hidden;
 }
 
@@ -578,23 +581,23 @@ html[data-theme="Dark"] {
 }
 
 .left-tag-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 26px;
-    padding: 0 12px;
-    font-size: 12px;
-    border-radius: 16px;
-    background: var(--left_tag_item);
-    color: var(--item_left_text_color);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: background 0.3s ease;
     position: absolute;
-    will-change: transform;
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--item_left_text_color);
+    text-align: center;
+    cursor: default;
+    transition: transform 0.3s ease;
+    will-change: transform, left, top;
+    transform-origin: center center;
 }
 
 .left-tag-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    z-index: 10;
 }
 
 #line {
@@ -641,7 +644,7 @@ html[data-theme="Dark"] {
 
 
 .marisa-right {
-    width: calc(100% - 230px);
+    width: calc(100% - 300px);
     display: flex;
     padding: 20px;
   position: relative;
@@ -745,11 +748,14 @@ html[data-theme="Dark"] {
     display: flex;
     margin-left: 12px;
 
-    backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    background: var(--item_bg_color);
-    border: 1px solid var(--item_border_color);
-    box-shadow: var(--shadow-sm);
+    /* Liquid Glass Styles */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     align-items: center;
     justify-content: center;
@@ -760,23 +766,20 @@ html[data-theme="Dark"] {
     position: relative;
 }
 .iconItem::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    border-radius:inherit;
-    padding: var(--edge_padding);
-    background: var(--edge_gradient);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: .85;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    pointer-events: none;
 }
 
 .iconItem:hover {
-    background: var(--item_hover_color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .iconItem i,.iconItem svg{
@@ -797,31 +800,34 @@ html[data-theme="Dark"] {
     align-items: center;
     justify-content: center;
     margin-left: 12px;
-    backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    background: var(--item_bg_color);
-    border: 1px solid var(--item_border_color);
-    box-shadow: var(--shadow-sm);
+    
+    /* Liquid Glass Styles */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    
     transition: all 0.3s ease;
     position: relative;
 }
 .switch::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    border-radius:inherit;
-    padding: var(--edge_padding);
-    background: var(--edge_gradient);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: .85;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    pointer-events: none;
 }
 
 .switch:hover {
-    background: var(--item_hover_color);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .iconTip {
@@ -840,9 +846,10 @@ html[data-theme="Dark"] {
     min-width: 60px;
     max-width: 200px;
     padding: 0 16px;
-    transform: translateY(-2px);
-    background: var(--item_hover_color);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .iconItem:hover .iconTip {
@@ -897,16 +904,19 @@ html[data-theme="Dark"] {
 .projectItem {
     margin: 0; /* Managed by gap or flex layout */
     display: flex;
-    background-color: var(--item_bg_color);
     border-radius: 16px;
     padding: 16px;
     height: 110px;
     width: calc(25% - 15px); /* Adjust based on gap */
     
-    backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(var(--card_filter)) saturate(1.25) contrast(1.05) brightness(1.12);
-    border: 1px solid var(--item_border_color);
-    box-shadow: var(--shadow-sm);
+    /* Liquid Glass Styles */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
@@ -914,24 +924,20 @@ html[data-theme="Dark"] {
     position: relative;
 }
 .projectItem::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    border-radius:inherit;
-    padding: var(--edge_padding);
-    background: var(--edge_gradient);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: .9;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    pointer-events: none;
 }
 
 .projectItem:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
-    background-color: var(--item_hover_color);
-    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .projectItem.pressed {
@@ -1061,7 +1067,7 @@ footer {
     }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1220px) {
     .projectItem, .a, .b {
         width: calc(50% - 8px);
     }

@@ -22,14 +22,14 @@ my_template.html：模版文件
 
 #### 1.2.1 使用例
 ```bash
-staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/download.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents --share https://shameimaru-ayaya.github.io/download/index.html
+staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/download.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents
 ```
 ```bash
 staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/about-us/about-us.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents
 ```
-注：如未能如期输出文件，则可将`--share`这一项删掉试试：
+注：如需要生成分享链接，则可添加`--share`参数（如未能如期输出文件，则可将`--share`这一项删掉试试）
 ```bash
-staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/download.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents
+staticrypt /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/download/download.html -t /Users/page/Documents/GitHub/KirisameMarisa-DAZE.github.io/template/my_template.html --template-title "Protected Page" --template-instructions "To unlock this file, you should enter the author's mail address." --remember 1 -d /Users/page/Documents --share https://shameimaru-ayaya.github.io/download/index.html
 ```
 
 ### 1.3 模板`my_template.html`
