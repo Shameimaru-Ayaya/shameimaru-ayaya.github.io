@@ -105,18 +105,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var Checkbox = document.getElementById('myonoffswitch')
-    Checkbox.addEventListener('change', function () {
-        if (themeState == "Dark") {
-            changeTheme("Light");
-        } else if (themeState == "Light") {
-            changeTheme("Dark");
-        } else {
-            changeTheme("Dark");
-        }
-    });
+    if (Checkbox) {
+        Checkbox.addEventListener('change', function () {
+            if (themeState == "Dark") {
+                changeTheme("Light");
+            } else if (themeState == "Light") {
+                changeTheme("Dark");
+            } else {
+                changeTheme("Dark");
+            }
+        });
 
-    if (themeState == "Dark") {
-        Checkbox.checked = false;
+        if (themeState == "Dark") {
+            Checkbox.checked = false;
+        }
     }
 
     changeTheme(themeState);
@@ -167,11 +169,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 var pageLoading = document.querySelector("#marisa-loading");
+var mainContent = document.querySelector(".marisa-main");
+var navbar = document.querySelector(".marisa-navbar");
+
 window.addEventListener('load', function() {
-    setTimeout(function () {
-        pageLoading.classList.add('loading-finish');
+    if (pageLoading) {
         setTimeout(function () {
-            pageLoading.style.display = 'none';
-        }, 1000);
-    }, 3000);
+            pageLoading.classList.add('loading-finish');
+            if (mainContent) mainContent.style.opacity = '1';
+            if (navbar) navbar.style.opacity = '1';
+            setTimeout(function () {
+                pageLoading.style.display = 'none';
+            }, 1000);
+        }, 3000);
+    } else {
+        // If no loading screen, ensure content is visible immediately
+        if (mainContent) mainContent.style.opacity = '1';
+        if (navbar) navbar.style.opacity = '1';
+    }
 });
