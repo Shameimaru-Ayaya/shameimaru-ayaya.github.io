@@ -200,21 +200,38 @@ html::before {
 }
 
 #marisa-loading {
-    background: radial-gradient(white, #d8eaff);
-    background-size: 100%;
-    background-position: center;
-
-    height: 100%;
-    width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 999999;
-    margin-top: 0px;
-    top: 0px;
-    pointer-events: none;
-    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 255, 0.3)), var(--main_bg_color);
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#marisa-loading.loading-finish {
+    opacity: 0;
+}
+
+#marisa-loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in;
+}
+
+#marisa-loading.loading-finish #marisa-loading-wrapper {
+    transform: scale(20);
 }
 
 html[data-theme="Dark"] {    
@@ -235,13 +252,51 @@ html[data-theme="Dark"] {
 }
 
 #marisa-loading-center {
-    height: 150px;
-    width: 150px;
+    width: 220px;
+    height: 220px;
     position: relative;
-    border-radius: 50%;
-    background: #472eff;
+    background: url('../img/img-loading.png') center/contain no-repeat;
+    border-radius: 0;
+    animation: rotate-ccw 6s linear infinite;
+    z-index: 10;
+}
 
-    animation: zoom 1s linear infinite;
+.loading-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 5px solid rgba(255, 0, 0, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    animation: ripple-anim 3s linear infinite;
+    z-index: 1;
+}
+
+@keyframes ripple-anim {
+    0% {
+        width: 150px;
+        height: 150px;
+        opacity: 0.8;
+        border-width: 5px;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+        border-width: 0px;
+    }
+}
+
+@keyframes rotate-ccw {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes zoom {

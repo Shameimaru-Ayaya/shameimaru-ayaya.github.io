@@ -51,12 +51,16 @@ function pop(imageURL) {
 
 var tc = document.getElementsByClassName('tc');
 var tc_main = document.getElementsByClassName('tc-main');
-tc[0].addEventListener('click', function (event) {
-    pop();
-});
-tc_main[0].addEventListener('click', function (event) {
-    event.stopPropagation();
-});
+if (tc.length > 0) {
+    tc[0].addEventListener('click', function (event) {
+        pop();
+    });
+}
+if (tc_main.length > 0) {
+    tc_main[0].addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+}
 
 function setCookie(name, value, days) {
     var expires = "";
@@ -165,6 +169,9 @@ document.addEventListener('DOMContentLoaded', function () {
 var pageLoading = document.querySelector("#marisa-loading");
 window.addEventListener('load', function() {
     setTimeout(function () {
-        pageLoading.style.opacity = '0';
-    }, 100);
+        pageLoading.classList.add('loading-finish');
+        setTimeout(function () {
+            pageLoading.style.display = 'none';
+        }, 1000);
+    }, 3000);
 });
