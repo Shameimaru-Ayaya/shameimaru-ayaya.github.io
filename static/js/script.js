@@ -218,8 +218,13 @@ if (pageLoading) {
         rippleIntervalId = setInterval(spawnRipple, 1000);
     }, 300);
 
+    var nonHomeSlugs = ['about-us','contact-us','tools','privacy-policy','terms-and-conditions','download'];
+    var isHome = !nonHomeSlugs.some(function (slug) {
+        return window.location.pathname.indexOf('/' + slug + '/') !== -1;
+    }) && (window.location.pathname === '/' || window.location.pathname.indexOf('/index.html') !== -1 || /\/KirisameMarisa-DAZE.github\.io\/?$/.test(window.location.pathname));
+    var minDurationMs = isHome ? 3000 : 1000;
     var minLoadingPromise = new Promise(function(resolve) {
-        setTimeout(resolve, 3000);
+        setTimeout(resolve, minDurationMs);
     });
  
     var windowLoadPromise = new Promise(function(resolve) {
