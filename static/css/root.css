@@ -127,21 +127,28 @@ html {
     --gradient: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b);
     --purple_text_color: #aeb4ff;
     --text_bg_color: rgba(0, 0, 0, 0.35);
-    --item_bg_color: rgba(22, 24, 28, 0.50);
-    --item_hover_color: rgba(36, 38, 42, 0.62);
-    --item_border_color: rgba(255, 255, 255, 0.1);
+    --item_bg_color: rgba(255, 255, 255, 0.32);
+    --item_hover_color: rgba(255, 255, 255, 0.42);
+    --item_border_color: rgba(0, 0, 0, 0.12);
     --item_left_title_color: #ffffff;
     --item_left_text_color: #cccccc;
     --footer_text_color: #aaaaaa;
     --left_tag_item: rgba(255, 255, 255, 0.1);
-    --card_filter: 20px;
-    --back_filter: 6px;
-    --back_filter_color: rgba(0, 0, 0, 0.20);
+    --card_filter: 10px;
+    --back_filter: 4px;
+    --back_filter_color: rgba(0, 0, 0, 0.16);
     --fill: #ffffff;
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.2);
     --edge_padding: 1px;
-    --edge_gradient: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(185,215,255,0.35) 22%, rgba(255,255,255,0.04) 50%, rgba(185,215,255,0.35) 78%, rgba(255,255,255,0.75));
+    --edge_gradient: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(185,215,255,0.35) 22%, rgba(255,255,255,0.12) 50%, rgba(220,220,220,0.35) 78%, rgba(255,255,255,0.9));
+    --glass-bg: rgba(0, 0, 50, 0.2);
+    --glass-border: rgba(0, 0, 0, 0.10);
+    --glass-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+    --glass-blur: 8px;
+    --glass-saturate: 1.15;
+    --glass-contrast: 1.02;
+    --glass-brightness: 1.02;
 }
 
 /* 移动端背景设置 */

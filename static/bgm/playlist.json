@@ -1,0 +1,58 @@
+[
+  {
+    "name": "タイムパラドックス",
+    "artist": "あよ_森羅万象",
+    "url": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス - あよ_森羅万象.flac",
+    "cover": "./static/bgm/タイムパラドックス【あよ_森羅万象】/エイセイパレード封面.jpg",
+    "lrc": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス.lrc"
+  },
+  {
+    "name": "三妖精SAY YA!!!",
+    "artist": "あやぽんず__あよ",
+    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.flac",
+    "cover": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/エイセイパレード封面.jpg",
+    "lrc": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY_YA!!!.lrc"
+  },
+  {
+    "name": "天狗舞踏会",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.mp3",
+    "cover": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.jpg",
+    "lrc": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.lrc"
+  },
+  {
+    "name": "有頂天ドリーマーズ",
+    "artist": "あやぽんず_",
+    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.flac",
+    "cover": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/シンクロ封面.jpg",
+    "lrc": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ.lrc"
+  },
+  {
+    "name": "永夜のパレード",
+    "artist": "JUMA_ケーキ姫☆優海",
+    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.flac",
+    "cover": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/幻想遊園郷_-Fantastic_Park-封面.jpg",
+    "lrc": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード.lrc"
+  },
+  {
+    "name": "童遊",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.flac",
+    "cover": "./static/bgm/童遊【めらみぽっぷ】/望（同人专辑）封面.jpg",
+    "lrc": "./static/bgm/童遊【めらみぽっぷ】/童遊.lrc"
+  },
+  {
+    "name": "運命線上のアリア",
+    "artist": "あよ",
+    "url": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア - あよ.flac",
+    "cover": "./static/bgm/運命線上のアリア【あよ】/ネタミニティ封面.jpg",
+    "lrc": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア.lrc"
+  },
+  {
+    "name": "风神少女",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.flac",
+    "cover": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.jpg",
+    "lrc": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.lrc"
+  }
+]

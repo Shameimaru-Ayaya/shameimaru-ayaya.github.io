@@ -32,11 +32,11 @@ body {
     top: 0;
     width: 100%;
     z-index: 100;
-    backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
-    background: rgba(19, 20, 24, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
     opacity: 0; /* 初始隐藏 */
     transition: opacity 1s ease;
 }
@@ -136,9 +136,9 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(19, 20, 24, 0.9);
+        background: var(--glass-bg);
         padding: 10px 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: var(--glass-shadow);
         z-index: 100;
     }
     
@@ -262,20 +262,29 @@ html::before {
 }
 
 html[data-theme="Dark"] {    
-    --main_text_color: #fff;
-    --gradient:linear-gradient(120deg, rgb(133, 62, 255), #f76cc6 30%, rgb(255, 255, 255) 60%);
-    --purple_text_color: #747bff;
-    --text_bg_color: rgb(26, 4, 48);
-    --item_bg_color: rgb(19, 20, 24);
-    --item_hover_color: rgb(19, 23, 27);
-    --item_left_title_color: rgb(255, 255, 255);
-    --item_left_text_color: rgb(142, 142, 142);
-    --footer_text_color: #646464;
-    --left_tag_item: linear-gradient(50deg, #1f2327, #000000);
-    --card_filter: 0px;
-    --back_filter: 0px;
-    --back_filter_color: #000000;
-    --fill:#ffffff;
+    --main_text_color: #f9fafb;
+    --gradient: linear-gradient(135deg, #6b8cff, #a770ef 35%, #e6e9ff 70%);
+    --purple_text_color: #a5b4ff;
+    --text_bg_color: rgba(10, 16, 40, 0.85);
+    --item_bg_color: rgba(10, 14, 32, 0.86);
+    --item_hover_color: rgba(20, 26, 60, 0.95);
+    --item_border_color: rgba(255, 255, 255, 0.15);
+    --item_left_title_color: #e5e7eb;
+    --item_left_text_color: #9ca3af;
+    --footer_text_color: #9ca3af;
+    --left_tag_item: rgba(148, 163, 255, 0.18);
+    --card_filter: 20px;
+    --back_filter: 6px;
+    --back_filter_color: rgba(3, 7, 18, 0.78);
+    --fill: #ffffff;
+    --glass-bg: rgba(11, 15, 35, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.16);
+    --glass-shadow: 0 20px 45px rgba(0, 0, 0, 0.75);
+    --glass-blur: 12px;
+    --glass-saturate: 1.25;
+    --glass-contrast: 1.06;
+    --glass-brightness: 1.04;
+    --edge_gradient: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(148,163,255,0.45) 22%, rgba(15,23,42,0.9) 50%, rgba(148,163,255,0.45) 78%, rgba(255,255,255,0.7));
 }
 
 #marisa-loading-center {
@@ -502,13 +511,12 @@ html[data-theme="Dark"] {
     margin-top: 15px;
     padding: 20px 16px;
     
-    /* Liquid Glass Styles */
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--main_text_color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -533,7 +541,7 @@ html[data-theme="Dark"] {
 
 .left-div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -748,13 +756,12 @@ html[data-theme="Dark"] {
     display: flex;
     margin-left: 12px;
 
-    /* Liquid Glass Styles */
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--main_text_color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     align-items: center;
@@ -778,7 +785,7 @@ html[data-theme="Dark"] {
 
 .iconItem:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -801,13 +808,12 @@ html[data-theme="Dark"] {
     justify-content: center;
     margin-left: 12px;
     
-    /* Liquid Glass Styles */
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--main_text_color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     transition: all 0.3s ease;
@@ -826,8 +832,28 @@ html[data-theme="Dark"] {
 
 .switch:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+.switch::after {
+    position: absolute;
+    right: -44px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="Light"] .switch::after {
+    content: "日间";
+    color: #ffd97a;
+}
+
+html[data-theme="Dark"] .switch::after {
+    content: "夜间";
+    color: #8bbdff;
 }
 
 .iconTip {
@@ -848,7 +874,7 @@ html[data-theme="Dark"] {
     padding: 0 16px;
     transform: translateY(-5px);
     background: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -909,13 +935,12 @@ html[data-theme="Dark"] {
     height: 110px;
     width: calc(25% - 15px); /* Adjust based on gap */
     
-    /* Liquid Glass Styles */
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--main_text_color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -936,7 +961,7 @@ html[data-theme="Dark"] {
 
 .projectItem:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1139,9 +1164,9 @@ footer {
     visibility: hidden;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    background: var(--back_filter_color);
     z-index: 99999;
     align-items: center;
     top: 0;
@@ -1192,8 +1217,8 @@ footer {
 
 .onoffswitch {
     position: relative;
-    width: 38px;
-    height: 20px;
+    width: 44px;
+    height: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1208,7 +1233,9 @@ footer {
     overflow: hidden;
     cursor: pointer;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 230, 180, 0.15), rgba(120, 160, 255, 0.35));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .onoffswitch-inner {
@@ -1231,38 +1258,55 @@ footer {
     height: 100%;
     padding: 0;
     font-size: 12px;
-    color: white;
+    color: #ffffff;
     font-family: Trebuchet, Arial, sans-serif;
     font-weight: bold;
     box-sizing: border-box;
 }
 
 .onoffswitch-inner:before {
-    content: "";
-    background-color: rgb(110 110 110 / 50%);
-    color: #FFFFFF;
-    text-align: left;
+    content: "日";
+    background: linear-gradient(135deg, #ffe7b0, #ffb38a);
+    color: #6b3b13;
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 6px;
 }
 
 .onoffswitch-inner:after {
-    content: "";
-    background-color: #272727;
-    color: #FAFAFA;
-    text-align: right;
+    content: "夜";
+    background: linear-gradient(135deg, #223355, #111827);
+    color: #e5edff;
+    text-align: left;
+    justify-content: flex-start;
+    padding-left: 6px;
 }
 
 .onoffswitch-switch {
     display: block;
-    height: 70%;
+    height: 72%;
     aspect-ratio: 1/1;
-    background: #FFFFFF;
+    background: #ffffff;
     position: absolute;
-    top: 12.5%;
-    bottom: 12.5%;
-    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    border-radius: 999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    transition: right 0.2s ease-in 0s, box-shadow 0.2s ease-in 0s, background-color 0.2s ease-in 0s, transform 0.2s ease-in 0s;
+}
 
-    border-radius: 20px;
-    transition: right 0.2s ease-in 0s;
+.onoffswitch-switch::before,
+.onoffswitch-switch::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
@@ -1272,6 +1316,56 @@ footer {
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
     right: 50%;
 }
+
+html[data-theme="Light"] .onoffswitch-switch {
+    background: radial-gradient(circle at 30% 30%, #fff9d6, #f6c453);
+}
+
+html[data-theme="Light"] .onoffswitch-switch::after {
+    background: radial-gradient(circle at 30% 30%, #fff9d6, #f6c453);
+    box-shadow:
+        0 0 0 2px rgba(255, 244, 214, 0.9),
+        0 0 8px rgba(255, 220, 130, 0.9),
+        0 0 0 6px rgba(255, 228, 160, 0.35);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.82);
+}
+
+html[data-theme="Light"] .onoffswitch-switch::before {
+    background: radial-gradient(circle, rgba(255, 249, 214, 0) 40%, rgba(255, 249, 214, 0.95) 68%, rgba(255, 249, 214, 0) 82%);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+    box-shadow:
+        0 0 10px rgba(255, 232, 170, 0.9),
+        0 0 18px rgba(255, 220, 130, 0.9);
+}
+
+/* 夜间模式：更干净的按钮背景 */
+html[data-theme="Dark"] .onoffswitch-switch {
+    background: linear-gradient(135deg, #0a0f1a, #111827);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* 夜间模式：统一光晕层级 */
+html[data-theme="Dark"] .onoffswitch-switch::before {
+    background: #fef4c3;
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow:
+        0 0 6px rgba(254, 244, 195, 0.8),
+        0 0 12px rgba(254, 244, 195, 0.5);
+}
+
+/* 夜间模式：内部阴影（更自然） */
+html[data-theme="Dark"] .onoffswitch-switch::after {
+    background: #050816;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.75);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
 
 /* About Us 页面样式 */
 .left-div.left-des {
@@ -1428,4 +1522,258 @@ footer {
   .left-div.left-des .experience-duration {
     margin-top: 0.5rem;
   }
+}
+
+/* APlayer Customization - Liquid Glass Style & Compact Layout */
+#aplayer-floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    max-width: 340px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#aplayer-floating.collapsed #aplayer-local {
+    display: none;
+}
+
+.aplayer-toggle {
+    background: rgba(19, 20, 24, 0.8);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    #aplayer-floating {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    .aplayer-toggle {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+#aplayer-local {
+    max-width: 320px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    background: rgba(19, 20, 24, 0.6) !important;
+    backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
+    -webkit-backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    overflow: hidden;
+}
+
+#aplayer-local .aplayer {
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+#aplayer-local .aplayer .aplayer-body {
+    background: transparent !important;
+}
+
+#aplayer-local .aplayer .aplayer-info {
+    border: none !important;
+    padding: 10px !important;
+    height: auto !important;
+}
+
+#aplayer-local .aplayer .aplayer-pic {
+    height: 66px !important;
+    width: 66px !important;
+    border-radius: 8px !important;
+    margin: 10px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-music {
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 14px !important;
+    color: #fff !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-music .aplayer-author {
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#aplayer-local .aplayer .aplayer-lrc {
+    margin: 6px 0 4px 0 !important;
+    height: 32px !important;
+    overflow: hidden !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    position: relative !important;
+}
+
+/* 移除歌词容器的渐变遮罩 */
+#aplayer-local .aplayer .aplayer-lrc::before,
+#aplayer-local .aplayer .aplayer-lrc::after,
+#aplayer-local .aplayer-lrc::before,
+#aplayer-local .aplayer-lrc::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 强制覆盖所有歌词段落样式 - 使用更高优先级 */
+#aplayer-local .aplayer .aplayer-lrc p,
+#aplayer-local .aplayer-lrc p {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    line-height: 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0.7 !important;
+    border: none !important;
+    background: transparent !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+}
+
+/* 当前播放歌词高亮 - 使用更高优先级 */
+#aplayer-local .aplayer .aplayer-lrc p.aplayer-lrc-current,
+#aplayer-local .aplayer-lrc p.aplayer-lrc-current {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.6)) !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 1px 3px rgba(0,0,0,0.8) !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    color: rgba(255, 255, 255, 0.7) !important;
+    bottom: 4px !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+    fill: #fff !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+    background: rgba(255, 255, 255, 0.2) !important;
+    height: 4px !important;
+    border-radius: 2px !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+    background: rgba(255, 255, 255, 0.2) !important;
+    height: 4px !important;
+    border-radius: 2px !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+    background: var(--purple_text_color, #747bff) !important;
+    height: 4px !important;
+    border-radius: 2px !important;
+}
+
+#aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+    background: #fff !important;
+    width: 8px !important;
+    height: 8px !important;
+    margin-top: -2px !important;
+}
+
+#aplayer-local .aplayer .aplayer-volume-bar-wrap .aplayer-volume-bar {
+    background: rgba(255,255,255,0.2) !important;
+}
+#aplayer-local .aplayer .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+    background: var(--purple_text_color, #747bff) !important;
+}
+
+/* 播放列表所有文字改为天蓝色 - 使用最高优先级 */
+#aplayer-local .aplayer .aplayer-list {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol {
+    background: transparent !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li {
+    color: #87CEEB !important;
+    border-top: 1px solid rgba(135, 206, 235, 0.2) !important;
+    background: transparent !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li * {
+    color: #87CEEB !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li .aplayer-list-index,
+#aplayer-local .aplayer-list ol li .aplayer-list-index {
+    color: #87CEEB !important;
+    opacity: 1 !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li .aplayer-list-author,
+#aplayer-local .aplayer-list ol li .aplayer-list-author {
+    color: #87CEEB !important;
+    opacity: 1 !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li .aplayer-list-title,
+#aplayer-local .aplayer-list ol li .aplayer-list-title {
+    color: #87CEEB !important;
+    opacity: 1 !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li:hover {
+    background: rgba(135, 206, 235, 0.15) !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-index,
+#aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-author,
+#aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-title {
+    color: #87CEEB !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: rgba(135, 206, 235, 0.25) !important;
+}
+
+#aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-index,
+#aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-author,
+#aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-title {
+    color: #87CEEB !important;
+}
+
+/* 强制覆盖任何默认样式 */
+.aplayer-list-index,
+.aplayer-list-author,
+.aplayer-list-title {
+    color: #87CEEB !important;
 }
