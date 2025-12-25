@@ -154,13 +154,6 @@
     "lrc": "./static/bgm/武装乙女【Chinozo__洛天依】/fuujinshoujo.lrc"
   },
   {
-    "name": "歳月-雲流れ-",
-    "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/歳月-雲流れ- - Foxtail-Grass Studio.flac",
-    "cover": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/fuujinshoujo.lrc"
-  },
-  {
     "name": "永夜のパレード",
     "artist": "JUMA_ケーキ姫☆優海",
     "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.flac",

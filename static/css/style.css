@@ -262,29 +262,29 @@ html::before {
 }
 
 html[data-theme="Dark"] {    
-    --main_text_color: #f9fafb;
-    --gradient: linear-gradient(135deg, #6b8cff, #a770ef 35%, #e6e9ff 70%);
-    --purple_text_color: #a5b4ff;
-    --text_bg_color: rgba(10, 16, 40, 0.85);
-    --item_bg_color: rgba(10, 14, 32, 0.86);
-    --item_hover_color: rgba(20, 26, 60, 0.95);
+    --main_text_color: #f8fafc;
+    --gradient: linear-gradient(135deg, #3b6cff 0%, #5b4bff 35%, #d2b4ff 72%);
+    --purple_text_color: #b79cff;
+    --text_bg_color: rgba(5, 10, 30, 0.86);
+    --item_bg_color: rgba(6, 10, 28, 0.84);
+    --item_hover_color: rgba(24, 12, 48, 0.92);
     --item_border_color: rgba(255, 255, 255, 0.15);
     --item_left_title_color: #e5e7eb;
     --item_left_text_color: #9ca3af;
     --footer_text_color: #9ca3af;
-    --left_tag_item: rgba(148, 163, 255, 0.18);
+    --left_tag_item: rgba(183, 156, 255, 0.18);
     --card_filter: 20px;
     --back_filter: 6px;
-    --back_filter_color: rgba(3, 7, 18, 0.78);
+    --back_filter_color: rgba(2, 4, 20, 0.82);
     --fill: #ffffff;
-    --glass-bg: rgba(11, 15, 35, 0.85);
+    --glass-bg: linear-gradient(135deg, rgba(6, 10, 36, 0.86), rgba(30, 12, 52, 0.82));
     --glass-border: rgba(255, 255, 255, 0.16);
     --glass-shadow: 0 20px 45px rgba(0, 0, 0, 0.75);
     --glass-blur: 12px;
     --glass-saturate: 1.25;
     --glass-contrast: 1.06;
     --glass-brightness: 1.04;
-    --edge_gradient: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(148,163,255,0.45) 22%, rgba(15,23,42,0.9) 50%, rgba(148,163,255,0.45) 78%, rgba(255,255,255,0.7));
+    --edge_gradient: linear-gradient(135deg, rgba(236,240,255,0.68), rgba(124,140,255,0.40) 22%, rgba(6,8,28,0.92) 50%, rgba(148,98,255,0.38) 78%, rgba(236,240,255,0.68));
 }
 
 #marisa-loading-center {
@@ -1542,29 +1542,49 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 }
 
 .aplayer-toggle {
-    background: rgba(19, 20, 24, 0.8);
-    color: #ffffff;
+    background: var(--glass-bg);
+    color: var(--main_text_color);
     padding: 6px 12px;
     border-radius: 999px;
     margin-bottom: 8px;
     font-size: 12px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border);
     user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
     #aplayer-floating {
-        right: 10px;
-        left: 10px;
-        max-width: none;
+        right: 12px;
+        top: 68px;
+        bottom: auto;
+        left: auto;
+        max-width: 320px;
+        width: auto;
     }
     .aplayer-toggle {
-        align-self: stretch;
-        text-align: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        padding: 0;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    .aplayer-toggle .aplayer-toggle-label {
+        display: none;
+    }
+    #aplayer-local {
+        width: 300px !important;
+        max-width: calc(100vw - 24px) !important;
     }
 }
 
@@ -1573,11 +1593,11 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
     width: 100% !important;
     margin: 0 !important;
     border-radius: 12px !important;
-    background: rgba(19, 20, 24, 0.6) !important;
-    backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
-    -webkit-backdrop-filter: blur(12px) saturate(1.25) contrast(1.05) brightness(1.12);
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
     overflow: hidden;
 }
 
@@ -1613,12 +1633,14 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 
 #aplayer-local .aplayer .aplayer-info .aplayer-music .aplayer-title {
     font-size: 14px !important;
-    color: #fff !important;
+    color: var(--main_text_color) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
 }
 
 #aplayer-local .aplayer .aplayer-info .aplayer-music .aplayer-author {
     font-size: 12px !important;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35) !important;
 }
 
 #aplayer-local .aplayer .aplayer-lrc {
@@ -1651,7 +1673,7 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 /* 强制覆盖所有歌词段落样式 - 使用更高优先级 */
 #aplayer-local .aplayer .aplayer-lrc p,
 #aplayer-local .aplayer-lrc p {
-    color: #ffffff !important;
+    color: var(--main_text_color) !important;
     font-size: 13px !important;
     line-height: 16px !important;
     padding: 0 !important;
@@ -1659,13 +1681,13 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
     opacity: 0.7 !important;
     border: none !important;
     background: transparent !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.75) !important;
 }
 
 /* 当前播放歌词高亮 - 使用更高优先级 */
 #aplayer-local .aplayer .aplayer-lrc p.aplayer-lrc-current,
 #aplayer-local .aplayer-lrc p.aplayer-lrc-current {
-    color: #ffffff !important;
+    color: var(--main_text_color) !important;
     font-size: 14px !important;
     font-weight: bold !important;
     opacity: 1 !important;
@@ -1679,7 +1701,7 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 }
 
 #aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
-    fill: #fff !important;
+    fill: var(--main_text_color) !important;
 }
 
 #aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
@@ -1701,7 +1723,7 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 }
 
 #aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
-    background: #fff !important;
+    background: var(--main_text_color) !important;
     width: 8px !important;
     height: 8px !important;
     margin-top: -2px !important;
@@ -1714,9 +1736,8 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
     background: var(--purple_text_color, #747bff) !important;
 }
 
-/* 播放列表所有文字改为天蓝色 - 使用最高优先级 */
 #aplayer-local .aplayer .aplayer-list {
-    background: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.35) !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol {
@@ -1724,56 +1745,56 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 }
 
 #aplayer-local .aplayer .aplayer-list ol li {
-    color: #87CEEB !important;
-    border-top: 1px solid rgba(135, 206, 235, 0.2) !important;
+    color: var(--purple_text_color) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
     background: transparent !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li * {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li .aplayer-list-index,
 #aplayer-local .aplayer-list ol li .aplayer-list-index {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
     opacity: 1 !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li .aplayer-list-author,
 #aplayer-local .aplayer-list ol li .aplayer-list-author {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
     opacity: 1 !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li .aplayer-list-title,
 #aplayer-local .aplayer-list ol li .aplayer-list-title {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
     opacity: 1 !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li:hover {
-    background: rgba(135, 206, 235, 0.15) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-index,
 #aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-author,
 #aplayer-local .aplayer .aplayer-list ol li:hover .aplayer-list-title {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light {
-    background: rgba(135, 206, 235, 0.25) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
 }
 
 #aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-index,
 #aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-author,
 #aplayer-local .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-title {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
 }
 
 /* 强制覆盖任何默认样式 */
 .aplayer-list-index,
 .aplayer-list-author,
 .aplayer-list-title {
-    color: #87CEEB !important;
+    color: var(--purple_text_color) !important;
 }
