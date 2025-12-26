@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import unicodedata
 
 
 def scan_bgm_root():
@@ -9,18 +10,23 @@ def scan_bgm_root():
     result = []
     if not os.path.isdir(bgm_root):
         return result
+
+    def normalize_path_component(value: str) -> str:
+        return unicodedata.normalize("NFC", value)
+
     audio_exts = {".mp3", ".flac", ".ogg", ".wav", ".m4a", ".aac", ".webm"}
     image_exts = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp"}
     for entry in sorted(os.listdir(bgm_root)):
         folder_path = os.path.join(bgm_root, entry)
         if not os.path.isdir(folder_path):
             continue
-        match = re.match(r"(.+?)【(.+?)】$", entry)
+        normalized_entry = normalize_path_component(entry)
+        match = re.match(r"(.+?)【(.+?)】$", normalized_entry)
         if match:
             name = match.group(1).strip()
             artist = match.group(2).strip()
         else:
-            name = entry.strip()
+            name = normalized_entry.strip()
             artist = ""
         audio_path = None
         cover_path = None
@@ -29,16 +35,23 @@ def scan_bgm_root():
             file_path = os.path.join(folder_path, file_name)
             if not os.path.isfile(file_path):
                 continue
+            normalized_file_name = normalize_path_component(file_name)
             ext = os.path.splitext(file_name)[1].lower()
             if ext == ".lrc":
                 if lrc_path is None:
-                    lrc_path = "./static/bgm/{}/{}".format(entry, file_name)
+                    lrc_path = "./static/bgm/{}/{}".format(
+                        normalized_entry, normalized_file_name
+                    )
             elif ext in image_exts:
                 if cover_path is None:
-                    cover_path = "./static/bgm/{}/{}".format(entry, file_name)
+                    cover_path = "./static/bgm/{}/{}".format(
+                        normalized_entry, normalized_file_name
+                    )
             elif ext in audio_exts:
                 if audio_path is None:
-                    audio_path = "./static/bgm/{}/{}".format(entry, file_name)
+                    audio_path = "./static/bgm/{}/{}".format(
+                        normalized_entry, normalized_file_name
+                    )
         if audio_path and cover_path and lrc_path:
             result.append(
                 {
@@ -62,4 +75,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

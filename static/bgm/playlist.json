@@ -15,52 +15,52 @@
   },
   {
     "name": "おちゃめ機能",
-    "artist": "重音テト_ラマーズP",
-    "url": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/おちゃめ機能 - 重音テト_ラマーズP.mp3",
-    "cover": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/1.jpg",
-    "lrc": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/fuujinshoujo.lrc"
+    "artist": "重音テト_ラマーズP",
+    "url": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/おちゃめ機能 - 重音テト_ラマーズP.mp3",
+    "cover": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/1.jpg",
+    "lrc": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/fuujinshoujo.lrc"
   },
   {
-    "name": "クレプスクルム",
+    "name": "クレプスクルム",
     "artist": "フーリンキャットマーク",
-    "url": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム - フーリンキャットマーク.MP3",
-    "cover": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム封面.png",
-    "lrc": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム.lrc"
+    "url": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム - フーリンキャットマーク.MP3",
+    "cover": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム封面.png",
+    "lrc": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム.lrc"
   },
   {
-    "name": "スカーレット警察のゲットーパトロール24時",
+    "name": "スカーレット警察のゲットーパトロール24時",
     "artist": "ココ_96_岩杉夏_miko",
-    "url": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時 - miko_ココ_黒田椋子_岩杉夏.mp3",
-    "cover": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/GENSOKYO_DEMPA_EXPO封面.jpg",
-    "lrc": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時.lrc"
+    "url": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時 - miko_ココ_黒田椋子_岩杉夏.mp3",
+    "cover": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/GENSOKYO_DEMPA_EXPO封面.jpg",
+    "lrc": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時.lrc"
   },
   {
-    "name": "タイムパラドックス",
+    "name": "タイムパラドックス",
     "artist": "あよ_森羅万象",
-    "url": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス - あよ_森羅万象.mp3",
-    "cover": "./static/bgm/タイムパラドックス【あよ_森羅万象】/エイセイパレード封面.jpg",
-    "lrc": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス.lrc"
+    "url": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス - あよ_森羅万象.mp3",
+    "cover": "./static/bgm/タイムパラドックス【あよ_森羅万象】/エイセイパレード封面.jpg",
+    "lrc": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス.lrc"
   },
   {
-    "name": "チルノのパーフェクトさんすう教室",
+    "name": "チルノのパーフェクトさんすう教室",
     "artist": "miko",
-    "url": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室 - miko.mp3",
-    "cover": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/東方氷雪歌集封面.jpg",
-    "lrc": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室.lrc"
+    "url": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室 - miko.mp3",
+    "cover": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/東方氷雪歌集封面.jpg",
+    "lrc": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室.lrc"
   },
   {
-    "name": "ツギハギスタッカート",
+    "name": "ツギハギスタッカート",
     "artist": "とあ_初音ミク",
-    "url": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/ツギハギスタッカート - とあ_初音ミク.mp3",
-    "cover": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/1.jpg",
-    "lrc": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/fuujinshoujo.lrc"
+    "url": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/ツギハギスタッカート - とあ_初音ミク.mp3",
+    "cover": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/1.jpg",
+    "lrc": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/fuujinshoujo.lrc"
   },
   {
     "name": "三妖精SAY YA!!!",
-    "artist": "あやぽんず__あよ",
-    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.mp3",
-    "cover": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/エイセイパレード封面.jpg",
-    "lrc": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY_YA!!!.lrc"
+    "artist": "あやぽんず__あよ",
+    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.mp3",
+    "cover": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/エイセイパレード封面.jpg",
+    "lrc": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY_YA!!!.lrc"
   },
   {
     "name": "世末歌者",
@@ -70,11 +70,11 @@
     "lrc": "./static/bgm/世末歌者【乐正绫_COP】/fuujinshoujo.lrc"
   },
   {
-    "name": "今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.",
+    "name": "今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.",
     "artist": "黄昏フロンティア_上海アリス幻樂団",
-    "url": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.mp3",
-    "cover": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/1.jpg",
-    "lrc": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/fuujinshoujo.lrc"
+    "url": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/1.jpg",
+    "lrc": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/fuujinshoujo.lrc"
   },
   {
     "name": "六兆年と一夜物語",
@@ -126,18 +126,18 @@
     "lrc": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/fuujinshoujo.lrc"
   },
   {
-    "name": "昼下がりの憂鬱",
+    "name": "昼下がりの憂鬱",
     "artist": "みかん箱_Foxtail-Grass Studio",
-    "url": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.flac",
-    "cover": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/天狗舞踏会.lrc"
+    "url": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.flac",
+    "cover": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/1.jpg",
+    "lrc": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/天狗舞踏会.lrc"
   },
   {
-    "name": "有頂天ドリーマーズ",
-    "artist": "あやぽんず_",
-    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.flac",
-    "cover": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/シンクロ封面.jpg",
-    "lrc": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ.lrc"
+    "name": "有頂天ドリーマーズ",
+    "artist": "あやぽんず_",
+    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.flac",
+    "cover": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/シンクロ封面.jpg",
+    "lrc": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ.lrc"
   },
   {
     "name": "果てなき風の軌跡さえ～破～",
@@ -161,11 +161,11 @@
     "lrc": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/fuujinshoujo.lrc"
   },
   {
-    "name": "永夜のパレード",
+    "name": "永夜のパレード",
     "artist": "JUMA_ケーキ姫☆優海",
-    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.flac",
-    "cover": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/幻想遊園郷_-Fantastic_Park-封面.jpg",
-    "lrc": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード.lrc"
+    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.flac",
+    "cover": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/幻想遊園郷_-Fantastic_Park-封面.jpg",
+    "lrc": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード.lrc"
   },
   {
     "name": "沢の河城工務店[Foxtail-Grass Studio]",
@@ -196,25 +196,25 @@
     "lrc": "./static/bgm/现梦 -genmu-【みぃ_yukina】/fuujinshoujo.lrc"
   },
   {
-    "name": "病名は愛だった",
+    "name": "病名は愛だった",
     "artist": "Neru_鏡音レン_鏡音リン_z'5",
-    "url": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.MP3",
-    "cover": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/1.jpg",
-    "lrc": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/fuujinshoujo.lrc"
+    "url": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.MP3",
+    "cover": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/1.jpg",
+    "lrc": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/fuujinshoujo.lrc"
   },
   {
     "name": "童遊",
-    "artist": "めらみぽっぷ",
-    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.flac",
-    "cover": "./static/bgm/童遊【めらみぽっぷ】/望（同人专辑）封面.jpg",
-    "lrc": "./static/bgm/童遊【めらみぽっぷ】/童遊.lrc"
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.flac",
+    "cover": "./static/bgm/童遊【めらみぽっぷ】/望（同人专辑）封面.jpg",
+    "lrc": "./static/bgm/童遊【めらみぽっぷ】/童遊.lrc"
   },
   {
     "name": "竹ノ花",
-    "artist": "めらみぽっぷ",
-    "url": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花 - めらみぽっぷ.flac",
-    "cover": "./static/bgm/竹ノ花【めらみぽっぷ】/薦封面.jpg",
-    "lrc": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花.lrc"
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花 - めらみぽっぷ.flac",
+    "cover": "./static/bgm/竹ノ花【めらみぽっぷ】/薦封面.jpg",
+    "lrc": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花.lrc"
   },
   {
     "name": "臙脂",
