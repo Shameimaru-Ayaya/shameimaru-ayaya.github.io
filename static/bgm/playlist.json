@@ -100,7 +100,7 @@
   {
     "name": "幻想症候群",
     "artist": "Marcia",
-    "url": "./static/bgm/幻想症候群【Marcia】/幻想症候群[with]Marcia - 一咲美葵.flac",
+    "url": "./static/bgm/幻想症候群【Marcia】/幻想症候群[with]Marcia - 一咲美葵.mp3",
     "cover": "./static/bgm/幻想症候群【Marcia】/幻想症候群封面.jpg",
     "lrc": "./static/bgm/幻想症候群【Marcia】/幻想症候群.lrc"
   },
@@ -114,14 +114,14 @@
   {
     "name": "日陰と帽子と風鈴と",
     "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/日陰と帽子と風鈴と - Foxtail-Grass Studio.flac",
+    "url": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/日陰と帽子と風鈴と - Foxtail-Grass Studio.mp3",
     "cover": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/1.jpg",
     "lrc": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/fuujinshoujo.lrc"
   },
   {
     "name": "明日ハレの日、ケの昨日",
     "artist": "上海アリス幻樂団",
-    "url": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/明日ハレの日、ケの昨日 - 上海アリス幻樂団.flac",
+    "url": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/明日ハレの日、ケの昨日 - 上海アリス幻樂団.mp3",
     "cover": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/1.jpg",
     "lrc": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/fuujinshoujo.lrc"
   },
@@ -142,7 +142,7 @@
   {
     "name": "果てなき風の軌跡さえ～破～",
     "artist": "森永真由美_一咲美葵",
-    "url": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ～破～ - 森永真由美_一咲美葵.flac",
+    "url": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ～破～ - 森永真由美_一咲美葵.mp3",
     "cover": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ封面.jpg",
     "lrc": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ.lrc"
   },
@@ -177,14 +177,14 @@
   {
     "name": "沸雪煮相思",
     "artist": "Newbiao好梦一场_洛天依Official_星尘infinity",
-    "url": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/沸雪煮相思 - Newbiao好梦一场_洛天依Official_星尘infinity.flac",
+    "url": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/沸雪煮相思 - Newbiao好梦一场_洛天依Official_星尘infinity.mp3",
     "cover": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/1.jpg",
     "lrc": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/fuujinshoujo.lrc"
   },
   {
     "name": "深海少女[ゆうゆ_初音ミク]",
     "artist": "",
-    "url": "./static/bgm/深海少女[ゆうゆ_初音ミク]/深海少女 - ゆうゆ_初音ミク.flac",
+    "url": "./static/bgm/深海少女[ゆうゆ_初音ミク]/深海少女 - ゆうゆ_初音ミク.mp3",
     "cover": "./static/bgm/深海少女[ゆうゆ_初音ミク]/1.jpg",
     "lrc": "./static/bgm/深海少女[ゆうゆ_初音ミク]/fuujinshoujo.lrc"
   },
@@ -247,14 +247,14 @@
   {
     "name": "风神少女",
     "artist": "上海アリス幻樂団",
-    "url": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.flac",
+    "url": "./static/bgm/风神少女【上海アリス幻樂団】/風神少女 - 上海アリス幻樂団.mp3",
     "cover": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.jpg",
     "lrc": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.lrc"
   },
   {
     "name": "鳥よ",
     "artist": "nayuta_凋叶棕",
-    "url": "./static/bgm/鳥よ【nayuta_凋叶棕】/鳥よ - nayuta_凋叶棕.flac",
+    "url": "./static/bgm/鳥よ【nayuta_凋叶棕】/鳥よ - nayuta_凋叶棕.mp3",
     "cover": "./static/bgm/鳥よ【nayuta_凋叶棕】/娶封面.jpg",
     "lrc": "./static/bgm/鳥よ【nayuta_凋叶棕】/鳥よ.lrc"
   }
