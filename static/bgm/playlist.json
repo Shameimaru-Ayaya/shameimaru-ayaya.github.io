@@ -128,7 +128,7 @@
   {
     "name": "昼下がりの憂鬱",
     "artist": "みかん箱_Foxtail-Grass Studio",
-    "url": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.flac",
+    "url": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.mp3",
     "cover": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/1.jpg",
     "lrc": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/天狗舞踏会.lrc"
   },
@@ -170,7 +170,7 @@
   {
     "name": "沢の河城工務店[Foxtail-Grass Studio]",
     "artist": "",
-    "url": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/沢の河城工務店 - Foxtail-Grass Studio.flac",
+    "url": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/沢の河城工務店 - Foxtail-Grass Studio.mp3",
     "cover": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/天狗舞踏会.jpg",
     "lrc": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/天狗舞踏会.lrc"
   },
@@ -212,7 +212,7 @@
   {
     "name": "竹ノ花",
     "artist": "めらみぽっぷ",
-    "url": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花 - めらみぽっぷ.flac",
+    "url": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花 - めらみぽっぷ.mp3",
     "cover": "./static/bgm/竹ノ花【めらみぽっぷ】/薦封面.jpg",
     "lrc": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花.lrc"
   },
@@ -233,7 +233,7 @@
   {
     "name": "運命線上のアリア",
     "artist": "あよ",
-    "url": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア - あよ.flac",
+    "url": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア - あよ.mp3",
     "cover": "./static/bgm/運命線上のアリア【あよ】/ネタミニティ封面.jpg",
     "lrc": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア.lrc"
   },
