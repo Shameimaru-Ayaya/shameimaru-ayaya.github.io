@@ -135,7 +135,7 @@
   {
     "name": "有頂天ドリーマーズ",
     "artist": "あやぽんず_",
-    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.flac",
+    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.mp3",
     "cover": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/シンクロ封面.jpg",
     "lrc": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ.lrc"
   },
@@ -163,7 +163,7 @@
   {
     "name": "永夜のパレード",
     "artist": "JUMA_ケーキ姫☆優海",
-    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.flac",
+    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.mp3",
     "cover": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/幻想遊園郷_-Fantastic_Park-封面.jpg",
     "lrc": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード.lrc"
   },
@@ -219,14 +219,14 @@
   {
     "name": "臙脂",
     "artist": "蛋包饭咖喱饭_重音テト",
-    "url": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/臙脂【蛋包饭咖喱饭_重音テト】.flac",
+    "url": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/臙脂【蛋包饭咖喱饭_重音テト】.mp3",
     "cover": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/1.jpg",
     "lrc": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/fuujinshoujo.lrc"
   },
   {
     "name": "踊っチャイナ",
     "artist": "Atena_初音ミク_重音テト",
-    "url": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/踊っチャイナ (feat. 初音ミク & 重音テト) - Atena_初音ミク_重音テト.flac",
+    "url": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/踊っチャイナ (feat. 初音ミク & 重音テト) - Atena_初音ミク_重音テト.mp3",
     "cover": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/1.jpg",
     "lrc": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/fuujinshoujo.lrc"
   },
@@ -240,7 +240,7 @@
   {
     "name": "雨待ち傘",
     "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/雨待ち傘 - Foxtail-Grass Studio.flac",
+    "url": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/雨待ち傘 - Foxtail-Grass Studio.mp3",
     "cover": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/1.jpg",
     "lrc": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/fuujinshoujo.lrc"
   },
