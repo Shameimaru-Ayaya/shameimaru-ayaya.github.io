@@ -2,14 +2,14 @@
   {
     "name": "Goldberg Variations, BWV 988_Aria",
     "artist": "Glenn Gould",
-    "url": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/Goldberg Variations, BWV 988_Aria - Glenn Gould.flac",
+    "url": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/Goldberg Variations, BWV 988 (1981 Recording)_ Aria - Glenn Gould.mp3",
     "cover": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/1.jpg",
     "lrc": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/fuujinshoujo.lrc"
   },
   {
     "name": "Unwelcome school【ミツキヨ]",
     "artist": "",
-    "url": "./static/bgm/Unwelcome school【ミツキヨ]/Unwelcome school - ミツキヨ.flac",
+    "url": "./static/bgm/Unwelcome school【ミツキヨ]/Unwelcome school - ミツキヨ.mp3",
     "cover": "./static/bgm/Unwelcome school【ミツキヨ]/1.jpg",
     "lrc": "./static/bgm/Unwelcome school【ミツキヨ]/fuujinshoujo.lrc"
   },
@@ -152,6 +152,13 @@
     "url": "./static/bgm/武装乙女【Chinozo__洛天依】/武装乙女 - Chinozo.flac",
     "cover": "./static/bgm/武装乙女【Chinozo__洛天依】/1.jpg",
     "lrc": "./static/bgm/武装乙女【Chinozo__洛天依】/fuujinshoujo.lrc"
+  },
+  {
+    "name": "歳月-雲流れ-",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/歳月-雲流れ- - Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/1.jpg",
+    "lrc": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/fuujinshoujo.lrc"
   },
   {
     "name": "永夜のパレード",
