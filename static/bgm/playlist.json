@@ -58,7 +58,7 @@
   {
     "name": "三妖精SAY YA!!!",
     "artist": "あやぽんず__あよ",
-    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.flac",
+    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.mp3",
     "cover": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/エイセイパレード封面.jpg",
     "lrc": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY_YA!!!.lrc"
   },
@@ -72,14 +72,14 @@
   {
     "name": "今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.",
     "artist": "黄昏フロンティア_上海アリス幻樂団",
-    "url": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.flac",
+    "url": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.mp3",
     "cover": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/1.jpg",
     "lrc": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/fuujinshoujo.lrc"
   },
   {
     "name": "六兆年と一夜物語",
     "artist": "Leo_need_初音ミク_堀江晶太",
-    "url": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/六兆年と一夜物語 - Leo_need_初音ミク_堀江晶太.flac",
+    "url": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/六兆年と一夜物語 - Leo_need_初音ミク_堀江晶太.mp3",
     "cover": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/1.jpg",
     "lrc": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/fuujinshoujo.lrc"
   },
@@ -198,7 +198,7 @@
   {
     "name": "病名は愛だった",
     "artist": "Neru_鏡音レン_鏡音リン_z'5",
-    "url": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.flac",
+    "url": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.MP3",
     "cover": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/1.jpg",
     "lrc": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/fuujinshoujo.lrc"
   },
