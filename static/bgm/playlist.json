@@ -93,7 +93,7 @@
   {
     "name": "太陽のうた",
     "artist": "あよ",
-    "url": "./static/bgm/太陽のうた【あよ】/太陽のうた - あよ.flac",
+    "url": "./static/bgm/太陽のうた【あよ】/太陽のうた - あよ.mp3",
     "cover": "./static/bgm/太陽のうた【あよ】/シンクロ2封面.jpg",
     "lrc": "./static/bgm/太陽のうた【あよ】/太陽のうた.lrc"
   },
@@ -107,7 +107,7 @@
   {
     "name": "我的悲伤是水做的",
     "artist": "ChiliChill乐团_洛天依Official",
-    "url": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/我的悲伤是水做的 - ChiliChill乐团_洛天依Official.flac",
+    "url": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/我的悲伤是水做的 - ChiliChill乐团_洛天依Official.mp3",
     "cover": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/1.jpg",
     "lrc": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/fuujinshoujo.lrc"
   },
@@ -149,7 +149,7 @@
   {
     "name": "武装乙女",
     "artist": "Chinozo__洛天依",
-    "url": "./static/bgm/武装乙女【Chinozo__洛天依】/武装乙女 - Chinozo.flac",
+    "url": "./static/bgm/武装乙女【Chinozo__洛天依】/武装乙女 - Chinozo.mp3",
     "cover": "./static/bgm/武装乙女【Chinozo__洛天依】/1.jpg",
     "lrc": "./static/bgm/武装乙女【Chinozo__洛天依】/fuujinshoujo.lrc"
   },
@@ -191,7 +191,7 @@
   {
     "name": "现梦 -genmu-",
     "artist": "みぃ_yukina",
-    "url": "./static/bgm/现梦 -genmu-【みぃ_yukina】/现梦 -genmu- - みぃ_yukina.flac",
+    "url": "./static/bgm/现梦 -genmu-【みぃ_yukina】/现梦 -genmu- - みぃ_yukina.mp3",
     "cover": "./static/bgm/现梦 -genmu-【みぃ_yukina】/1.jpg",
     "lrc": "./static/bgm/现梦 -genmu-【みぃ_yukina】/fuujinshoujo.lrc"
   },
@@ -205,7 +205,7 @@
   {
     "name": "童遊",
     "artist": "めらみぽっぷ",
-    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.flac",
+    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.mp3",
     "cover": "./static/bgm/童遊【めらみぽっぷ】/望（同人专辑）封面.jpg",
     "lrc": "./static/bgm/童遊【めらみぽっぷ】/童遊.lrc"
   },
