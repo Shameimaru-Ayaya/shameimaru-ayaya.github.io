@@ -510,12 +510,6 @@
     "cover": "./static/bgm/[TH秘封]童遊 - めらみぽっぷ/望（同人专辑）封面.jpg"
   },
   {
-    "name": "【Key】SPRB]風は微かに、熱を残し…",
-    "artist": "VISUAL ARTS",
-    "url": "./static/bgm/【Key】SPRB]風は微かに、熱を残し… - VISUAL ARTS/【Key】SPRB]風は微かに、熱を残し… - VISUAL ARTS.mp3",
-    "cover": ""
-  },
-  {
     "name": "【Key】[SPRB]Don't Cry Red",
     "artist": "神山識(CV.ファイルーズあい)／VISUAL ARTS／Key",
     "url": "./static/bgm/【Key】[SPRB]Don't Cry Red - 神山識(CV.ファイルーズあい)／VISUAL ARTS／Key/【Key】[SPRB]Don't Cry Red - 神山識(CV.ファイルーズあい)_VISUAL ARTS _ Key.mp3",
@@ -651,6 +645,12 @@
     "name": "【Key】[SPRB]青き此方",
     "artist": "YURiKA／VISUAL ARTS／Key",
     "url": "./static/bgm/【Key】[SPRB]青き此方 - YURiKA／VISUAL ARTS／Key/【Key】[SPRB]青き此方 - YURiKA_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]風は微かに、熱を残し…",
+    "artist": "VISUAL ARTS",
+    "url": "./static/bgm/【Key】[SPRB]風は微かに、熱を残し… - VISUAL ARTS/【Key】[SPRB]風は微かに、熱を残し… - VISUAL ARTS.mp3",
     "cover": ""
   },
   {
