@@ -783,7 +783,7 @@
     "name": "【日V】Miku",
     "artist": "Anamanaguchi／初音ミク",
     "url": "./static/bgm/【日V】Miku - Anamanaguchi／初音ミク/【日V】Miku - Anamanaguchi_初音ミク.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【日V】Miku - Anamanaguchi／初音ミク/ab67616d0000b2733483d29da023022d903644f3.jpeg"
   },
   {
     "name": "【日V】おちゃめ機能",
@@ -795,7 +795,7 @@
     "name": "【日V】サイエンス (feat. 重音テト)",
     "artist": "MIMI／重音テト",
     "url": "./static/bgm/【日V】サイエンス (feat. 重音テト) - MIMI／重音テト/【日V】サイエンス (feat. 重音テト) - MIMI_重音テト.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【日V】サイエンス (feat. 重音テト) - MIMI／重音テト/ab67616d0000b27390ac49821da0e6cedc1fc9f1.jpeg"
   },
   {
     "name": "【日V】ツギハギスタッカート",
@@ -807,7 +807,7 @@
     "name": "【日V】ワールドイズマイン",
     "artist": "初音ミク／ryo (supercell)",
     "url": "./static/bgm/【日V】ワールドイズマイン - 初音ミク／ryo (supercell)/【日V】ワールドイズマイン - 初音ミク_ryo (supercell).mp3",
-    "cover": ""
+    "cover": "./static/bgm/【日V】ワールドイズマイン - 初音ミク／ryo (supercell)/BqFzD0ev7bMOxkSQqjtKmg==_109951169042217958.jpg"
   },
   {
     "name": "【日V】六兆年と一夜物語",
@@ -819,7 +819,7 @@
     "name": "【日V】星涙哀歌",
     "artist": "MIMI",
     "url": "./static/bgm/【日V】星涙哀歌 - MIMI/【日V】星涙哀歌 - MIMI.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【日V】星涙哀歌 - MIMI/images.jpeg"
   },
   {
     "name": "【日V】深海少女",
@@ -837,7 +837,7 @@
     "name": "【日V】神のまにまに",
     "artist": "初音ミク／鏡音リン／GUMI／れるりり",
     "url": "./static/bgm/【日V】神のまにまに - 初音ミク／鏡音リン／GUMI／れるりり/【日V】神のまにまに - 初音ミク_鏡音リン_GUMI_れるりり.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【日V】神のまにまに - 初音ミク／鏡音リン／GUMI／れるりり/b08613f63c9dc14c8db84aad65892478.1000x999x1.png"
   },
   {
     "name": "【日V】臙脂",
@@ -903,175 +903,175 @@
     "name": "【柚子】[千恋万花]くつろぎの間",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]くつろぎの間 - Angel Note／井ノ原智/【柚子】[千恋万花]くつろぎの間 - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]くつろぎの間 - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]とおりゃんせ~甘美風来",
     "artist": "遥そら",
     "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ~甘美風来 - 遥そら/【柚子】[千恋万花]とおりゃんせ~甘美風来 - 遥そら.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]とおりゃんせ~甘美風来 - 遥そら/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞",
     "artist": "ゆずひこ／佐々倉マコト",
     "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞ - ゆずひこ／佐々倉マコト/【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞ - ゆずひこ_佐々倉マコト.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞ - ゆずひこ／佐々倉マコト/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_",
     "artist": "Angel Note／ゆずひこ",
     "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_ - Angel Note／ゆずひこ/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_ - Angel Note_ゆずひこ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_ - Angel Note／ゆずひこ/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_",
     "artist": "Angel Note／ゆずひこ",
     "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_ - Angel Note／ゆずひこ/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_ - Angel Note_ゆずひこ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_ - Angel Note／ゆずひこ/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]ひとときの安息",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]ひとときの安息 - Angel Note／井ノ原智/【柚子】[千恋万花]ひとときの安息 - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]ひとときの安息 - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]ふたつの影",
     "artist": "Famishin／春風まゆき",
     "url": "./static/bgm/【柚子】[千恋万花]ふたつの影 - Famishin／春風まゆき/【柚子】[千恋万花]ふたつの影 - Famishin_春風まゆき.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]ふたつの影 - Famishin／春風まゆき/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]ふたりで",
     "artist": "Famishin／Riryka",
     "url": "./static/bgm/【柚子】[千恋万花]ふたりで - Famishin／Riryka/【柚子】[千恋万花]ふたりで - Famishin_Riryka.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]ふたりで - Famishin／Riryka/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉",
     "artist": "Famishin／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉 - Famishin／Angel Note/【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉 - Famishin_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉 - Famishin／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]キズナヒトツ",
     "artist": "山本希望",
     "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ - 山本希望/【柚子】[千恋万花]キズナヒトツ - 山本希望.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]キズナヒトツ - 山本希望/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]キズナヒトツ _Instrument Version_",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Instrument Version_ - Angel Note／井ノ原智/【柚子】[千恋万花]キズナヒトツ _Instrument Version_ - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Instrument Version_ - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]キズナヒトツ _Quiet Version_",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Quiet Version_ - Angel Note／井ノ原智/【柚子】[千恋万花]キズナヒトツ _Quiet Version_ - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Quiet Version_ - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]心の夜明け",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]心の夜明け - Angel Note／井ノ原智/【柚子】[千恋万花]心の夜明け - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]心の夜明け - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]恋ひ恋ふ縁",
     "artist": "Famishin／KOTOKO",
     "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁 - Famishin／KOTOKO/【柚子】[千恋万花]恋ひ恋ふ縁 - Famishin_KOTOKO.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁 - Famishin／KOTOKO/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞",
     "artist": "Famishin／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞ - Famishin／Angel Note/【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞ - Famishin_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞ - Famishin／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞",
     "artist": "Famishin／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞ - Famishin／Angel Note/【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞ - Famishin_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞ - Famishin／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉",
     "artist": "Famishin／佐々倉マコト",
     "url": "./static/bgm/【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉 - Famishin／佐々倉マコト/【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉 - Famishin_佐々倉マコト.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉 - Famishin／佐々倉マコト/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]慎ましき朝",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]慎ましき朝 - Angel Note／井ノ原智/【柚子】[千恋万花]慎ましき朝 - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]慎ましき朝 - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]本日は晴天なり",
     "artist": "Famishin／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]本日は晴天なり - Famishin／Angel Note/【柚子】[千恋万花]本日は晴天なり - Famishin_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]本日は晴天なり - Famishin／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]田心屋",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]田心屋 - Angel Note／井ノ原智/【柚子】[千恋万花]田心屋 - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]田心屋 - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]縁結び",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]縁結び - Angel Note／井ノ原智/【柚子】[千恋万花]縁結び - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]縁結び - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉",
     "artist": "Famishin／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉 - Famishin／Angel Note/【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉 - Famishin_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉 - Famishin／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]花鳥風月",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]花鳥風月 - Angel Note／井ノ原智/【柚子】[千恋万花]花鳥風月 - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]花鳥風月 - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞",
     "artist": "井ノ原智／佐々倉マコト",
     "url": "./static/bgm/【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞ - 井ノ原智／佐々倉マコト/【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞ - 井ノ原智_佐々倉マコト.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞ - 井ノ原智／佐々倉マコト/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]茉子の日常",
     "artist": "高森奈津美",
     "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 - 高森奈津美/【柚子】[千恋万花]茉子の日常 - 高森奈津美.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]茉子の日常 - 高森奈津美/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]茉子の日常 _Instrument Version_",
     "artist": "ユージ・ナイトー／山田屋カズ",
     "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Instrument Version_ - ユージ・ナイトー／山田屋カズ/【柚子】[千恋万花]茉子の日常 _Instrument Version_ - ユージ・ナイトー_山田屋カズ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Instrument Version_ - ユージ・ナイトー／山田屋カズ/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]茉子の日常 _Quiet Version_",
     "artist": "ユージ・ナイトー／山田屋カズ",
     "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Quiet Version_ - ユージ・ナイトー／山田屋カズ/【柚子】[千恋万花]茉子の日常 _Quiet Version_ - ユージ・ナイトー_山田屋カズ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Quiet Version_ - ユージ・ナイトー／山田屋カズ/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉",
     "artist": "ユージ・ナイトー／山田屋カズ／Angel Note",
     "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉 - ユージ・ナイトー／山田屋カズ／Angel Note/【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉 - ユージ・ナイトー_山田屋カズ_Angel Note.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉 - ユージ・ナイトー／山田屋カズ／Angel Note/19019352137357551.jpg"
   },
   {
     "name": "【柚子】[千恋万花]身も心も…",
     "artist": "Angel Note／井ノ原智",
     "url": "./static/bgm/【柚子】[千恋万花]身も心も… - Angel Note／井ノ原智/【柚子】[千恋万花]身も心も… - Angel Note_井ノ原智.mp3",
-    "cover": ""
+    "cover": "./static/bgm/【柚子】[千恋万花]身も心も… - Angel Note／井ノ原智/19019352137357551.jpg"
   },
   {
     "name": "影色舞",
