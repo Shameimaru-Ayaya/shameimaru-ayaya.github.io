@@ -1,261 +1,32 @@
 [
   {
-    "name": "Goldberg Variations, BWV 988_Aria",
-    "artist": "Glenn Gould",
-    "url": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/Goldberg Variations, BWV 988 (1981 Recording)_ Aria - Glenn Gould.mp3",
-    "cover": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/1.jpg",
-    "lrc": "./static/bgm/Goldberg Variations, BWV 988_Aria【Glenn Gould】/fuujinshoujo.lrc"
+    "name": "[TH06 红]スカーレット警察のゲットーパトロール24時",
+    "artist": "miko／ココ／黒田椋子／岩杉夏",
+    "url": "./static/bgm/[TH06 红]スカーレット警察のゲットーパトロール24時 - miko／ココ／黒田椋子／岩杉夏/[TH06 红]スカーレット警察のゲットーパトロール24時 - miko_ココ_黒田椋子_岩杉夏.mp3",
+    "cover": "./static/bgm/[TH06 红]スカーレット警察のゲットーパトロール24時 - miko／ココ／黒田椋子／岩杉夏/GENSOKYO_DEMPA_EXPO封面.jpg"
   },
   {
-    "name": "Unwelcome school【ミツキヨ]",
-    "artist": "",
-    "url": "./static/bgm/Unwelcome school【ミツキヨ]/Unwelcome school - ミツキヨ.mp3",
-    "cover": "./static/bgm/Unwelcome school【ミツキヨ]/1.jpg",
-    "lrc": "./static/bgm/Unwelcome school【ミツキヨ]/fuujinshoujo.lrc"
-  },
-  {
-    "name": "おちゃめ機能",
-    "artist": "重音テト_ラマーズP",
-    "url": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/おちゃめ機能 - 重音テト_ラマーズP.mp3",
-    "cover": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/1.jpg",
-    "lrc": "./static/bgm/おちゃめ機能【重音テト_ラマーズP】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "クレプスクルム",
-    "artist": "フーリンキャットマーク",
-    "url": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム - フーリンキャットマーク.MP3",
-    "cover": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム封面.png",
-    "lrc": "./static/bgm/クレプスクルム【フーリンキャットマーク】/クレプスクルム.lrc"
-  },
-  {
-    "name": "スカーレット警察のゲットーパトロール24時",
-    "artist": "ココ_96_岩杉夏_miko",
-    "url": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時 - miko_ココ_黒田椋子_岩杉夏.mp3",
-    "cover": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/GENSOKYO_DEMPA_EXPO封面.jpg",
-    "lrc": "./static/bgm/スカーレット警察のゲットーパトロール24時【ココ_96_岩杉夏_miko】/スカーレット警察のゲットーパトロール24時.lrc"
-  },
-  {
-    "name": "タイムパラドックス",
-    "artist": "あよ_森羅万象",
-    "url": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス - あよ_森羅万象.mp3",
-    "cover": "./static/bgm/タイムパラドックス【あよ_森羅万象】/エイセイパレード封面.jpg",
-    "lrc": "./static/bgm/タイムパラドックス【あよ_森羅万象】/タイムパラドックス.lrc"
-  },
-  {
-    "name": "チルノのパーフェクトさんすう教室",
+    "name": "[TH06 红]チルノのパーフェクトさんすう教室",
     "artist": "miko",
-    "url": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室 - miko.mp3",
-    "cover": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/東方氷雪歌集封面.jpg",
-    "lrc": "./static/bgm/チルノのパーフェクトさんすう教室【miko】/チルノのパーフェクトさんすう教室.lrc"
+    "url": "./static/bgm/[TH06 红]チルノのパーフェクトさんすう教室 - miko/[TH06 红]チルノのパーフェクトさんすう教室 - miko.mp3",
+    "cover": "./static/bgm/[TH06 红]チルノのパーフェクトさんすう教室 - miko/東方氷雪歌集封面.jpg"
   },
   {
-    "name": "ツギハギスタッカート",
-    "artist": "とあ_初音ミク",
-    "url": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/ツギハギスタッカート - とあ_初音ミク.mp3",
-    "cover": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/1.jpg",
-    "lrc": "./static/bgm/ツギハギスタッカート【とあ_初音ミク】/fuujinshoujo.lrc"
+    "name": "[TH06 红]幻想症候群[with]Marcia",
+    "artist": "一咲美葵",
+    "url": "./static/bgm/[TH06 红]幻想症候群[with]Marcia - 一咲美葵/[TH06 红]幻想症候群[with]Marcia - 一咲美葵.mp3",
+    "cover": "./static/bgm/[TH06 红]幻想症候群[with]Marcia - 一咲美葵/幻想症候群封面.jpg"
   },
   {
-    "name": "三妖精SAY YA!!!",
-    "artist": "あやぽんず__あよ",
-    "url": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY YA!!! - あやぽんず__あよ.mp3",
-    "cover": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/エイセイパレード封面.jpg",
-    "lrc": "./static/bgm/三妖精SAY YA!!!【あやぽんず__あよ】/三妖精SAY_YA!!!.lrc"
-  },
-  {
-    "name": "世末歌者",
-    "artist": "乐正绫_COP",
-    "url": "./static/bgm/世末歌者【乐正绫_COP】/世末歌者 - 乐正绫_COP.mp3",
-    "cover": "./static/bgm/世末歌者【乐正绫_COP】/1.jpg",
-    "lrc": "./static/bgm/世末歌者【乐正绫_COP】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.",
-    "artist": "黄昏フロンティア_上海アリス幻樂団",
-    "url": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.mp3",
-    "cover": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/1.jpg",
-    "lrc": "./static/bgm/今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.【黄昏フロンティア_上海アリス幻樂団】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "六兆年と一夜物語",
-    "artist": "Leo_need_初音ミク_堀江晶太",
-    "url": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/六兆年と一夜物語 - Leo_need_初音ミク_堀江晶太.mp3",
-    "cover": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/1.jpg",
-    "lrc": "./static/bgm/六兆年と一夜物語【Leo_need_初音ミク_堀江晶太】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "天狗舞踏会",
-    "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.mp3",
-    "cover": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.jpg",
-    "lrc": "./static/bgm/天狗舞踏会【Foxtail-Grass Studio】/天狗舞踏会.lrc"
-  },
-  {
-    "name": "太陽のうた",
+    "name": "[TH06 红]運命線上のアリア",
     "artist": "あよ",
-    "url": "./static/bgm/太陽のうた【あよ】/太陽のうた - あよ.mp3",
-    "cover": "./static/bgm/太陽のうた【あよ】/シンクロ2封面.jpg",
-    "lrc": "./static/bgm/太陽のうた【あよ】/太陽のうた.lrc"
+    "url": "./static/bgm/[TH06 红]運命線上のアリア - あよ/[TH06 红]運命線上のアリア - あよ.mp3",
+    "cover": "./static/bgm/[TH06 红]運命線上のアリア - あよ/ネタミニティ封面.jpg"
   },
   {
-    "name": "幻想症候群",
-    "artist": "Marcia",
-    "url": "./static/bgm/幻想症候群【Marcia】/幻想症候群[with]Marcia - 一咲美葵.mp3",
-    "cover": "./static/bgm/幻想症候群【Marcia】/幻想症候群封面.jpg",
-    "lrc": "./static/bgm/幻想症候群【Marcia】/幻想症候群.lrc"
-  },
-  {
-    "name": "我的悲伤是水做的",
-    "artist": "ChiliChill乐团_洛天依Official",
-    "url": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/我的悲伤是水做的 - ChiliChill乐团_洛天依Official.mp3",
-    "cover": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/1.jpg",
-    "lrc": "./static/bgm/我的悲伤是水做的【ChiliChill乐团_洛天依Official】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "日陰と帽子と風鈴と",
+    "name": "[TH07.5 萃]歳月-雲流れ-",
     "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/日陰と帽子と風鈴と - Foxtail-Grass Studio.mp3",
-    "cover": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/日陰と帽子と風鈴と【Foxtail-Grass Studio】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "明日ハレの日、ケの昨日",
-    "artist": "上海アリス幻樂団",
-    "url": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/明日ハレの日、ケの昨日 - 上海アリス幻樂団.mp3",
-    "cover": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/1.jpg",
-    "lrc": "./static/bgm/明日ハレの日、ケの昨日【上海アリス幻樂団】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "昼下がりの憂鬱",
-    "artist": "みかん箱_Foxtail-Grass Studio",
-    "url": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.mp3",
-    "cover": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/昼下がりの憂鬱【みかん箱_Foxtail-Grass Studio】/天狗舞踏会.lrc"
-  },
-  {
-    "name": "有頂天ドリーマーズ",
-    "artist": "あやぽんず_",
-    "url": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ - あやぽんず_.mp3",
-    "cover": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/シンクロ封面.jpg",
-    "lrc": "./static/bgm/有頂天ドリーマーズ【あやぽんず_】/有頂天ドリーマーズ.lrc"
-  },
-  {
-    "name": "果てなき風の軌跡さえ～破～",
-    "artist": "森永真由美_一咲美葵",
-    "url": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ～破～ - 森永真由美_一咲美葵.mp3",
-    "cover": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ封面.jpg",
-    "lrc": "./static/bgm/果てなき風の軌跡さえ～破～【森永真由美_一咲美葵】/果てなき風の軌跡さえ.lrc"
-  },
-  {
-    "name": "武装乙女",
-    "artist": "Chinozo__洛天依",
-    "url": "./static/bgm/武装乙女【Chinozo__洛天依】/武装乙女 - Chinozo.mp3",
-    "cover": "./static/bgm/武装乙女【Chinozo__洛天依】/1.jpg",
-    "lrc": "./static/bgm/武装乙女【Chinozo__洛天依】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "歳月-雲流れ-",
-    "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/歳月-雲流れ- - Foxtail-Grass Studio.mp3",
-    "cover": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/歳月-雲流れ-【Foxtail-Grass Studio】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "永夜のパレード",
-    "artist": "JUMA_ケーキ姫☆優海",
-    "url": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード - JUMA_ケーキ姫☆優海.mp3",
-    "cover": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/幻想遊園郷_-Fantastic_Park-封面.jpg",
-    "lrc": "./static/bgm/永夜のパレード【JUMA_ケーキ姫☆優海】/永夜のパレード.lrc"
-  },
-  {
-    "name": "沢の河城工務店[Foxtail-Grass Studio]",
-    "artist": "",
-    "url": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/沢の河城工務店 - Foxtail-Grass Studio.mp3",
-    "cover": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/天狗舞踏会.jpg",
-    "lrc": "./static/bgm/沢の河城工務店[Foxtail-Grass Studio]/天狗舞踏会.lrc"
-  },
-  {
-    "name": "沸雪煮相思",
-    "artist": "Newbiao好梦一场_洛天依Official_星尘infinity",
-    "url": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/沸雪煮相思 - Newbiao好梦一场_洛天依Official_星尘infinity.mp3",
-    "cover": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/1.jpg",
-    "lrc": "./static/bgm/沸雪煮相思【Newbiao好梦一场_洛天依Official_星尘infinity】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "深海少女[ゆうゆ_初音ミク]",
-    "artist": "",
-    "url": "./static/bgm/深海少女[ゆうゆ_初音ミク]/深海少女 - ゆうゆ_初音ミク.mp3",
-    "cover": "./static/bgm/深海少女[ゆうゆ_初音ミク]/1.jpg",
-    "lrc": "./static/bgm/深海少女[ゆうゆ_初音ミク]/fuujinshoujo.lrc"
-  },
-  {
-    "name": "现梦 -genmu-",
-    "artist": "みぃ_yukina",
-    "url": "./static/bgm/现梦 -genmu-【みぃ_yukina】/现梦 -genmu- - みぃ_yukina.mp3",
-    "cover": "./static/bgm/现梦 -genmu-【みぃ_yukina】/1.jpg",
-    "lrc": "./static/bgm/现梦 -genmu-【みぃ_yukina】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "病名は愛だった",
-    "artist": "Neru_鏡音レン_鏡音リン_z'5",
-    "url": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.MP3",
-    "cover": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/1.jpg",
-    "lrc": "./static/bgm/病名は愛だった【Neru_鏡音レン_鏡音リン_z'5】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "童遊",
-    "artist": "めらみぽっぷ",
-    "url": "./static/bgm/童遊【めらみぽっぷ】/童遊 - めらみぽっぷ.mp3",
-    "cover": "./static/bgm/童遊【めらみぽっぷ】/望（同人专辑）封面.jpg",
-    "lrc": "./static/bgm/童遊【めらみぽっぷ】/童遊.lrc"
-  },
-  {
-    "name": "竹ノ花",
-    "artist": "めらみぽっぷ",
-    "url": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花 - めらみぽっぷ.mp3",
-    "cover": "./static/bgm/竹ノ花【めらみぽっぷ】/薦封面.jpg",
-    "lrc": "./static/bgm/竹ノ花【めらみぽっぷ】/竹ノ花.lrc"
-  },
-  {
-    "name": "臙脂",
-    "artist": "蛋包饭咖喱饭_重音テト",
-    "url": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/臙脂【蛋包饭咖喱饭_重音テト】.mp3",
-    "cover": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/1.jpg",
-    "lrc": "./static/bgm/臙脂【蛋包饭咖喱饭_重音テト】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "踊っチャイナ",
-    "artist": "Atena_初音ミク_重音テト",
-    "url": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/踊っチャイナ (feat. 初音ミク & 重音テト) - Atena_初音ミク_重音テト.mp3",
-    "cover": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/1.jpg",
-    "lrc": "./static/bgm/踊っチャイナ【Atena_初音ミク_重音テト】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "運命線上のアリア",
-    "artist": "あよ",
-    "url": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア - あよ.mp3",
-    "cover": "./static/bgm/運命線上のアリア【あよ】/ネタミニティ封面.jpg",
-    "lrc": "./static/bgm/運命線上のアリア【あよ】/運命線上のアリア.lrc"
-  },
-  {
-    "name": "雨待ち傘",
-    "artist": "Foxtail-Grass Studio",
-    "url": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/雨待ち傘 - Foxtail-Grass Studio.mp3",
-    "cover": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/1.jpg",
-    "lrc": "./static/bgm/雨待ち傘【Foxtail-Grass Studio】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "风神少女",
-    "artist": "上海アリス幻樂団",
-    "url": "./static/bgm/风神少女【上海アリス幻樂団】/風神少女 - 上海アリス幻樂団.mp3",
-    "cover": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.jpg",
-    "lrc": "./static/bgm/风神少女【上海アリス幻樂団】/fuujinshoujo.lrc"
-  },
-  {
-    "name": "鳥よ",
-    "artist": "nayuta_凋叶棕",
-    "url": "./static/bgm/鳥よ【nayuta_凋叶棕】/鳥よ - nayuta_凋叶棕.mp3",
-    "cover": "./static/bgm/鳥よ【nayuta_凋叶棕】/娶封面.jpg",
-    "lrc": "./static/bgm/鳥よ【nayuta_凋叶棕】/鳥よ.lrc"
+    "url": "./static/bgm/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio/1.jpg"
   }
 ]

@@ -1644,55 +1644,7 @@ html[data-theme="Dark"] .onoffswitch-switch::after {
 }
 
 #aplayer-local .aplayer .aplayer-lrc {
-    margin: 6px 0 4px 0 !important;
-    height: 32px !important;
-    overflow: hidden !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    border: none !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
-    -webkit-mask: none !important;
-    mask: none !important;
-    position: relative !important;
-}
-
-/* 移除歌词容器的渐变遮罩 */
-#aplayer-local .aplayer .aplayer-lrc::before,
-#aplayer-local .aplayer .aplayer-lrc::after,
-#aplayer-local .aplayer-lrc::before,
-#aplayer-local .aplayer-lrc::after {
-    content: none !important;
     display: none !important;
-    background: none !important;
-    background-image: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-/* 强制覆盖所有歌词段落样式 - 使用更高优先级 */
-#aplayer-local .aplayer .aplayer-lrc p,
-#aplayer-local .aplayer-lrc p {
-    color: var(--main_text_color) !important;
-    font-size: 13px !important;
-    line-height: 16px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    opacity: 0.7 !important;
-    border: none !important;
-    background: transparent !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.75) !important;
-}
-
-/* 当前播放歌词高亮 - 使用更高优先级 */
-#aplayer-local .aplayer .aplayer-lrc p.aplayer-lrc-current,
-#aplayer-local .aplayer-lrc p.aplayer-lrc-current {
-    color: var(--main_text_color) !important;
-    font-size: 14px !important;
-    font-weight: bold !important;
-    opacity: 1 !important;
-    filter: drop-shadow(0 0 3px rgba(255,255,255,0.6)) !important;
-    text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 1px 3px rgba(0,0,0,0.8) !important;
 }
 
 #aplayer-local .aplayer .aplayer-info .aplayer-controller .aplayer-time {

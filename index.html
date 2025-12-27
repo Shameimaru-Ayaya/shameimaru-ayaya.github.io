@@ -63,7 +63,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 							preload: 'auto',
 							theme: '#2a2a2a',
 							mutex: true,
-							lrcType: 3,
+							lrcType: 0,
 							audio: []
 						});
 
@@ -122,10 +122,6 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 									list.forEach(item => {
 										ap.list.add(item);
 									});
-									if (ap.list && ap.list.audios && ap.list.audios.length > 0) {
-										const index = typeof ap.list.index === 'number' ? ap.list.index : 0;
-										loadCustomLrc(index);
-									}
 								})
 								.catch(() => {});
 						}
@@ -160,154 +156,12 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 							});
 						}, 500);
 
-						function removeWhiteLines() {
-							const lrcContainer = document.querySelector('#aplayer-local .aplayer-lrc');
-							if (lrcContainer) {
-								lrcContainer.style.cssText += `
-									mask-image: none !important;
-									-webkit-mask-image: none !important;
-									-webkit-mask: none !important;
-									mask: none !important;
-								`;
-								const style = document.createElement('style');
-								style.textContent = `
-									#aplayer-local .aplayer-lrc::before,
-									#aplayer-local .aplayer-lrc::after {
-										content: none !important;
-										display: none !important;
-										background: none !important;
-										background-image: none !important;
-									}
-								`;
-								document.head.appendChild(style);
-								const lrcLines = lrcContainer.querySelectorAll('p');
-								lrcLines.forEach(line => {
-									line.style.color = '#ffffff';
-									line.style.textShadow = '0 1px 3px rgba(0,0,0,0.8)';
-								});
-							}
-						}
-
-						function parseLrc(text) {
-							const lines = text.split(/\r?\n/);
-							const result = [];
-							const timeReg = /\[(\d{2}):(\d{2})(?:\.(\d{2,3}))?]/g;
-							lines.forEach(rawLine => {
-								const line = rawLine.trim();
-								if (!line) {
-									return;
-								}
-								let match;
-								const times = [];
-								while ((match = timeReg.exec(line)) !== null) {
-									const min = parseInt(match[1], 10);
-									const sec = parseInt(match[2], 10);
-									const ms = match[3] ? parseInt(match[3].padEnd(3, "0"), 10) : 0;
-									const time = min * 60 + sec + ms / 1000;
-									times.push(time);
-								}
-								const textPart = line.replace(timeReg, "").trim();
-								if (!times.length || !textPart) {
-									return;
-								}
-								times.forEach(time => {
-									result.push({ time, text: textPart });
-								});
-							});
-							result.sort((a, b) => a.time - b.time);
-							return result;
-						}
-
-						let customLrcData = [];
-						let currentLrcIndex = -1;
-
-						function renderCustomLrc() {
-							const lrcContents = document.querySelector('#aplayer-local .aplayer-lrc .aplayer-lrc-contents');
-							if (!lrcContents) {
-								return;
-							}
-							lrcContents.innerHTML = "";
-							customLrcData.forEach(item => {
-								const p = document.createElement("p");
-								p.textContent = item.text;
-								lrcContents.appendChild(p);
-							});
-							currentLrcIndex = -1;
-							removeWhiteLines();
-						}
-
-						function updateCurrentLrc(currentTime) {
-							if (!customLrcData.length) {
-								return;
-							}
-							let targetIndex = customLrcData.length - 1;
-							for (let i = 0; i < customLrcData.length; i++) {
-								if (customLrcData[i].time > currentTime) {
-									targetIndex = i > 0 ? i - 1 : 0;
-									break;
-								}
-							}
-							if (targetIndex === currentLrcIndex) {
-								return;
-							}
-							const lrcContents = document.querySelector('#aplayer-local .aplayer-lrc .aplayer-lrc-contents');
-							if (!lrcContents) {
-								return;
-							}
-							const lines = lrcContents.querySelectorAll("p");
-							if (!lines.length) {
-								return;
-							}
-							if (currentLrcIndex >= 0 && currentLrcIndex < lines.length) {
-								lines[currentLrcIndex].classList.remove("aplayer-lrc-current");
-							}
-							if (targetIndex >= 0 && targetIndex < lines.length) {
-								lines[targetIndex].classList.add("aplayer-lrc-current");
-							}
-							const offset = -targetIndex * 18;
-							lrcContents.style.transform = "translateY(" + offset + "px)";
-							currentLrcIndex = targetIndex;
-						}
-
-						function loadCustomLrc(index) {
-							const list = ap.list && ap.list.audios ? ap.list.audios : [];
-							const audio = list[index];
-							if (!audio || !audio.lrc) {
-								customLrcData = [];
-								renderCustomLrc();
-								return;
-							}
-							fetch(audio.lrc)
-								.then(res => res.text())
-								.then(text => {
-									customLrcData = parseLrc(text);
-									renderCustomLrc();
-								})
-								.catch(() => {});
-						}
-
-						setTimeout(removeWhiteLines, 100);
-						setTimeout(removeWhiteLines, 500);
-						setTimeout(removeWhiteLines, 1000);
-
-						ap.on("lrcshow", () => {
-							removeWhiteLines();
-						});
-
 						ap.on("listswitch", index => {
-							loadCustomLrc(index);
 							expandPlayer(true);
 						});
 
 						ap.on("play", () => {
 							expandPlayer(true);
-						});
-
-						ap.on("timeupdate", () => {
-							if (!ap.audio) {
-								return;
-							}
-							updateCurrentLrc(ap.audio.currentTime || 0);
 						});
 
 						loadPlaylist();
