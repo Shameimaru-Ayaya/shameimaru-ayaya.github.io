@@ -27,7 +27,7 @@
     "name": "[TH06 红]Who Killed U.N.Owen",
     "artist": "lily-an",
     "url": "./static/bgm/[TH06 红]Who Killed U.N.Owen - lily-an/[TH06 红]Who Killed U.N.Owen - lily-an.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH06 红]Who Killed U.N.Owen - lily-an/109951166296456751.jpg"
   },
   {
     "name": "[TH06 红]おてんば恋娘",
@@ -51,13 +51,13 @@
     "name": "[TH06 红]ナイト・オブ・ナイツ",
     "artist": "ビートまりお",
     "url": "./static/bgm/[TH06 红]ナイト・オブ・ナイツ - ビートまりお/[TH06 红]ナイト・オブ・ナイツ - ビートまりお.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH06 红]ナイト・オブ・ナイツ - ビートまりお/600x600bf-60.jpg"
   },
   {
     "name": "[TH06 红]メイドノココロハ アヤツリドール",
     "artist": "あよ",
     "url": "./static/bgm/[TH06 红]メイドノココロハ アヤツリドール - あよ/[TH06 红]メイドノココロハ アヤツリドール - あよ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH06 红]メイドノココロハ アヤツリドール - あよ/109951164912363859.jpg"
   },
   {
     "name": "[TH06 红]上海紅茶館 ～ Chinese Tea",
@@ -99,25 +99,25 @@
     "name": "[TH07 妖]少女幻葬 ～ Necro-Fantasy",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH07 妖]少女幻葬 ～ Necro-Fantasy - 上海アリス幻樂団/[TH07 妖]少女幻葬　～ Necro-Fantasy - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH07 妖]少女幻葬 ～ Necro-Fantasy - 上海アリス幻樂団/109951166292315110.jpg"
   },
   {
     "name": "[TH07 妖]幼女幻奏",
     "artist": "Sing, R. Sing!",
     "url": "./static/bgm/[TH07 妖]幼女幻奏 - Sing, R. Sing!/[TH07 妖]幼女幻奏 - Sing, R. Sing!.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH07 妖]幼女幻奏 - Sing, R. Sing!/iErs_7G8OtQF4x1Ihct6jQ==_886206371987708.jpg"
   },
   {
     "name": "[TH07 妖]幽雅に咲かせ、墨染の桜 ～ Border of Life",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH07 妖]幽雅に咲かせ、墨染の桜 ～ Border of Life - 上海アリス幻樂団/[TH07 妖]幽雅に咲かせ、墨染の桜　～ Border of Life - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH07 妖]幽雅に咲かせ、墨染の桜 ～ Border of Life - 上海アリス幻樂団/109951166292315110.jpg"
   },
   {
     "name": "[TH07 妖]純情アルメリア",
     "artist": "あやぽんず",
     "url": "./static/bgm/[TH07 妖]純情アルメリア - あやぽんず/[TH07 妖]純情アルメリア - あやぽんず_.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH07 妖]純情アルメリア - あやぽんず/純情アルメリア.jpg"
   },
   {
     "name": "[TH07.5 萃]歳月-雲流れ-",
@@ -129,7 +129,7 @@
     "name": "[TH07.5 萃]魔女達の舞踏会 _ あきやまうに",
     "artist": "黄昏フロンティア／上海アリス幻樂団",
     "url": "./static/bgm/[TH07.5 萃]魔女達の舞踏会 _ あきやまうに - 黄昏フロンティア／上海アリス幻樂団/[TH07.5 萃]魔女達の舞踏会 _ あきやまうに - 黄昏フロンティア_上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH07.5 萃]魔女達の舞踏会 _ あきやまうに - 黄昏フロンティア／上海アリス幻樂団/109951169299678835.jpg"
   },
   {
     "name": "[TH08 永]ねこ巫女れいむ",
@@ -147,13 +147,13 @@
     "name": "[TH08 永]少女綺想曲 ～ Dream Battle",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH08 永]少女綺想曲 ～ Dream Battle - 上海アリス幻樂団/[TH08 永]少女綺想曲　～ Dream Battle - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH08 永]少女綺想曲 ～ Dream Battle - 上海アリス幻樂団/109951166292306928.jpg"
   },
   {
     "name": "[TH08 永]恋色マスタースパーク",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH08 永]恋色マスタースパーク - 上海アリス幻樂団/[TH08 永]恋色マスタースパーク - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH08 永]恋色マスタースパーク - 上海アリス幻樂団/109951166292306928.jpg"
   },
   {
     "name": "[TH08 永]昼下がりの憂鬱",
@@ -165,7 +165,7 @@
     "name": "[TH08 永]月まで届け、不死の煙",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH08 永]月まで届け、不死の煙 - 上海アリス幻樂団/[TH08 永]月まで届け、不死の煙 - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH08 永]月まで届け、不死の煙 - 上海アリス幻樂団/109951166292306928.jpg"
   },
   {
     "name": "[TH08 永]永夜のパレード",
@@ -177,7 +177,7 @@
     "name": "[TH08 永]竹取飛翔 ～ Lunatic Princess",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH08 永]竹取飛翔 ～ Lunatic Princess - 上海アリス幻樂団/[TH08 永]竹取飛翔　～ Lunatic Princess - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH08 永]竹取飛翔 ～ Lunatic Princess - 上海アリス幻樂団/109951166292306928.jpg"
   },
   {
     "name": "[TH08 永]雨待ち傘",
