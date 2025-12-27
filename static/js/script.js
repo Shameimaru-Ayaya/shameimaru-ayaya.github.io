@@ -88,8 +88,13 @@ function getCookie(name) {
 }
 
 var themeState = getCookie("themeState") || "Light";
+var themeMode = getCookie("themeMode") || "auto";
 
-function changeTheme(theme) {
+function getSystemTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "Dark" : "Light";
+}
+
+function changeTheme(theme, shouldPersist) {
     var html = document.querySelector('html');
     var tanChiShe = document.getElementById("tanChiShe");
     var basePath = getBasePath();
@@ -99,40 +104,74 @@ function changeTheme(theme) {
     if (html) {
         html.dataset.theme = theme;
     }
-    setCookie("themeState", theme, 365);
+    if (shouldPersist) {
+        setCookie("themeState", theme, 365);
+    }
     themeState = theme;
+}
+
+function syncThemeSwitchState() {
+    var Checkbox = document.getElementById('myonoffswitch');
+    if (!Checkbox) {
+        return;
+    }
+    if (themeState == "Dark") {
+        Checkbox.checked = false;
+    } else {
+        Checkbox.checked = true;
+    }
 }
 
 function initThemeSwitch() {
     var Checkbox = document.getElementById('myonoffswitch');
     if (Checkbox) {
-        // Remove old event listeners by cloning (optional, but safer if called multiple times)
-        // var newCheckbox = Checkbox.cloneNode(true);
-        // Checkbox.parentNode.replaceChild(newCheckbox, Checkbox);
-        // Checkbox = newCheckbox;
-        // Actually, simple addEventListener is fine if we don't bind multiple times to the SAME element.
-        // When renderRightHeader runs, it creates a NEW element.
-        
+        if (Checkbox.dataset.themeSwitchBound === '1') {
+            syncThemeSwitchState();
+            return;
+        }
+        Checkbox.dataset.themeSwitchBound = '1';
         Checkbox.addEventListener('change', function () {
+            themeMode = "manual";
+            setCookie("themeMode", themeMode, 365);
             if (themeState == "Dark") {
-                changeTheme("Light");
+                changeTheme("Light", true);
             } else {
-                changeTheme("Dark");
+                changeTheme("Dark", true);
             }
+            syncThemeSwitchState();
         });
 
-        if (themeState == "Dark") {
-            Checkbox.checked = false;
-        } else {
-            Checkbox.checked = true;
-        }
+        syncThemeSwitchState();
     }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    changeTheme(themeState);
+    if (!getCookie("themeMode")) {
+        setCookie("themeMode", themeMode, 365);
+    }
+    if (themeMode === "auto") {
+        changeTheme(getSystemTheme(), false);
+    } else {
+        changeTheme(themeState, true);
+    }
     initThemeSwitch();
+
+    if (window.matchMedia) {
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+        var handleSystemThemeChange = function (event) {
+            if (themeMode !== "auto") {
+                return;
+            }
+            changeTheme(event.matches ? "Dark" : "Light", false);
+            syncThemeSwitchState();
+        };
+        if (typeof media.addEventListener === 'function') {
+            media.addEventListener('change', handleSystemThemeChange);
+        } else if (typeof media.addListener === 'function') {
+            media.addListener(handleSystemThemeChange);
+        }
+    }
 
 
 

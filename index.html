@@ -122,8 +122,44 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 									list.forEach(item => {
 										ap.list.add(item);
 									});
+									setTimeout(() => {
+										applyAPlayerMarquee();
+									}, 200);
 								})
 								.catch(() => {});
+						}
+
+						function applyAPlayerMarquee() {
+							const selectors = [
+								'#aplayer-local .aplayer-info .aplayer-music .aplayer-title',
+								'#aplayer-local .aplayer-info .aplayer-music .aplayer-author',
+								'#aplayer-local .aplayer-list ol li .aplayer-list-title',
+								'#aplayer-local .aplayer-list ol li .aplayer-list-author'
+							];
+							const elements = document.querySelectorAll(selectors.join(','));
+							elements.forEach(el => {
+								const rawText = el.textContent || '';
+								const text = rawText.trim();
+								if (!text) {
+									return;
+								}
+								el.classList.add('aplayer-marquee');
+								el.classList.remove('aplayer-marquee-active');
+								el.style.removeProperty('--aplayer-marquee-duration');
+								el.textContent = '';
+								const inner = document.createElement('span');
+								inner.className = 'aplayer-marquee-inner';
+								inner.textContent = text;
+								el.appendChild(inner);
+								const hostWidth = el.getBoundingClientRect().width;
+								const innerWidth = inner.getBoundingClientRect().width;
+								if (hostWidth > 0 && innerWidth > hostWidth + 2) {
+									el.classList.add('aplayer-marquee-active');
+									const ratio = innerWidth / hostWidth;
+									const duration = Math.min(22, Math.max(8, ratio * 8));
+									el.style.setProperty('--aplayer-marquee-duration', `${duration}s`);
+								}
+							});
 						}
 
 						// 强制应用天蓝色样式到播放列表
@@ -139,6 +175,7 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 									if (title) title.style.color = '#87CEEB';
 									if (author) author.style.color = '#87CEEB';
 								});
+								applyAPlayerMarquee();
 							}, 50);
 						});
 
@@ -154,14 +191,21 @@ Improvement：GitHub@Shameimaru-Ayaya & ChatGPT & DeepSeek & Gemini
 								if (title) title.style.color = '#87CEEB';
 								if (author) author.style.color = '#87CEEB';
 							});
+							applyAPlayerMarquee();
 						}, 500);
 
 						ap.on("listswitch", index => {
 							expandPlayer(true);
+							setTimeout(() => {
+								applyAPlayerMarquee();
+							}, 50);
 						});
 
 						ap.on("play", () => {
 							expandPlayer(true);
+							setTimeout(() => {
+								applyAPlayerMarquee();
+							}, 50);
 						});
 
 						loadPlaylist();
