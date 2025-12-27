@@ -1,5 +1,41 @@
 [
   {
+    "name": "Goldberg Variations, BWV 988 (1981 Recording)_ Aria",
+    "artist": "Glenn Gould",
+    "url": "./static/bgm/Goldberg Variations, BWV 988 (1981 Recording)_ Aria - Glenn Gould/Goldberg Variations, BWV 988 (1981 Recording)_ Aria - Glenn Gould.mp3",
+    "cover": "./static/bgm/Goldberg Variations, BWV 988 (1981 Recording)_ Aria - Glenn Gould/1.jpg"
+  },
+  {
+    "name": "Unwelcome school",
+    "artist": "ミツキヨ",
+    "url": "./static/bgm/Unwelcome school - ミツキヨ/Unwelcome school - ミツキヨ.mp3",
+    "cover": "./static/bgm/Unwelcome school - ミツキヨ/1.jpg"
+  },
+  {
+    "name": "[TH04 幻]Bad Apple!!",
+    "artist": "のみこ",
+    "url": "./static/bgm/[TH04 幻]Bad Apple!! - のみこ/[TH04 幻]Bad Apple!! - のみこ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]U.N.オーエンは彼女なのか？",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH06 红]U.N.オーエンは彼女なのか？ - 上海アリス幻樂団/[TH06 红]U.N.オーエンは彼女なのか？ - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]Who Killed U.N.Owen",
+    "artist": "lily-an",
+    "url": "./static/bgm/[TH06 红]Who Killed U.N.Owen - lily-an/[TH06 红]Who Killed U.N.Owen - lily-an.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]おてんば恋娘",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH06 红]おてんば恋娘 - 上海アリス幻樂団/[TH06 红]おてんば恋娘 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
     "name": "[TH06 红]スカーレット警察のゲットーパトロール24時",
     "artist": "miko／ココ／黒田椋子／岩杉夏",
     "url": "./static/bgm/[TH06 红]スカーレット警察のゲットーパトロール24時 - miko／ココ／黒田椋子／岩杉夏/[TH06 红]スカーレット警察のゲットーパトロール24時 - miko_ココ_黒田椋子_岩杉夏.mp3",
@@ -12,10 +48,46 @@
     "cover": "./static/bgm/[TH06 红]チルノのパーフェクトさんすう教室 - miko/東方氷雪歌集封面.jpg"
   },
   {
+    "name": "[TH06 红]ナイト・オブ・ナイツ",
+    "artist": "ビートまりお",
+    "url": "./static/bgm/[TH06 红]ナイト・オブ・ナイツ - ビートまりお/[TH06 红]ナイト・オブ・ナイツ - ビートまりお.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]メイドノココロハ アヤツリドール",
+    "artist": "あよ",
+    "url": "./static/bgm/[TH06 红]メイドノココロハ アヤツリドール - あよ/[TH06 红]メイドノココロハ アヤツリドール - あよ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]上海紅茶館 ～ Chinese Tea",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH06 红]上海紅茶館 ～ Chinese Tea - 上海アリス幻樂団/[TH06 红]上海紅茶館　～ Chinese Tea - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]亡き王女の為のセプテット",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH06 红]亡き王女の為のセプテット - 上海アリス幻樂団/[TH06 红]亡き王女の為のセプテット - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
     "name": "[TH06 红]幻想症候群[with]Marcia",
     "artist": "一咲美葵",
     "url": "./static/bgm/[TH06 红]幻想症候群[with]Marcia - 一咲美葵/[TH06 红]幻想症候群[with]Marcia - 一咲美葵.mp3",
     "cover": "./static/bgm/[TH06 红]幻想症候群[with]Marcia - 一咲美葵/幻想症候群封面.jpg"
+  },
+  {
+    "name": "[TH06 红]時計仕掛けの命に抱かれ～幽～",
+    "artist": "幽閉サテライト",
+    "url": "./static/bgm/[TH06 红]時計仕掛けの命に抱かれ～幽～ - 幽閉サテライト/[TH06 红]時計仕掛けの命に抱かれ～幽～ - 幽閉サテライト.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH06 红]物凄い狂っとるフランちゃんが物凄いうた (feat. ななひら)",
+    "artist": "ななひら",
+    "url": "./static/bgm/[TH06 红]物凄い狂っとるフランちゃんが物凄いうた (feat. ななひら) - ななひら/[TH06 红]物凄い狂っとるフランちゃんが物凄いうた (feat. ななひら) - ななひら.mp3",
+    "cover": ""
   },
   {
     "name": "[TH06 红]運命線上のアリア",
@@ -24,9 +96,987 @@
     "cover": "./static/bgm/[TH06 红]運命線上のアリア - あよ/ネタミニティ封面.jpg"
   },
   {
+    "name": "[TH07 妖]少女幻葬 ～ Necro-Fantasy",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH07 妖]少女幻葬 ～ Necro-Fantasy - 上海アリス幻樂団/[TH07 妖]少女幻葬　～ Necro-Fantasy - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH07 妖]幼女幻奏",
+    "artist": "Sing, R. Sing!",
+    "url": "./static/bgm/[TH07 妖]幼女幻奏 - Sing, R. Sing!/[TH07 妖]幼女幻奏 - Sing, R. Sing!.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH07 妖]幽雅に咲かせ、墨染の桜 ～ Border of Life",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH07 妖]幽雅に咲かせ、墨染の桜 ～ Border of Life - 上海アリス幻樂団/[TH07 妖]幽雅に咲かせ、墨染の桜　～ Border of Life - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH07 妖]純情アルメリア",
+    "artist": "あやぽんず",
+    "url": "./static/bgm/[TH07 妖]純情アルメリア - あやぽんず/[TH07 妖]純情アルメリア - あやぽんず_.mp3",
+    "cover": ""
+  },
+  {
     "name": "[TH07.5 萃]歳月-雲流れ-",
     "artist": "Foxtail-Grass Studio",
     "url": "./static/bgm/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio.mp3",
     "cover": "./static/bgm/[TH07.5 萃]歳月-雲流れ- - Foxtail-Grass Studio/1.jpg"
+  },
+  {
+    "name": "[TH07.5 萃]魔女達の舞踏会 _ あきやまうに",
+    "artist": "黄昏フロンティア／上海アリス幻樂団",
+    "url": "./static/bgm/[TH07.5 萃]魔女達の舞踏会 _ あきやまうに - 黄昏フロンティア／上海アリス幻樂団/[TH07.5 萃]魔女達の舞踏会 _ あきやまうに - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]ねこ巫女れいむ",
+    "artist": "miko",
+    "url": "./static/bgm/[TH08 永]ねこ巫女れいむ - miko/[TH08 永]ねこ巫女れいむ - miko.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]クレプスクルム",
+    "artist": "フーリンキャットマーク",
+    "url": "./static/bgm/[TH08 永]クレプスクルム - フーリンキャットマーク/[TH08 永]クレプスクルム - フーリンキャットマーク.MP3",
+    "cover": "./static/bgm/[TH08 永]クレプスクルム - フーリンキャットマーク/クレプスクルム封面.png"
+  },
+  {
+    "name": "[TH08 永]少女綺想曲 ～ Dream Battle",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH08 永]少女綺想曲 ～ Dream Battle - 上海アリス幻樂団/[TH08 永]少女綺想曲　～ Dream Battle - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]恋色マスタースパーク",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH08 永]恋色マスタースパーク - 上海アリス幻樂団/[TH08 永]恋色マスタースパーク - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]昼下がりの憂鬱",
+    "artist": "みかん箱／Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH08 永]昼下がりの憂鬱 - みかん箱／Foxtail-Grass Studio/[TH08 永]昼下がりの憂鬱 - みかん箱_Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/[TH08 永]昼下がりの憂鬱 - みかん箱／Foxtail-Grass Studio/1.jpg"
+  },
+  {
+    "name": "[TH08 永]月まで届け、不死の煙",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH08 永]月まで届け、不死の煙 - 上海アリス幻樂団/[TH08 永]月まで届け、不死の煙 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]永夜のパレード",
+    "artist": "JUMA／ケーキ姫☆優海",
+    "url": "./static/bgm/[TH08 永]永夜のパレード - JUMA／ケーキ姫☆優海/[TH08 永]永夜のパレード - JUMA_ケーキ姫☆優海.mp3",
+    "cover": "./static/bgm/[TH08 永]永夜のパレード - JUMA／ケーキ姫☆優海/幻想遊園郷_-Fantastic_Park-封面.jpg"
+  },
+  {
+    "name": "[TH08 永]竹取飛翔 ～ Lunatic Princess",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH08 永]竹取飛翔 ～ Lunatic Princess - 上海アリス幻樂団/[TH08 永]竹取飛翔　～ Lunatic Princess - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH08 永]雨待ち傘",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH08 永]雨待ち傘 - Foxtail-Grass Studio/[TH08 永]雨待ち傘 - Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/[TH08 永]雨待ち傘 - Foxtail-Grass Studio/1.jpg"
+  },
+  {
+    "name": "[TH09 花]MY Heart Rate",
+    "artist": "あよ／森羅万象",
+    "url": "./static/bgm/[TH09 花]MY Heart Rate - あよ／森羅万象/[TH09 花]MY Heart Rate - あよ_森羅万象.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH09 花]花映「タマシイノハナ」",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/[TH09 花]花映「タマシイノハナ」 - めらみぽっぷ/[TH09 花]花映「タマシイノハナ」 - めらみぽっぷ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH09 花]華鳥風月",
+    "artist": "幽閉サテライト／森永真由美",
+    "url": "./static/bgm/[TH09 花]華鳥風月 - 幽閉サテライト／森永真由美/[TH09 花]華鳥風月 - 幽閉サテライト_森永真由美.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH09.5 帖]ためすがめ",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/[TH09.5 帖]ためすがめ - めらみぽっぷ/[TH09.5 帖]ためすがめ - めらみぽっぷ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH09.5 帖]風神少女",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH09.5 帖]風神少女 - 上海アリス幻樂団/[TH09.5 帖]風神少女 - 上海アリス幻樂団.mp3",
+    "cover": "./static/bgm/[TH09.5 帖]風神少女 - 上海アリス幻樂団/fuujinshoujo.jpg"
+  },
+  {
+    "name": "[TH10 风]Aisya -ye ru amma-",
+    "artist": "Riverside",
+    "url": "./static/bgm/[TH10 风]Aisya -ye ru amma- - Riverside/[TH10 风]Aisya -ye ru amma- - Riverside.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]フォールオブフォール ～ 秋めく滝",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]フォールオブフォール ～ 秋めく滝 - 上海アリス幻樂団/[TH10 风]フォールオブフォール　～ 秋めく滝 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]信仰は儚き人間の為に",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]信仰は儚き人間の為に - 上海アリス幻樂団/[TH10 风]信仰は儚き人間の為に - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]凄い回しちゃう鍵山さんが物凄いうた",
+    "artist": "ななひら",
+    "url": "./static/bgm/[TH10 风]凄い回しちゃう鍵山さんが物凄いうた - ななひら/[TH10 风]凄い回しちゃう鍵山さんが物凄いうた - ななひら.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]厄神様の通り道 ～ Dark Road",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]厄神様の通り道 ～ Dark Road - 上海アリス幻樂団/[TH10 风]厄神様の通り道　～ Dark Road - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]天狗舞踏会",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH10 风]天狗舞踏会 - Foxtail-Grass Studio/[TH10 风]天狗舞踏会.mp3",
+    "cover": "./static/bgm/[TH10 风]天狗舞踏会 - Foxtail-Grass Studio/天狗舞踏会.jpg"
+  },
+  {
+    "name": "[TH10 风]妖怪の山 ～ Mysterious Mountain",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]妖怪の山 ～ Mysterious Mountain - 上海アリス幻樂団/[TH10 风]妖怪の山　～ Mysterious Mountain - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]少女が見た日本の原風景",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]少女が見た日本の原風景 - 上海アリス幻樂団/[TH10 风]少女が見た日本の原風景 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]明日ハレの日、ケの昨日",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH10 风]明日ハレの日、ケの昨日 - 上海アリス幻樂団/[TH10 风]明日ハレの日、ケの昨日 - 上海アリス幻樂団.mp3",
+    "cover": "./static/bgm/[TH10 风]明日ハレの日、ケの昨日 - 上海アリス幻樂団/1.jpg"
+  },
+  {
+    "name": "[TH10 风]明日散る運命なら[with Marcia]",
+    "artist": "一咲美葵",
+    "url": "./static/bgm/[TH10 风]明日散る運命なら[with Marcia] - 一咲美葵/[TH10 风]明日散る運命なら[with Marcia] - 一咲美葵.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]果てなき風の軌跡さえ～破～",
+    "artist": "森永真由美／一咲美葵",
+    "url": "./static/bgm/[TH10 风]果てなき風の軌跡さえ～破～ - 森永真由美／一咲美葵/[TH10 风]果てなき風の軌跡さえ～破～ - 森永真由美_一咲美葵.mp3",
+    "cover": "./static/bgm/[TH10 风]果てなき風の軌跡さえ～破～ - 森永真由美／一咲美葵/果てなき風の軌跡さえ封面.jpg"
+  },
+  {
+    "name": "[TH10 风]沢の河城工務店",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH10 风]沢の河城工務店 - Foxtail-Grass Studio/[TH10 风]沢の河城工務店 - Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/[TH10 风]沢の河城工務店 - Foxtail-Grass Studio/天狗舞踏会.jpg"
+  },
+  {
+    "name": "[TH10 风]秋姉妹のなく顷に",
+    "artist": "ばんばんしー",
+    "url": "./static/bgm/[TH10 风]秋姉妹のなく顷に - ばんばんしー/[TH10 风]秋姉妹のなく顷に - ばんばんしー.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]風の唄(long ver.)",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/[TH10 风]風の唄(long ver.) - めらみぽっぷ/[TH10 风]風の唄(long ver.) - めらみぽっぷ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10 风]鳥よ",
+    "artist": "nayuta／凋叶棕",
+    "url": "./static/bgm/[TH10 风]鳥よ - nayuta／凋叶棕/[TH10 风]鳥よ - nayuta_凋叶棕.mp3",
+    "cover": "./static/bgm/[TH10 风]鳥よ - nayuta／凋叶棕/娶封面.jpg"
+  },
+  {
+    "name": "[TH10.5 绯]冷吟閑酔",
+    "artist": "黄昏フロンティア／上海アリス幻樂団",
+    "url": "./static/bgm/[TH10.5 绯]冷吟閑酔 - 黄昏フロンティア／上海アリス幻樂団/[TH10.5 绯]冷吟閑酔 - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": "./static/bgm/[TH10.5 绯]冷吟閑酔 - 黄昏フロンティア／上海アリス幻樂団/1.jpg"
+  },
+  {
+    "name": "[TH10.5 绯]有頂天ドリーマーズ",
+    "artist": "あやぽんず",
+    "url": "./static/bgm/[TH10.5 绯]有頂天ドリーマーズ - あやぽんず/[TH10.5 绯]有頂天ドリーマーズ - あやぽんず_.mp3",
+    "cover": "./static/bgm/[TH10.5 绯]有頂天ドリーマーズ - あやぽんず/シンクロ封面.jpg"
+  },
+  {
+    "name": "[TH10.5 绯]有頂天変 ～ Wonderful Heaven _ ZUN",
+    "artist": "黄昏フロンティア／上海アリス幻樂団",
+    "url": "./static/bgm/[TH10.5 绯]有頂天変 ～ Wonderful Heaven _ ZUN - 黄昏フロンティア／上海アリス幻樂団/[TH10.5 绯]有頂天変　～ Wonderful Heaven _ ZUN - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH10.5 绯]東方緋想天 (Arrange Version)",
+    "artist": "黄昏フロンティア／上海アリス幻樂団",
+    "url": "./static/bgm/[TH10.5 绯]東方緋想天 (Arrange Version) - 黄昏フロンティア／上海アリス幻樂団/[TH10.5 绯]東方緋想天 (Arrange Version) - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH11 地]ハルトマンの妖怪少女",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH11 地]ハルトマンの妖怪少女 - 上海アリス幻樂団/[TH11 地]ハルトマンの妖怪少女 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH11 地]ラストリモート",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH11 地]ラストリモート - 上海アリス幻樂団/[TH11 地]ラストリモート - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH11 地]太陽のうた",
+    "artist": "あよ",
+    "url": "./static/bgm/[TH11 地]太陽のうた - あよ/[TH11 地]太陽のうた - あよ.mp3",
+    "cover": "./static/bgm/[TH11 地]太陽のうた - あよ/シンクロ2封面.jpg"
+  },
+  {
+    "name": "[TH11 地]少女さとり ～ 3rd eye",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH11 地]少女さとり ～ 3rd eye - 上海アリス幻樂団/[TH11 地]少女さとり　～ 3rd eye - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH12 星]万年置き傘にご注意を",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH12 星]万年置き傘にご注意を - 上海アリス幻樂団/[TH12 星]万年置き傘にご注意を - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH12 星]感情の摩天楼 ～ Cosmic Mind",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH12 星]感情の摩天楼 ～ Cosmic Mind - 上海アリス幻樂団/[TH12 星]感情の摩天楼　～ Cosmic Mind - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH12 星]春の湊に",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH12 星]春の湊に - 上海アリス幻樂団/[TH12 星]春の湊に - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH12.8 三]fairy stage",
+    "artist": "K2 SOUND",
+    "url": "./static/bgm/[TH12.8 三]fairy stage - K2 SOUND/[TH12.8 三]fairy stage - K2 SOUND.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH12.8 三]三妖精SAY YA!!!",
+    "artist": "あやぽんず／あよ",
+    "url": "./static/bgm/[TH12.8 三]三妖精SAY YA!!! - あやぽんず／あよ/[TH12.8 三]三妖精SAY YA!!! - あやぽんず__あよ.mp3",
+    "cover": "./static/bgm/[TH12.8 三]三妖精SAY YA!!! - あやぽんず／あよ/エイセイパレード封面.jpg"
+  },
+  {
+    "name": "[TH13 神]デザイアドライブ",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH13 神]デザイアドライブ - 上海アリス幻樂団/[TH13 神]デザイアドライブ - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH14 辉]タイムパラドックス",
+    "artist": "あよ／森羅万象",
+    "url": "./static/bgm/[TH14 辉]タイムパラドックス - あよ／森羅万象/[TH14 辉]タイムパラドックス - あよ_森羅万象.mp3",
+    "cover": "./static/bgm/[TH14 辉]タイムパラドックス - あよ／森羅万象/エイセイパレード封面.jpg"
+  },
+  {
+    "name": "[TH14 辉]輝く針の小人族 ～ Little Princess",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH14 辉]輝く針の小人族 ～ Little Princess - 上海アリス幻樂団/[TH14 辉]輝く針の小人族　～ Little Princess - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH15 绀]ははうさぎ",
+    "artist": "あよ",
+    "url": "./static/bgm/[TH15 绀]ははうさぎ - あよ/[TH15 绀]ははうさぎ - あよ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH15 绀]ピュアヒューリーズ ～ 心の在処",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH15 绀]ピュアヒューリーズ ～ 心の在処 - 上海アリス幻樂団/[TH15 绀]ピュアヒューリーズ　～ 心の在処 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH15 绀]故郷の星が映る海",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH15 绀]故郷の星が映る海 - 上海アリス幻樂団/[TH15 绀]故郷の星が映る海 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH15 绀]星条旗のピエロ",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH15 绀]星条旗のピエロ - 上海アリス幻樂団/[TH15 绀]星条旗のピエロ - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH15.5 凭]今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers",
+    "artist": "黄昏フロンティア／上海アリス幻樂団",
+    "url": "./static/bgm/[TH15.5 凭]今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers - 黄昏フロンティア／上海アリス幻樂団/[TH15.5 凭]今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers. - 黄昏フロンティア_上海アリス幻樂団.mp3",
+    "cover": "./static/bgm/[TH15.5 凭]今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers - 黄昏フロンティア／上海アリス幻樂団/1.jpg"
+  },
+  {
+    "name": "[TH17 鬼]偶像に世界を委ねて ～ Idoratrize World",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH17 鬼]偶像に世界を委ねて ～ Idoratrize World - 上海アリス幻樂団/[TH17 鬼]偶像に世界を委ねて　～ Idoratrize World - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH18 虹]あの賑やかな市場は今どこに ～ Immemorial Marketeers",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH18 虹]あの賑やかな市場は今どこに ～ Immemorial Marketeers - 上海アリス幻樂団/[TH18 虹]あの賑やかな市場は今どこに　～ Immemorial Marketeers - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH19 兽]世界は可愛く出来ている",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH19 兽]世界は可愛く出来ている - 上海アリス幻樂団/[TH19 兽]世界は可愛く出来ている - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH20 锦]どうせなら命を賭けて謎を解け",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH20 锦]どうせなら命を賭けて謎を解け - 上海アリス幻樂団/[TH20 锦]どうせなら命を賭けて謎を解け - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH求闻史纪]现梦 -genmu-",
+    "artist": "みぃ／yukina",
+    "url": "./static/bgm/[TH求闻史纪]现梦 -genmu- - みぃ／yukina/[TH求闻史纪]现梦 -genmu- - みぃ_yukina.mp3",
+    "cover": "./static/bgm/[TH求闻史纪]现梦 -genmu- - みぃ／yukina/1.jpg"
+  },
+  {
+    "name": "[TH求闻史纪]竹ノ花",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/[TH求闻史纪]竹ノ花 - めらみぽっぷ/[TH求闻史纪]竹ノ花 - めらみぽっぷ.mp3",
+    "cover": "./static/bgm/[TH求闻史纪]竹ノ花 - めらみぽっぷ/薦封面.jpg"
+  },
+  {
+    "name": "[TH秘封]The des Alizes",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH秘封]The des Alizes - Foxtail-Grass Studio/[TH秘封]The des Alizes - Foxtail-Grass Studio.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH秘封]インスタントブルー",
+    "artist": "あよ",
+    "url": "./static/bgm/[TH秘封]インスタントブルー - あよ/[TH秘封]インスタントブルー - あよ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH秘封]少女秘封倶楽部",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH秘封]少女秘封倶楽部 - 上海アリス幻樂団/[TH秘封]少女秘封倶楽部 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH秘封]日陰と帽子と風鈴と",
+    "artist": "Foxtail-Grass Studio",
+    "url": "./static/bgm/[TH秘封]日陰と帽子と風鈴と - Foxtail-Grass Studio/[TH秘封]日陰と帽子と風鈴と - Foxtail-Grass Studio.mp3",
+    "cover": "./static/bgm/[TH秘封]日陰と帽子と風鈴と - Foxtail-Grass Studio/1.jpg"
+  },
+  {
+    "name": "[TH秘封]時間よ止まれ",
+    "artist": "あやぽんず／あよ",
+    "url": "./static/bgm/[TH秘封]時間よ止まれ - あやぽんず／あよ/[TH秘封]時間よ止まれ - あやぽんず__あよ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH秘封]最も澄みわたる空と海",
+    "artist": "上海アリス幻樂団",
+    "url": "./static/bgm/[TH秘封]最も澄みわたる空と海 - 上海アリス幻樂団/[TH秘封]最も澄みわたる空と海 - 上海アリス幻樂団.mp3",
+    "cover": ""
+  },
+  {
+    "name": "[TH秘封]童遊",
+    "artist": "めらみぽっぷ",
+    "url": "./static/bgm/[TH秘封]童遊 - めらみぽっぷ/[TH秘封]童遊 - めらみぽっぷ.mp3",
+    "cover": "./static/bgm/[TH秘封]童遊 - めらみぽっぷ/望（同人专辑）封面.jpg"
+  },
+  {
+    "name": "【Key】SPRB]風は微かに、熱を残し…",
+    "artist": "VISUAL ARTS",
+    "url": "./static/bgm/【Key】SPRB]風は微かに、熱を残し… - VISUAL ARTS/【Key】SPRB]風は微かに、熱を残し… - VISUAL ARTS.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Don't Cry Red",
+    "artist": "神山識(CV.ファイルーズあい)／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]Don't Cry Red - 神山識(CV.ファイルーズあい)／VISUAL ARTS／Key/【Key】[SPRB]Don't Cry Red - 神山識(CV.ファイルーズあい)_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Lasting Moment",
+    "artist": "鈴木このみ／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]Lasting Moment - 鈴木このみ／VISUAL ARTS／Key/【Key】[SPRB]Lasting Moment - 鈴木このみ_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]REFLECTION BLUE",
+    "artist": "VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]REFLECTION BLUE - VISUAL ARTS／Key/【Key】[SPRB]REFLECTION BLUE - VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Run Red Run",
+    "artist": "VISUAL ARTS",
+    "url": "./static/bgm/【Key】[SPRB]Run Red Run - VISUAL ARTS/【Key】[SPRB]Run Red Run - VISUAL ARTS.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Sea, You & Me",
+    "artist": "麻枝准",
+    "url": "./static/bgm/【Key】[SPRB]Sea, You & Me - 麻枝准/【Key】[SPRB]Sea, You & Me - 麻枝准.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Sea, You Next",
+    "artist": "麻枝准",
+    "url": "./static/bgm/【Key】[SPRB]Sea, You Next - 麻枝准/【Key】[SPRB]Sea, You Next - 麻枝准.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Sea, Your Memory",
+    "artist": "麻枝准",
+    "url": "./static/bgm/【Key】[SPRB]Sea, Your Memory - 麻枝准/【Key】[SPRB]Sea, Your Memory - 麻枝准.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]Summer Pockets",
+    "artist": "水月陵",
+    "url": "./static/bgm/【Key】[SPRB]Summer Pockets - 水月陵/【Key】[SPRB]Summer Pockets - 水月陵.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]しろはの子守歌",
+    "artist": "小原好美／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]しろはの子守歌 - 小原好美／VISUAL ARTS／Key/【Key】[SPRB]しろはの子守歌 - 小原好美_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]アスタロア (-reflect-)",
+    "artist": "VISUAL ARTS",
+    "url": "./static/bgm/【Key】[SPRB]アスタロア (-reflect-) - VISUAL ARTS/【Key】[SPRB]アスタロア (-reflect-) - VISUAL ARTS.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]アスタロア",
+    "artist": "鈴木このみ／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]アスタロア - 鈴木このみ／VISUAL ARTS／Key/【Key】[SPRB]アスタロア - 鈴木このみ_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]アルカテイル",
+    "artist": "鈴木このみ／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]アルカテイル - 鈴木このみ／VISUAL ARTS／Key/【Key】[SPRB]アルカテイル - 鈴木このみ_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]アルカテイル -story-",
+    "artist": "折戸伸治",
+    "url": "./static/bgm/【Key】[SPRB]アルカテイル -story- - 折戸伸治/【Key】[SPRB]アルカテイル -story- - 折戸伸治.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]ポケットをふくらませて",
+    "artist": "rionos／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]ポケットをふくらませて - rionos／VISUAL ARTS／Key/【Key】[SPRB]ポケットをふくらませて - rionos_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]ポケットをふくらませて ～Sea, you again～",
+    "artist": "rionos／VISUAL ARTS",
+    "url": "./static/bgm/【Key】[SPRB]ポケットをふくらませて ～Sea, you again～ - rionos／VISUAL ARTS/【Key】[SPRB]ポケットをふくらませて ～Sea, you again～ - rionos_VISUAL ARTS.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]坂の上の陽炎",
+    "artist": "どんまる",
+    "url": "./static/bgm/【Key】[SPRB]坂の上の陽炎 - どんまる/【Key】[SPRB]坂の上の陽炎 - どんまる.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]夏の子守歌",
+    "artist": "折戸伸治",
+    "url": "./static/bgm/【Key】[SPRB]夏の子守歌 - 折戸伸治/【Key】[SPRB]夏の子守歌 - 折戸伸治.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]夏の紫苑",
+    "artist": "VISUAL ARTS",
+    "url": "./static/bgm/【Key】[SPRB]夏の紫苑 - VISUAL ARTS/【Key】[SPRB]夏の紫苑 - VISUAL ARTS.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]夜奏花",
+    "artist": "YURiKA／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]夜奏花 - YURiKA／VISUAL ARTS／Key/【Key】[SPRB]夜奏花 - YURiKA_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]木陰の憩",
+    "artist": "水月陵",
+    "url": "./static/bgm/【Key】[SPRB]木陰の憩 - 水月陵/【Key】[SPRB]木陰の憩 - 水月陵.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]紬の夏休み",
+    "artist": "岩井映美里／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]紬の夏休み - 岩井映美里／VISUAL ARTS／Key/【Key】[SPRB]紬の夏休み - 岩井映美里_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]蝉声とともに",
+    "artist": "水月陵",
+    "url": "./static/bgm/【Key】[SPRB]蝉声とともに - 水月陵/【Key】[SPRB]蝉声とともに - 水月陵.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[SPRB]青き此方",
+    "artist": "YURiKA／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[SPRB]青き此方 - YURiKA／VISUAL ARTS／Key/【Key】[SPRB]青き此方 - YURiKA_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[星之终途]Ortus",
+    "artist": "相宮零／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[星之终途]Ortus - 相宮零／VISUAL ARTS／Key/【Key】[星之终途]Ortus - 相宮零_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Key】[星之终途]breath of stella",
+    "artist": "相宮零／VISUAL ARTS／Key",
+    "url": "./static/bgm/【Key】[星之终途]breath of stella - 相宮零／VISUAL ARTS／Key/【Key】[星之终途]breath of stella - 相宮零_VISUAL ARTS _ Key.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]All right!!",
+    "artist": "KOTOKO",
+    "url": "./static/bgm/【Lose】[爱上火车]All right!! - KOTOKO/【Lose】[爱上火车]All right!! - KOTOKO.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]Run with our dreams_piano solo",
+    "artist": "V.A",
+    "url": "./static/bgm/【Lose】[爱上火车]Run with our dreams_piano solo - V.A/【Lose】[爱上火车]Run with our dreams_piano solo - V.A..mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]blooming symphony",
+    "artist": "Ayumi",
+    "url": "./static/bgm/【Lose】[爱上火车]blooming symphony - Ayumi/【Lose】[爱上火车]blooming symphony - Ayumi..mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]floraison",
+    "artist": "美郷あき",
+    "url": "./static/bgm/【Lose】[爱上火车]floraison - 美郷あき/【Lose】[爱上火车]floraison - 美郷あき.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]どこまでも続くこの路を_piano solo",
+    "artist": "V.A",
+    "url": "./static/bgm/【Lose】[爱上火车]どこまでも続くこの路を_piano solo - V.A/【Lose】[爱上火车]どこまでも続くこの路を_piano solo - V.A..mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]ひだまりライン",
+    "artist": "はな",
+    "url": "./static/bgm/【Lose】[爱上火车]ひだまりライン - はな/【Lose】[爱上火车]ひだまりライン - はな.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]レイル・ロマネスク",
+    "artist": "中恵光城",
+    "url": "./static/bgm/【Lose】[爱上火车]レイル・ロマネスク - 中恵光城/【Lose】[爱上火车]レイル・ロマネスク - 中恵光城.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]ロオド・ラスト",
+    "artist": "中恵光城",
+    "url": "./static/bgm/【Lose】[爱上火车]ロオド・ラスト - 中恵光城/【Lose】[爱上火车]ロオド・ラスト - 中恵光城.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]未来へのレール_piano solo",
+    "artist": "V.A",
+    "url": "./static/bgm/【Lose】[爱上火车]未来へのレール_piano solo - V.A/【Lose】[爱上火车]未来へのレール_piano solo - V.A..mp3",
+    "cover": ""
+  },
+  {
+    "name": "【Lose】[爱上火车]未来行き☆列車_piano",
+    "artist": "V.A",
+    "url": "./static/bgm/【Lose】[爱上火车]未来行き☆列車_piano - V.A/【Lose】[爱上火车]未来行き☆列車_piano - V.A..mp3",
+    "cover": ""
+  },
+  {
+    "name": "【中V】∞ TIMEs",
+    "artist": "洛天依Official／星葵77",
+    "url": "./static/bgm/【中V】∞ TIMEs - 洛天依Official／星葵77/【中V】∞ TIMEs - 洛天依Official_星葵77.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【中V】世末歌者",
+    "artist": "乐正绫／COP",
+    "url": "./static/bgm/【中V】世末歌者 - 乐正绫／COP/【中V】世末歌者 - 乐正绫_COP.mp3",
+    "cover": "./static/bgm/【中V】世末歌者 - 乐正绫／COP/1.jpg"
+  },
+  {
+    "name": "【中V】小孩的歌",
+    "artist": "洛天依",
+    "url": "./static/bgm/【中V】小孩的歌 - 洛天依/【中V】小孩的歌 - 洛天依.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【中V】我的悲伤是水做的",
+    "artist": "ChiliChill乐团／洛天依Official",
+    "url": "./static/bgm/【中V】我的悲伤是水做的 - ChiliChill乐团／洛天依Official/【中V】我的悲伤是水做的 - ChiliChill乐团_洛天依Official.mp3",
+    "cover": "./static/bgm/【中V】我的悲伤是水做的 - ChiliChill乐团／洛天依Official/1.jpg"
+  },
+  {
+    "name": "【中V】武装乙女",
+    "artist": "Chinozo",
+    "url": "./static/bgm/【中V】武装乙女 - Chinozo/【中V】武装乙女 - Chinozo.mp3",
+    "cover": "./static/bgm/【中V】武装乙女 - Chinozo/1.jpg"
+  },
+  {
+    "name": "【中V】沸雪煮相思",
+    "artist": "Newbiao好梦一场／洛天依Official／星尘infinity",
+    "url": "./static/bgm/【中V】沸雪煮相思 - Newbiao好梦一场／洛天依Official／星尘infinity/【中V】沸雪煮相思 - Newbiao好梦一场_洛天依Official_星尘infinity.mp3",
+    "cover": "./static/bgm/【中V】沸雪煮相思 - Newbiao好梦一场／洛天依Official／星尘infinity/1.jpg"
+  },
+  {
+    "name": "【中V】玉兰开花三月三",
+    "artist": "洛天依／乌龟Sui／亚小琨",
+    "url": "./static/bgm/【中V】玉兰开花三月三 - 洛天依／乌龟Sui／亚小琨/【中V】玉兰开花三月三 - 洛天依_乌龟Sui_亚小琨.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【中V】谁家",
+    "artist": "洛天依／乐正绫／宇衡Yu／H／木叶muya",
+    "url": "./static/bgm/【中V】谁家 - 洛天依／乐正绫／宇衡Yu／H／木叶muya/【中V】谁家 - 洛天依_乐正绫_宇衡Yu_H_木叶muya.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【中V】霜雪千年 (官方重置版)",
+    "artist": "洛天依Official／乐正绫",
+    "url": "./static/bgm/【中V】霜雪千年 (官方重置版) - 洛天依Official／乐正绫/【中V】霜雪千年 (官方重置版) - 洛天依Official_乐正绫.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】Miku",
+    "artist": "Anamanaguchi／初音ミク",
+    "url": "./static/bgm/【日V】Miku - Anamanaguchi／初音ミク/【日V】Miku - Anamanaguchi_初音ミク.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】おちゃめ機能",
+    "artist": "重音テト／ラマーズP",
+    "url": "./static/bgm/【日V】おちゃめ機能 - 重音テト／ラマーズP/【日V】おちゃめ機能 - 重音テト_ラマーズP.mp3",
+    "cover": "./static/bgm/【日V】おちゃめ機能 - 重音テト／ラマーズP/1.jpg"
+  },
+  {
+    "name": "【日V】サイエンス (feat. 重音テト)",
+    "artist": "MIMI／重音テト",
+    "url": "./static/bgm/【日V】サイエンス (feat. 重音テト) - MIMI／重音テト/【日V】サイエンス (feat. 重音テト) - MIMI_重音テト.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】ツギハギスタッカート",
+    "artist": "とあ／初音ミク",
+    "url": "./static/bgm/【日V】ツギハギスタッカート - とあ／初音ミク/【日V】ツギハギスタッカート - とあ_初音ミク.mp3",
+    "cover": "./static/bgm/【日V】ツギハギスタッカート - とあ／初音ミク/1.jpg"
+  },
+  {
+    "name": "【日V】ワールドイズマイン",
+    "artist": "初音ミク／ryo (supercell)",
+    "url": "./static/bgm/【日V】ワールドイズマイン - 初音ミク／ryo (supercell)/【日V】ワールドイズマイン - 初音ミク_ryo (supercell).mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】六兆年と一夜物語",
+    "artist": "Leo／need／初音ミク／堀江晶太",
+    "url": "./static/bgm/【日V】六兆年と一夜物語 - Leo／need／初音ミク／堀江晶太/【日V】六兆年と一夜物語 - Leo_need_初音ミク_堀江晶太.mp3",
+    "cover": "./static/bgm/【日V】六兆年と一夜物語 - Leo／need／初音ミク／堀江晶太/1.jpg"
+  },
+  {
+    "name": "【日V】星涙哀歌",
+    "artist": "MIMI",
+    "url": "./static/bgm/【日V】星涙哀歌 - MIMI/【日V】星涙哀歌 - MIMI.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】深海少女",
+    "artist": "ゆうゆ／初音ミク",
+    "url": "./static/bgm/【日V】深海少女 - ゆうゆ／初音ミク/【日V】深海少女 - ゆうゆ_初音ミク.mp3",
+    "cover": "./static/bgm/【日V】深海少女 - ゆうゆ／初音ミク/1.jpg"
+  },
+  {
+    "name": "【日V】病名は愛だった",
+    "artist": "Neru／鏡音レン／鏡音リン／z'5",
+    "url": "./static/bgm/【日V】病名は愛だった - Neru／鏡音レン／鏡音リン／z'5/【日V】病名は愛だった - Neru_鏡音レン_鏡音リン_z'5.MP3",
+    "cover": "./static/bgm/【日V】病名は愛だった - Neru／鏡音レン／鏡音リン／z'5/1.jpg"
+  },
+  {
+    "name": "【日V】神のまにまに",
+    "artist": "初音ミク／鏡音リン／GUMI／れるりり",
+    "url": "./static/bgm/【日V】神のまにまに - 初音ミク／鏡音リン／GUMI／れるりり/【日V】神のまにまに - 初音ミク_鏡音リン_GUMI_れるりり.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【日V】臙脂",
+    "artist": "蛋包饭咖喱饭／重音テト",
+    "url": "./static/bgm/【日V】臙脂 - 蛋包饭咖喱饭／重音テト/【日V】臙脂 - 蛋包饭咖喱饭_重音テト.mp3",
+    "cover": "./static/bgm/【日V】臙脂 - 蛋包饭咖喱饭／重音テト/1.jpg"
+  },
+  {
+    "name": "【日V】踊っチャイナ (feat. 初音ミク & 重音テト)",
+    "artist": "Atena／初音ミク／重音テト",
+    "url": "./static/bgm/【日V】踊っチャイナ (feat. 初音ミク & 重音テト) - Atena／初音ミク／重音テト/【日V】踊っチャイナ (feat. 初音ミク & 重音テト) - Atena_初音ミク_重音テト.mp3",
+    "cover": "./static/bgm/【日V】踊っチャイナ (feat. 初音ミク & 重音テト) - Atena／初音ミク／重音テト/1.jpg"
+  },
+  {
+    "name": "【枕】[ATRI]Dear Moments",
+    "artist": "赤尾ひかる",
+    "url": "./static/bgm/【枕】[ATRI]Dear Moments - 赤尾ひかる/【枕】[ATRI]Dear Moments - 赤尾ひかる.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]こんにちは太陽",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]こんにちは太陽 - 松本文紀/【枕】[ATRI]こんにちは太陽 - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]ごきげん戦闘ロボ",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]ごきげん戦闘ロボ - 松本文紀/【枕】[ATRI]ごきげん戦闘ロボ - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]光放て！",
+    "artist": "柳麻美",
+    "url": "./static/bgm/【枕】[ATRI]光放て！ - 柳麻美/【枕】[ATRI]光放て！ - 柳麻美.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]子供たちのひととき",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]子供たちのひととき - 松本文紀/【枕】[ATRI]子供たちのひととき - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]暖かな時間",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]暖かな時間 - 松本文紀/【枕】[ATRI]暖かな時間 - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]海中都市",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]海中都市 - 松本文紀/【枕】[ATRI]海中都市 - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【枕】[ATRI]親愛なるあの日々へ",
+    "artist": "松本文紀",
+    "url": "./static/bgm/【枕】[ATRI]親愛なるあの日々へ - 松本文紀/【枕】[ATRI]親愛なるあの日々へ - 松本文紀.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]くつろぎの間",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]くつろぎの間 - Angel Note／井ノ原智/【柚子】[千恋万花]くつろぎの間 - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]とおりゃんせ~甘美風来",
+    "artist": "遥そら",
+    "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ~甘美風来 - 遥そら/【柚子】[千恋万花]とおりゃんせ~甘美風来 - 遥そら.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞",
+    "artist": "ゆずひこ／佐々倉マコト",
+    "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞ - ゆずひこ／佐々倉マコト/【柚子】[千恋万花]とおりゃんせ〜甘美風来 ＜orgel arrange ver.＞ - ゆずひこ_佐々倉マコト.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_",
+    "artist": "Angel Note／ゆずひこ",
+    "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_ - Angel Note／ゆずひこ/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Instrument Version_ - Angel Note_ゆずひこ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_",
+    "artist": "Angel Note／ゆずひこ",
+    "url": "./static/bgm/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_ - Angel Note／ゆずひこ/【柚子】[千恋万花]とおりゃんせ～甘美風来 _Quiet Version_ - Angel Note_ゆずひこ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]ひとときの安息",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]ひとときの安息 - Angel Note／井ノ原智/【柚子】[千恋万花]ひとときの安息 - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]ふたつの影",
+    "artist": "Famishin／春風まゆき",
+    "url": "./static/bgm/【柚子】[千恋万花]ふたつの影 - Famishin／春風まゆき/【柚子】[千恋万花]ふたつの影 - Famishin_春風まゆき.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]ふたりで",
+    "artist": "Famishin／Riryka",
+    "url": "./static/bgm/【柚子】[千恋万花]ふたりで - Famishin／Riryka/【柚子】[千恋万花]ふたりで - Famishin_Riryka.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉",
+    "artist": "Famishin／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉 - Famishin／Angel Note/【柚子】[千恋万花]ふたりで 〈orgel arrange ver.〉 - Famishin_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]キズナヒトツ",
+    "artist": "山本希望",
+    "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ - 山本希望/【柚子】[千恋万花]キズナヒトツ - 山本希望.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]キズナヒトツ _Instrument Version_",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Instrument Version_ - Angel Note／井ノ原智/【柚子】[千恋万花]キズナヒトツ _Instrument Version_ - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]キズナヒトツ _Quiet Version_",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]キズナヒトツ _Quiet Version_ - Angel Note／井ノ原智/【柚子】[千恋万花]キズナヒトツ _Quiet Version_ - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]心の夜明け",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]心の夜明け - Angel Note／井ノ原智/【柚子】[千恋万花]心の夜明け - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]恋ひ恋ふ縁",
+    "artist": "Famishin／KOTOKO",
+    "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁 - Famishin／KOTOKO/【柚子】[千恋万花]恋ひ恋ふ縁 - Famishin_KOTOKO.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞",
+    "artist": "Famishin／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞ - Famishin／Angel Note/【柚子】[千恋万花]恋ひ恋ふ縁＜Koto Version＞ - Famishin_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞",
+    "artist": "Famishin／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞ - Famishin／Angel Note/【柚子】[千恋万花]恋ひ恋ふ縁＜Piano Version＞ - Famishin_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉",
+    "artist": "Famishin／佐々倉マコト",
+    "url": "./static/bgm/【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉 - Famishin／佐々倉マコト/【柚子】[千恋万花]愛しさと感謝の気持ち 〈orgel arrange ver.〉 - Famishin_佐々倉マコト.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]慎ましき朝",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]慎ましき朝 - Angel Note／井ノ原智/【柚子】[千恋万花]慎ましき朝 - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]本日は晴天なり",
+    "artist": "Famishin／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]本日は晴天なり - Famishin／Angel Note/【柚子】[千恋万花]本日は晴天なり - Famishin_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]田心屋",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]田心屋 - Angel Note／井ノ原智/【柚子】[千恋万花]田心屋 - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]縁結び",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]縁結び - Angel Note／井ノ原智/【柚子】[千恋万花]縁結び - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉",
+    "artist": "Famishin／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉 - Famishin／Angel Note/【柚子】[千恋万花]縁結び 〈orgel arrange ver.〉 - Famishin_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]花鳥風月",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]花鳥風月 - Angel Note／井ノ原智/【柚子】[千恋万花]花鳥風月 - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞",
+    "artist": "井ノ原智／佐々倉マコト",
+    "url": "./static/bgm/【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞ - 井ノ原智／佐々倉マコト/【柚子】[千恋万花]花鳥風月 ＜orgel arrange ver.＞ - 井ノ原智_佐々倉マコト.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]茉子の日常",
+    "artist": "高森奈津美",
+    "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 - 高森奈津美/【柚子】[千恋万花]茉子の日常 - 高森奈津美.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]茉子の日常 _Instrument Version_",
+    "artist": "ユージ・ナイトー／山田屋カズ",
+    "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Instrument Version_ - ユージ・ナイトー／山田屋カズ/【柚子】[千恋万花]茉子の日常 _Instrument Version_ - ユージ・ナイトー_山田屋カズ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]茉子の日常 _Quiet Version_",
+    "artist": "ユージ・ナイトー／山田屋カズ",
+    "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 _Quiet Version_ - ユージ・ナイトー／山田屋カズ/【柚子】[千恋万花]茉子の日常 _Quiet Version_ - ユージ・ナイトー_山田屋カズ.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉",
+    "artist": "ユージ・ナイトー／山田屋カズ／Angel Note",
+    "url": "./static/bgm/【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉 - ユージ・ナイトー／山田屋カズ／Angel Note/【柚子】[千恋万花]茉子の日常 〈orgel arrange ver.〉 - ユージ・ナイトー_山田屋カズ_Angel Note.mp3",
+    "cover": ""
+  },
+  {
+    "name": "【柚子】[千恋万花]身も心も…",
+    "artist": "Angel Note／井ノ原智",
+    "url": "./static/bgm/【柚子】[千恋万花]身も心も… - Angel Note／井ノ原智/【柚子】[千恋万花]身も心も… - Angel Note_井ノ原智.mp3",
+    "cover": ""
+  },
+  {
+    "name": "影色舞",
+    "artist": "MyGO!!!!!",
+    "url": "./static/bgm/影色舞 - MyGO!!!!!/ 影色舞 - MyGO!!!!!.mp3",
+    "cover": ""
   }
 ]
