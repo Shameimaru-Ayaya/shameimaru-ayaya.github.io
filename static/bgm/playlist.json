@@ -135,7 +135,7 @@
     "name": "[TH08 永]ねこ巫女れいむ",
     "artist": "miko",
     "url": "./static/bgm/[TH08 永]ねこ巫女れいむ - miko/[TH08 永]ねこ巫女れいむ - miko.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH08 永]ねこ巫女れいむ - miko/109951169374642728.jpg"
   },
   {
     "name": "[TH08 永]クレプスクルム",
@@ -189,25 +189,25 @@
     "name": "[TH09 花]MY Heart Rate",
     "artist": "あよ／森羅万象",
     "url": "./static/bgm/[TH09 花]MY Heart Rate - あよ／森羅万象/[TH09 花]MY Heart Rate - あよ_森羅万象.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH09 花]MY Heart Rate - あよ／森羅万象/109951164912370591.jpg"
   },
   {
     "name": "[TH09 花]花映「タマシイノハナ」",
     "artist": "めらみぽっぷ",
     "url": "./static/bgm/[TH09 花]花映「タマシイノハナ」 - めらみぽっぷ/[TH09 花]花映「タマシイノハナ」 - めらみぽっぷ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH09 花]花映「タマシイノハナ」 - めらみぽっぷ/109951166032225268.jpg"
   },
   {
     "name": "[TH09 花]華鳥風月",
     "artist": "幽閉サテライト／森永真由美",
     "url": "./static/bgm/[TH09 花]華鳥風月 - 幽閉サテライト／森永真由美/[TH09 花]華鳥風月 - 幽閉サテライト_森永真由美.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH09 花]華鳥風月 - 幽閉サテライト／森永真由美/109951164945890080.jpg"
   },
   {
     "name": "[TH09.5 帖]ためすがめ",
     "artist": "めらみぽっぷ",
     "url": "./static/bgm/[TH09.5 帖]ためすがめ - めらみぽっぷ/[TH09.5 帖]ためすがめ - めらみぽっぷ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH09.5 帖]ためすがめ - めらみぽっぷ/ab67616d0000b273bce5f4a649d5993cf9539a23.jpeg"
   },
   {
     "name": "[TH09.5 帖]風神少女",
@@ -219,31 +219,25 @@
     "name": "[TH10 风]Aisya -ye ru amma-",
     "artist": "Riverside",
     "url": "./static/bgm/[TH10 风]Aisya -ye ru amma- - Riverside/[TH10 风]Aisya -ye ru amma- - Riverside.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]Aisya -ye ru amma- - Riverside/Cz91GMblXb7NHQi_5pt79g==_4457420139014647.jpg"
   },
   {
     "name": "[TH10 风]フォールオブフォール ～ 秋めく滝",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH10 风]フォールオブフォール ～ 秋めく滝 - 上海アリス幻樂団/[TH10 风]フォールオブフォール　～ 秋めく滝 - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]フォールオブフォール ～ 秋めく滝 - 上海アリス幻樂団/109951166292318000.jpg"
   },
   {
     "name": "[TH10 风]信仰は儚き人間の為に",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH10 风]信仰は儚き人間の為に - 上海アリス幻樂団/[TH10 风]信仰は儚き人間の為に - 上海アリス幻樂団.mp3",
-    "cover": ""
-  },
-  {
-    "name": "[TH10 风]凄い回しちゃう鍵山さんが物凄いうた",
-    "artist": "ななひら",
-    "url": "./static/bgm/[TH10 风]凄い回しちゃう鍵山さんが物凄いうた - ななひら/[TH10 风]凄い回しちゃう鍵山さんが物凄いうた - ななひら.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]信仰は儚き人間の為に - 上海アリス幻樂団/109951166292318000.jpg"
   },
   {
     "name": "[TH10 风]厄神様の通り道 ～ Dark Road",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH10 风]厄神様の通り道 ～ Dark Road - 上海アリス幻樂団/[TH10 风]厄神様の通り道　～ Dark Road - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]厄神様の通り道 ～ Dark Road - 上海アリス幻樂団/109951166292318000.jpg"
   },
   {
     "name": "[TH10 风]天狗舞踏会",
@@ -255,13 +249,13 @@
     "name": "[TH10 风]妖怪の山 ～ Mysterious Mountain",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH10 风]妖怪の山 ～ Mysterious Mountain - 上海アリス幻樂団/[TH10 风]妖怪の山　～ Mysterious Mountain - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]妖怪の山 ～ Mysterious Mountain - 上海アリス幻樂団/109951166292318000.jpg"
   },
   {
     "name": "[TH10 风]少女が見た日本の原風景",
     "artist": "上海アリス幻樂団",
     "url": "./static/bgm/[TH10 风]少女が見た日本の原風景 - 上海アリス幻樂団/[TH10 风]少女が見た日本の原風景 - 上海アリス幻樂団.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]少女が見た日本の原風景 - 上海アリス幻樂団/109951166292318000.jpg"
   },
   {
     "name": "[TH10 风]明日ハレの日、ケの昨日",
@@ -273,7 +267,7 @@
     "name": "[TH10 风]明日散る運命なら[with Marcia]",
     "artist": "一咲美葵",
     "url": "./static/bgm/[TH10 风]明日散る運命なら[with Marcia] - 一咲美葵/[TH10 风]明日散る運命なら[with Marcia] - 一咲美葵.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]明日散る運命なら[with Marcia] - 一咲美葵/109951166698724243.jpg"
   },
   {
     "name": "[TH10 风]果てなき風の軌跡さえ～破～",
@@ -288,16 +282,22 @@
     "cover": "./static/bgm/[TH10 风]沢の河城工務店 - Foxtail-Grass Studio/天狗舞踏会.jpg"
   },
   {
+    "name": "[TH10 风]物凄い回しちゃう鍵山さんが物凄いうた",
+    "artist": "ななひら",
+    "url": "./static/bgm/[TH10 风]物凄い回しちゃう鍵山さんが物凄いうた - ななひら/[TH10 风]物凄い回しちゃう鍵山さんが物凄いうた - ななひら.mp3",
+    "cover": "./static/bgm/[TH10 风]物凄い回しちゃう鍵山さんが物凄いうた - ななひら/109951165153205991.jpg"
+  },
+  {
     "name": "[TH10 风]秋姉妹のなく顷に",
     "artist": "ばんばんしー",
     "url": "./static/bgm/[TH10 风]秋姉妹のなく顷に - ばんばんしー/[TH10 风]秋姉妹のなく顷に - ばんばんしー.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]秋姉妹のなく顷に - ばんばんしー/109951170048310574.jpg"
   },
   {
     "name": "[TH10 风]風の唄(long ver.)",
     "artist": "めらみぽっぷ",
     "url": "./static/bgm/[TH10 风]風の唄(long ver.) - めらみぽっぷ/[TH10 风]風の唄(long ver.) - めらみぽっぷ.mp3",
-    "cover": ""
+    "cover": "./static/bgm/[TH10 风]風の唄(long ver.) - めらみぽっぷ/109951163081137434.jpg"
   },
   {
     "name": "[TH10 风]鳥よ",
